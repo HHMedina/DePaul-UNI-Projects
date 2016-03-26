@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C0BED050-044F-418F-ADC9-A391DE636599}</ProjectGuid>
+    <RootNamespace>Pyramid</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>Game</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateManifest>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionName)Debug</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionName)Release</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;MONKEY="$(SolutionName)";_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)Azul\include;$(SolutionDir)Math\include;$(SolutionDir)File\include;$(SolutionDir)Time\include;$(SolutionDir)OpenGL\GLTools\include;$(SolutionDir)OpenGL\GLFW;$(SolutionDir)OpenGL\GLFW\include;$(SolutionDir)Game\P2Engine;$(SolutionDir)User Files;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <StringPooling>false</StringPooling>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <UseUnicodeForAssemblerListing>false</UseUnicodeForAssemblerListing>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessToFile>false</PreprocessToFile>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <AdditionalDependencies>OpenGL32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>%libcmt.lib;msvcrt.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;MONKEY="$(SolutionName)";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)Azul\include;$(SolutionDir)Math\include;$(SolutionDir)File\include;$(SolutionDir)Time\include;$(SolutionDir)OpenGL\GLTools\include;$(SolutionDir)OpenGL\GLFW;$(SolutionDir)OpenGL\GLFW\include</AdditionalIncludeDirectories>
+      <StringPooling>false</StringPooling>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <UseUnicodeForAssemblerListing>false</UseUnicodeForAssemblerListing>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>OpenGL32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%libcmt.lib;msvcrt.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\User Files\BattleShip.cpp" />
+    <ClCompile Include="..\User Files\Bomb.cpp" />
+    <ClCompile Include="..\User Files\Bucket.cpp" />
+    <ClCompile Include="..\User Files\Floor.cpp" />
+    <ClCompile Include="..\User Files\GameController.cpp" />
+    <ClCompile Include="..\User Files\Level1.cpp" />
+    <ClCompile Include="..\User Files\Level2.cpp" />
+    <ClCompile Include="..\User Files\LoseScene .cpp" />
+    <ClCompile Include="..\User Files\LoseText.cpp" />
+    <ClCompile Include="..\User Files\P2EngineContent.cpp" />
+    <ClCompile Include="..\User Files\RecyclingBombFactory.cpp" />
+    <ClCompile Include="..\User Files\Ship.cpp" />
+    <ClCompile Include="..\User Files\TutorialLevel1.cpp" />
+    <ClCompile Include="..\User Files\WeirdShape.cpp" />
+    <ClCompile Include="..\User Files\WinScene.cpp" />
+    <ClCompile Include="..\User Files\WinText.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="P2Engine\Alarmable.cpp" />
+    <ClCompile Include="P2Engine\AlarmManager.cpp" />
+    <ClCompile Include="P2Engine\AlarmMarker.cpp" />
+    <ClCompile Include="P2Engine\AssetManager.cpp" />
+    <ClCompile Include="P2Engine\Collidable.cpp" />
+    <ClCompile Include="P2Engine\CollisionManager.cpp" />
+    <ClCompile Include="P2Engine\Drawable.cpp" />
+    <ClCompile Include="P2Engine\DrawableManager.cpp" />
+    <ClCompile Include="P2Engine\GraphicsObjectMaker.cpp" />
+    <ClCompile Include="P2Engine\Inputable.cpp" />
+    <ClCompile Include="P2Engine\InputManager.cpp" />
+    <ClCompile Include="P2Engine\KeyState.cpp" />
+    <ClCompile Include="P2Engine\Scene.cpp" />
+    <ClCompile Include="P2Engine\SceneManager.cpp" />
+    <ClCompile Include="P2Engine\Terminable.cpp" />
+    <ClCompile Include="P2Engine\TerminableManager.cpp" />
+    <ClCompile Include="P2Engine\TerminationDumpster.cpp" />
+    <ClCompile Include="P2Engine\TimeManager.cpp" />
+    <ClCompile Include="P2Engine\Updatable.cpp" />
+    <ClCompile Include="P2Engine\UpdatableManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Azul\include\Azul.h" />
+    <ClInclude Include="..\File\include\File.h" />
+    <ClInclude Include="..\Math\include\MathApp.h" />
+    <ClInclude Include="..\Math\include\MathEngine.h" />
+    <ClInclude Include="..\Time\include\Time.h" />
+    <ClInclude Include="..\Time\include\Timer.h" />
+    <ClInclude Include="..\User Files\Bomb.h" />
+    <ClInclude Include="..\User Files\Bucket.h" />
+    <ClInclude Include="..\User Files\Floor.h" />
+    <ClInclude Include="..\User Files\GameController.h" />
+    <ClInclude Include="..\User Files\Level1.h" />
+    <ClInclude Include="..\User Files\Level2.h" />
+    <ClInclude Include="..\User Files\LoseScene .h" />
+    <ClInclude Include="..\User Files\LoseText.h" />
+    <ClInclude Include="..\User Files\RecyclingBombFactory.h" />
+    <ClInclude Include="..\User Files\Ship.h" />
+    <ClInclude Include="..\User Files\BattleShip.h" />
+    <ClInclude Include="..\User Files\TutorialLevel1.h" />
+    <ClInclude Include="..\User Files\WeirdShape.h" />
+    <ClInclude Include="..\User Files\WinScene.h" />
+    <ClInclude Include="..\User Files\WinText.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="P2Engine\Alarmable.h" />
+    <ClInclude Include="P2Engine\AlarmManager.h" />
+    <ClInclude Include="P2Engine\AlarmMarker.h" />
+    <ClInclude Include="P2Engine\AssetManager.h" />
+    <ClInclude Include="P2Engine\Collidable.h" />
+    <ClInclude Include="P2Engine\CollidableGroup.h" />
+    <ClInclude Include="P2Engine\CollidableGroupBase.h" />
+    <ClInclude Include="P2Engine\CollisionManager.h" />
+    <ClInclude Include="P2Engine\CollisionPairProcessor.h" />
+    <ClInclude Include="P2Engine\CollisionProcessorBase.h" />
+    <ClInclude Include="P2Engine\CollisionSingleProcessor.h" />
+    <ClInclude Include="P2Engine\DoxygenP2Api.h" />
+    <ClInclude Include="P2Engine\Drawable.h" />
+    <ClInclude Include="P2Engine\DrawableManager.h" />
+    <ClInclude Include="P2Engine\GameObject.h" />
+    <ClInclude Include="P2Engine\GraphicsObjectMaker.h" />
+    <ClInclude Include="P2Engine\Inputable.h" />
+    <ClInclude Include="P2Engine\InputManager.h" />
+    <ClInclude Include="P2Engine\KeyEventEnum.h" />
+    <ClInclude Include="P2Engine\KeyState.h" />
+    <ClInclude Include="P2Engine\P2Engine.h" />
+    <ClInclude Include="P2Engine\Scene.h" />
+    <ClInclude Include="P2Engine\SceneManager.h" />
+    <ClInclude Include="P2Engine\Terminable.h" />
+    <ClInclude Include="P2Engine\TerminableManager.h" />
+    <ClInclude Include="P2Engine\TerminationDumpster.h" />
+    <ClInclude Include="P2Engine\TimeManager.h" />
+    <ClInclude Include="P2Engine\Updatable.h" />
+    <ClInclude Include="P2Engine\UpdatableManager.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\Azul\lib\AzulDebug.lib">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\Azul\lib\AzulRelease.lib">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\File\lib\FileDebug.lib">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\File\lib\FileRelease.lib">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\Math\lib\MathDebug.lib">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\Math\lib\MathRelease.lib">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\Time\lib\TimeDebug.lib">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\Time\lib\TimeRelease.lib">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Game.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

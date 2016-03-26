@@ -1,0 +1,61 @@
+﻿Build started 3/1/2015 9:09:10 PM.
+     1>Project "C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\Azul\Azul.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\OpenGL\GLTools\include" /I"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\OpenGL\GLFW" /I"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\OpenGL\GLFW\include" /I"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\Math\include" /I"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\File\include" /I"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\Time\include" /I"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\Azul\include" /I"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\Game\P2Engine" /Zi /nologo /W4 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _MBCS /GF- /Gm- /EHsc /RTC1 /MTd /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\Azul\lib\AzulDebug.pdb" /Gd /TP /analyze- /errorReport:prompt src\BoxModel.cpp src\PyramidCreateModel.cpp src\SphereModel.cpp
+         BoxModel.cpp
+         PyramidCreateModel.cpp
+         SphereModel.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\OpenGL\GLTools\include" /I"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\OpenGL\GLFW" /I"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\OpenGL\GLFW\include" /I"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\Math\include" /I"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\File\include" /I"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\Time\include" /I"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\Azul\include" /I"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\Game\P2Engine" /Zi /nologo /W4 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _MBCS /GF- /Gm- /RTC1 /MTd /GS- /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\Azul\lib\AzulDebug.pdb" /Gd /TP /analyze- /errorReport:prompt src\Camera.cpp src\CameraMan.cpp src\Engine.cpp src\GpuModel.cpp src\GraphicsObject.cpp src\GraphicsObject_ColorNoTexture.cpp src\GraphicsObject_FlatTexture.cpp src\GraphicsObject_WireFrame.cpp src\InputMan.cpp src\Keyboard.cpp src\Mouse.cpp src\RenderMan.cpp src\RenderMaterial.cpp src\Render_ColorNoTexture.cpp src\Render_FlatTexture.cpp src\Render_WireFrame.cpp src\ShaderMan.cpp src\GpuTexture.cpp src\UserInterface.cpp
+         Camera.cpp
+         CameraMan.cpp
+         Engine.cpp
+         GpuModel.cpp
+         GraphicsObject.cpp
+         GraphicsObject_ColorNoTexture.cpp
+         GraphicsObject_FlatTexture.cpp
+         GraphicsObject_WireFrame.cpp
+         InputMan.cpp
+         Keyboard.cpp
+         Mouse.cpp
+         RenderMan.cpp
+         RenderMaterial.cpp
+         Render_ColorNoTexture.cpp
+         Render_FlatTexture.cpp
+         Render_WireFrame.cpp
+         ShaderMan.cpp
+         GpuTexture.cpp
+         UserInterface.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\Azul\lib\AzulDebug.lib" /NOLOGO Debug\BoxModel.obj
+         Debug\Camera.obj
+         Debug\CameraMan.obj
+         Debug\Engine.obj
+         Debug\GpuModel.obj
+         Debug\GraphicsObject.obj
+         Debug\GraphicsObject_ColorNoTexture.obj
+         Debug\GraphicsObject_FlatTexture.obj
+         Debug\GraphicsObject_WireFrame.obj
+         Debug\InputMan.obj
+         Debug\Keyboard.obj
+         Debug\Mouse.obj
+         Debug\PyramidCreateModel.obj
+         Debug\RenderMan.obj
+         Debug\RenderMaterial.obj
+         Debug\Render_ColorNoTexture.obj
+         Debug\Render_FlatTexture.obj
+         Debug\Render_WireFrame.obj
+         Debug\ShaderMan.obj
+         Debug\GpuTexture.obj
+         Debug\SphereModel.obj
+         Debug\UserInterface.obj
+         ..\File\lib\FileDebug.lib
+         ..\Math\lib\MathDebug.lib
+         ..\OpenGL\GLFW\lib\GLFW3Debug.lib
+         ..\OpenGL\GLTools\lib\gltoolsDebug.lib
+         ..\Time\lib\TimeDebug.lib
+         Azul.vcxproj -> C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\Azul\lib\AzulDebug.lib
+     1>Done Building Project "C:\Users\Hector Medina\Perforce\HMedina_gam374\student\hmedina\Sprint 7\P2 Engine\Azul\Azul.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.64

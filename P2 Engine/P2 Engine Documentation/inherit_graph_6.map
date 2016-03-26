@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_collision_processor_base.html" title="CollisionProcessorBase" alt="" coords="5,42,165,69"/>
+<area shape="rect" id="node2" href="$class_collision_pair_processor.html" title="CollisionPairProcessor\l\&lt; C1, C2 \&gt;" alt="" coords="236,5,389,47"/>
+<area shape="rect" id="node3" href="$class_collision_single_processor.html" title="CollisionSingleProcessor\&lt; C \&gt;" alt="" coords="213,71,412,98"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Scenes" name="Scenes">
+<area shape="rect" id="node1" href="$group___s_e_t_t_i_n_g_u_p_c_o_l_l_i_s_i_o_n_p_a_i_r_s.html" title="Setting the scene&#39;s\l collisions" alt="" coords="231,5,364,47"/>
+<area shape="rect" id="node3" href="$group___s_c_e_n_e_f_u_n_c_t_i_o_n_s.html" title="These are the events that can be performed by a scene. " alt="" coords="237,71,357,98"/>
+<area shape="rect" id="node5" href="$group___i_n_i_t_i_a_l_s_c_e_n_e_s_e_t_u_p.html" title="Setting the initial\l scene" alt="" coords="238,123,357,164"/>
+<area shape="rect" id="node6" href="$group___s_c_e_n_e_e_x_p_l_a_i_n_a_t_i_o_n.html" title="Creating a Level" alt="" coords="240,189,355,215"/>
+<area shape="rect" id="node4" href="$group___p2-_a_p_i.html" title="These commands are available to P2 Engine users. " alt="" coords="5,101,68,127"/>
+</map>

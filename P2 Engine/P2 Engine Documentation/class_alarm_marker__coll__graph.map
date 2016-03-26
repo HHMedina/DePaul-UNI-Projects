@@ -1,0 +1,3 @@
+<map id="AlarmMarker" name="AlarmMarker">
+<area shape="rect" id="node2" href="$class_alarmable.html" title="{Alarmable\n|# timeTrigger\l# MAX_ALARM_EVENTS\l|+ ~Alarmable()\l+ SetAlarm()\l+ GetTimeRemainingOfAlarm()\l+ AddTimeToAlarm()\l+ SubtractTimeFromAlarm()\l+ CancelAlarm()\l# Alarmable()\l# Alarmable()\l# operator=()\l# Dispatch()\l# Alarm0()\l# Alarm1()\l# Alarm2()\l}" alt="" coords="5,5,204,273"/>
+</map>

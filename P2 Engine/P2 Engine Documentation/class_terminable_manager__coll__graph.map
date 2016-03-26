@@ -1,0 +1,3 @@
+<map id="TerminableManager" name="TerminableManager">
+<area shape="rect" id="node3" href="$class_terminable.html" title="{Terminable\n|# hasExternalManagement\l# markedForTermination\l|+ SetExternalManagement()\l+ HasExternalManager()\l+ MarkForDestroy()\l# Terminable()\l# Terminable()\l# operator=()\l# ~Terminable()\l# SendToExternalManager()\l# DeregisterFromAutomated()\l# RegisterForAutomated()\l# OnTerminate()\l}" alt="" coords="5,5,199,244"/>
+</map>
