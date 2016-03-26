@@ -1,0 +1,102 @@
+Program Assignment: 3 
+Name: Student Values
+------------Memory System------------
+
+Test14: 
+
+     memSystem mem;                     
+     mem.InitializeSystem();            
+     void *a = mem.Malloc( 0x200 );     
+     void *b = mem.Malloc( 0x200 );     
+     void *c = mem.Malloc( 0x300 );     
+     void *d = mem.Malloc( 0x300 );     
+     void *e = mem.Malloc( 0x300 );     
+     void *f = mem.Malloc( 0x400 );     
+     void *g = mem.Malloc( 0x300 );     
+     mem.dump();                        
+     mem.Free( a );                     
+     mem.Free( c );                     
+     mem.Free( f );                     
+     mem.dump();                        
+     void *r = mem.Malloc( 0x380 );     
+     mem.dump();                        
+
+------- DUMP -------------
+
+heapStart: 0x007A98D0     
+heapEnd:   0x007B60D0 
+
+usedHead:  0x007AAA70     
+freeHead:  0x007AAD80 
+
+Heap Hdr   s: 007A98D0  e: 007A9910                            size: 0x40 
+USED HDR   s: 007A9910  e: 007A9920  p: 007A9B20  n: 00000000  size: 0x10    AF: 0 
+USED       s: 007A9920  e: 007A9B20                            size: 0x200 
+USED HDR   s: 007A9B20  e: 007A9B30  p: 007A9D30  n: 007A9910  size: 0x10    AF: 0 
+USED       s: 007A9B30  e: 007A9D30                            size: 0x200 
+USED HDR   s: 007A9D30  e: 007A9D40  p: 007AA040  n: 007A9B20  size: 0x10    AF: 0 
+USED       s: 007A9D40  e: 007AA040                            size: 0x300 
+USED HDR   s: 007AA040  e: 007AA050  p: 007AA350  n: 007A9D30  size: 0x10    AF: 0 
+USED       s: 007AA050  e: 007AA350                            size: 0x300 
+USED HDR   s: 007AA350  e: 007AA360  p: 007AA660  n: 007AA040  size: 0x10    AF: 0 
+USED       s: 007AA360  e: 007AA660                            size: 0x300 
+USED HDR   s: 007AA660  e: 007AA670  p: 007AAA70  n: 007AA350  size: 0x10    AF: 0 
+USED       s: 007AA670  e: 007AAA70                            size: 0x400 
+USED HDR   s: 007AAA70  e: 007AAA80  p: 00000000  n: 007AA660  size: 0x10    AF: 0 
+USED       s: 007AAA80  e: 007AAD80                            size: 0x300 
+FREE HDR   s: 007AAD80  e: 007AAD90  p: 00000000  n: 00000000  size: 0x10    AF: 0 
+FREE       s: 007AAD90  e: 007B60D0                            size: 0xb340 
+
+------- DUMP -------------
+
+heapStart: 0x007A98D0     
+heapEnd:   0x007B60D0 
+
+usedHead:  0x007AAA70     
+freeHead:  0x007A9910 
+
+Heap Hdr   s: 007A98D0  e: 007A9910                            size: 0x40 
+FREE HDR   s: 007A9910  e: 007A9920  p: 00000000  n: 007A9D30  size: 0x10    AF: 0 
+FREE       s: 007A9920  e: 007A9B20                            size: 0x200 
+USED HDR   s: 007A9B20  e: 007A9B30  p: 007AA040  n: 00000000  size: 0x10    AF: 1 
+USED       s: 007A9B30  e: 007A9D30                            size: 0x200 
+FREE HDR   s: 007A9D30  e: 007A9D40  p: 007A9910  n: 007AA660  size: 0x10    AF: 0 
+FREE       s: 007A9D40  e: 007AA040                            size: 0x300 
+USED HDR   s: 007AA040  e: 007AA050  p: 007AA350  n: 007A9B20  size: 0x10    AF: 1 
+USED       s: 007AA050  e: 007AA350                            size: 0x300 
+USED HDR   s: 007AA350  e: 007AA360  p: 007AAA70  n: 007AA040  size: 0x10    AF: 0 
+USED       s: 007AA360  e: 007AA660                            size: 0x300 
+FREE HDR   s: 007AA660  e: 007AA670  p: 007A9D30  n: 007AAD80  size: 0x10    AF: 0 
+FREE       s: 007AA670  e: 007AAA70                            size: 0x400 
+USED HDR   s: 007AAA70  e: 007AAA80  p: 00000000  n: 007AA350  size: 0x10    AF: 1 
+USED       s: 007AAA80  e: 007AAD80                            size: 0x300 
+FREE HDR   s: 007AAD80  e: 007AAD90  p: 007AA660  n: 00000000  size: 0x10    AF: 0 
+FREE       s: 007AAD90  e: 007B60D0                            size: 0xb340 
+
+------- DUMP -------------
+
+heapStart: 0x007A98D0     
+heapEnd:   0x007B60D0 
+
+usedHead:  0x007AA660     
+freeHead:  0x007A9910 
+
+Heap Hdr   s: 007A98D0  e: 007A9910                            size: 0x40 
+FREE HDR   s: 007A9910  e: 007A9920  p: 00000000  n: 007A9D30  size: 0x10    AF: 0 
+FREE       s: 007A9920  e: 007A9B20                            size: 0x200 
+USED HDR   s: 007A9B20  e: 007A9B30  p: 007AA040  n: 00000000  size: 0x10    AF: 1 
+USED       s: 007A9B30  e: 007A9D30                            size: 0x200 
+FREE HDR   s: 007A9D30  e: 007A9D40  p: 007A9910  n: 007AA9F0  size: 0x10    AF: 0 
+FREE       s: 007A9D40  e: 007AA040                            size: 0x300 
+USED HDR   s: 007AA040  e: 007AA050  p: 007AA350  n: 007A9B20  size: 0x10    AF: 1 
+USED       s: 007AA050  e: 007AA350                            size: 0x300 
+USED HDR   s: 007AA350  e: 007AA360  p: 007AAA70  n: 007AA040  size: 0x10    AF: 0 
+USED       s: 007AA360  e: 007AA660                            size: 0x300 
+USED HDR   s: 007AA660  e: 007AA670  p: 00000000  n: 007AAA70  size: 0x10    AF: 0 
+USED       s: 007AA670  e: 007AA9F0                            size: 0x380 
+FREE HDR   s: 007AA9F0  e: 007AAA00  p: 007A9D30  n: 007AAD80  size: 0x10    AF: 0 
+FREE       s: 007AAA00  e: 007AAA70                            size: 0x70 
+USED HDR   s: 007AAA70  e: 007AAA80  p: 007AA660  n: 007AA350  size: 0x10    AF: 1 
+USED       s: 007AAA80  e: 007AAD80                            size: 0x300 
+FREE HDR   s: 007AAD80  e: 007AAD90  p: 007AA9F0  n: 00000000  size: 0x10    AF: 0 
+FREE       s: 007AAD90  e: 007B60D0                            size: 0xb340 

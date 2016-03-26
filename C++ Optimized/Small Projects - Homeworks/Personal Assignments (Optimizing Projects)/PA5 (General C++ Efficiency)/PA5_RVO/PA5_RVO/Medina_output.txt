@@ -1,0 +1,18 @@
+Program Assignment: 5 
+Name: Hector Medina
+RVO Conversions
+
+
+Debug Mode
+
+Run without RVO: 9865.454102 ms
+Run _with_  RVO: 5061.312988 ms
+
+               1.95 faster
+
+Release Mode
+
+Run without RVO: 7114.172852 ms
+Run _with_  RVO: 4194.024902 ms
+
+             1.70 faster

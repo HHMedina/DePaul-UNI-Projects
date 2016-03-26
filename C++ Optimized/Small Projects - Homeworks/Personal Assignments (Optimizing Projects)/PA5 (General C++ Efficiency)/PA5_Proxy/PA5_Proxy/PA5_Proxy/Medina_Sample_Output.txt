@@ -1,0 +1,17 @@
+Program Assignment: 5
+Name: Hector Medina
+Proxy Objects
+
+Debug Mode
+
+Run without proxy objects: 45289.277344 ms
+Run _with_  proxy objects: 38818.203125 ms
+
+			 1.17  faster
+
+Release Mode
+
+Run without proxy objects: 3370.427246 ms
+Run _with_  proxy objects: 478.395447 ms
+
+                        7.05    faster

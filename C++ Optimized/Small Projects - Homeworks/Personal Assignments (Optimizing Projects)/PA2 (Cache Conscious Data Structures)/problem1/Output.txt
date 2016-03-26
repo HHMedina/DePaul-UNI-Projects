@@ -1,0 +1,171 @@
+Information for (Test_A)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x40a838: 02 03 04 
+
+	Size: 3 bytes.	Number of Padding: 0
+
+Information for (Test_B)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x40a838: 00 00 00 00 
+	0x40a83c: 00 00 00 00 
+
+	Size: 8 bytes.	Number of Padding: 0
+
+Information for (Test_C)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x40a838: 00 00 00 00 
+	0x40a83c: 00 aa aa aa 
+
+	Size: 8 bytes.	Number of Padding: 3
+
+Information for (Test_D)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x40a838: 51 aa aa aa 
+	0x40a83c: 52 00 00 00 
+	0x40a840: 53 aa aa aa 
+
+	Size: 12 bytes.	Number of Padding: 6
+
+Information for (Test_E)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x40a838: 00 00 00 00 
+	0x40a83c: 00 00 4c 42 
+	0x40a840: 34 00 00 00 
+	0x40a844: 35 36 37 aa 
+
+	Size: 16 bytes.	Number of Padding: 1
+
+Information for (Test_F)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x40a838: 00 aa aa aa 
+	0x40a83c: aa aa aa aa 
+	0x40a840: 00 00 00 00 
+	0x40a844: 00 00 00 00 
+	0x40a848: 00 00 00 00 
+	0x40a84c: aa aa aa aa 
+
+	Size: 24 bytes.	Number of Padding: 11
+
+Information for (Test_G)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x40a838: 00 00 00 00 
+	0x40a83c: 00 00 00 00 
+	0x40a840: 00 00 00 00 
+	0x40a844: 00 aa aa aa 
+
+	Size: 16 bytes.	Number of Padding: 3
+
+Information for (vect)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x40a838: 00 00 00 00 
+	0x40a83c: 00 00 00 00 
+	0x40a840: 00 aa aa aa 
+	0x40a844: 00 00 00 00 
+	0x40a848: 00 00 00 00 
+
+	Size: 20 bytes.	Number of Padding: 3
+
+Information for (Test_H)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x40a838: 00 00 00 00 
+	0x40a83c: 00 00 00 00 
+	0x40a840: 00 00 00 00 
+	0x40a844: 00 aa aa aa 
+	0x40a848: 00 00 00 00 
+	0x40a84c: 00 00 00 00 
+	0x40a850: 00 aa aa aa 
+	0x40a854: 00 00 00 00 
+
+	Size: 32 bytes.	Number of Padding: 6
+
+Information for (Test_I)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x40cba8: 00 00 00 00 
+	0x40cbac: 00 00 00 00 
+	0x40cbb0: 00 00 00 00 
+	0x40cbb4: 00 00 00 00 
+	0x40cbb8: 00 00 00 00 
+	0x40cbbc: 00 00 00 00 
+	0x40cbc0: 00 00 00 00 
+	0x40cbc4: 00 00 00 00 
+	0x40cbc8: 00 00 00 00 
+	0x40cbcc: 00 00 00 00 
+	0x40cbd0: 00 00 00 00 
+	0x40cbd4: 00 00 00 00 
+	0x40cbd8: 00 00 00 00 
+	0x40cbdc: 00 00 00 00 
+	0x40cbe0: 00 00 00 00 
+	0x40cbe4: 00 00 00 aa 
+	0x40cbe8: 00 00 00 00 
+	0x40cbec: 00 aa aa aa 
+	0x40cbf0: 00 00 00 00 
+
+	Size: 76 bytes.	Number of Padding: 4
+
+Information for (Test_J)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x40cba8: 00 00 00 00 
+	0x40cbac: 00 00 00 00 
+	0x40cbb0: 00 00 00 00 
+	0x40cbb4: 00 00 00 00 
+	0x40cbb8: 00 00 00 00 
+	0x40cbbc: 00 00 00 00 
+	0x40cbc0: 00 00 00 00 
+	0x40cbc4: 00 00 00 00 
+	0x40cbc8: 00 00 00 00 
+	0x40cbcc: 00 00 00 00 
+	0x40cbd0: 00 00 00 00 
+	0x40cbd4: 00 00 00 00 
+	0x40cbd8: 00 00 00 00 
+	0x40cbdc: 00 00 00 00 
+	0x40cbe0: 00 00 00 00 
+	0x40cbe4: 00 00 00 00 
+	0x40cbe8: 00 00 00 00 
+	0x40cbec: 00 00 00 00 
+	0x40cbf0: 00 00 00 00 
+	0x40cbf4: 00 00 00 00 
+	0x40cbf8: 00 00 00 00 
+	0x40cbfc: 00 00 00 00 
+	0x40cc00: 00 00 00 00 
+	0x40cc04: 00 00 00 00 
+	0x40cc08: 00 00 00 00 
+	0x40cc0c: 00 00 00 00 
+	0x40cc10: 00 00 00 00 
+	0x40cc14: 00 00 00 00 
+	0x40cc18: 00 00 00 00 
+	0x40cc1c: 00 00 00 00 
+	0x40cc20: 00 00 aa aa 
+	0x40cc24: 00 00 00 00 
+	0x40cc28: 00 aa aa aa 
+	0x40cc2c: aa aa aa aa 
+	0x40cc30: 00 00 00 00 
+	0x40cc34: 00 00 00 00 
+	0x40cc38: 00 00 00 00 
+	0x40cc3c: 00 aa aa aa 
+	0x40cc40: 00 00 00 00 
+	0x40cc44: aa aa aa aa 
+
+	Size: 160 bytes.	Number of Padding: 16
+
