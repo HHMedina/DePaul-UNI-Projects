@@ -1,7 +1,0 @@
-<map id="CollisionManager.h" name="CollisionManager.h">
-<area shape="rect" id="node3" href="$_collidable_group_base_8h.html" title="CollidableGroupBase.h" alt="" coords="327,229,481,256"/>
-<area shape="rect" id="node4" href="$_collidable_group_8h.html" title="CollidableGroup.h" alt="" coords="91,155,215,181"/>
-<area shape="rect" id="node6" href="$_collision_processor_base_8h.html" title="CollisionProcessorBase.h" alt="" coords="263,155,433,181"/>
-<area shape="rect" id="node7" href="$_collision_single_processor_8h.html" title="CollisionSingleProcessor.h" alt="" coords="65,80,242,107"/>
-<area shape="rect" id="node8" href="$_collision_pair_processor_8h.html" title="CollisionPairProcessor.h" alt="" coords="266,80,430,107"/>
-</map>

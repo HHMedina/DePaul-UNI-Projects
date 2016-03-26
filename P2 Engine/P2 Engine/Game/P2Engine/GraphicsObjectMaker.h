@@ -13,6 +13,10 @@ class GraphicsObjectMaker{
 	friend class Drawable;
 private:
 
+	static void Initialize(){
+		Instance();
+	}
+
 	/**
 	\brief Static pointer to singleton
 	*/

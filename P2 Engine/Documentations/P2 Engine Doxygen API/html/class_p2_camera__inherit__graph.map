@@ -1,0 +1,3 @@
+<map id="P2Camera" name="P2Camera">
+<area shape="rect" id="node3" href="$class_sound_conscious.html" title="{SoundConscious\n|# sndConPos\l# sndConDirection\l# myState\l|+ GetSoundConsciousPosition()\l+ GetSoundConsciousDirection()\l# SoundConscious()\l# SoundConscious()\l# operator=()\l# ~SoundConscious()\l# SetSndConciousPos()\l# SetToNotListening()\l# SetToListening()\l# SetSndConciousDir()\l# UpdatePosAndDir()\l}" alt="" coords="97,5,309,259"/>
+</map>

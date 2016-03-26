@@ -1,0 +1,3 @@
+<map id="DrawableManager" name="DrawableManager">
+<area shape="rect" id="node3" href="$class_drawable.html" title="{Drawable\n|# graphicsObject\l# graphicsWorld\l|+ RegisterToDraw()\l+ DeregisterToDraw()\l+ SetGraphicsObject()\l# SetGraphicsWorld()\l# Drawable()\l# Drawable()\l# operator=()\l# ~Drawable()\l# Draw()\l# RenderGraphics()\l}" alt="" coords="6,5,158,229"/>
+</map>

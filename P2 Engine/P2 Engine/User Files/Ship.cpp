@@ -53,7 +53,7 @@ Ship::Ship(){
 		world.set(IDENTITY);
 		world *= ShipScale * ShipRot * Matrix( TRANS, ShipPos );
 		
-		SetGameObjectWorld(world);
+//		SetGameObjectWorld(world);
 
 
 	RegisterCollision(this);
@@ -99,7 +99,7 @@ Ship::Ship(int x){
 		Matrix world = ShipScale * ShipRot * Matrix( TRANS, ShipPos );
 		//graphicsObject->setWorld(world);
 		//colWorld = world
-		SetGameObjectWorld(world);
+//		SetGameObjectWorld(world);
 
 		this->RegisterToDraw();
 
@@ -157,7 +157,7 @@ Ship::Ship(int x){
 
 	// Spaceship adjust matrix
 	world =  ShipScale * ShipRot * Matrix( TRANS, ShipPos );
-	SetGameObjectWorld(world);
+//	SetGameObjectWorld(world);
 
 }
 

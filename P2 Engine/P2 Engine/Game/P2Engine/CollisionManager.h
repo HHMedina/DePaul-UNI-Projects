@@ -7,6 +7,7 @@
 #include "CollisionProcessorBase.h"
 #include "CollisionSingleProcessor.h"
 #include "CollisionPairProcessor.h"
+#include "CollisionTerrainProcessor.h"
 
 class CollisionManager{
 
@@ -26,6 +27,18 @@ public:
 	template<class C1, class C2>
 	void SetCollisionPair(){
 		colProcessorCol.push_front(new CollisionPairProcessor<C1,C2>() );
+
+		//add group base to list
+		colGroupCol.insert(&CollidableGroup<C1>::Instance());
+		colGroupCol.insert(&CollidableGroup<C2>::Instance());
+	}
+
+	template <class C>
+	void SetCollisionWithTerrain(){
+
+		colProcessorCol.push_front(new  CollisionTerrainProcessor<C>() );
+		//add group base to list
+		colGroupCol.insert(&CollidableGroup<C>::Instance());
 	}
 
 	/**
@@ -40,7 +53,7 @@ public:
 	template<class C>
 	void SetCollisionSelf(){
 		colProcessorCol.push_front(new CollisionSingleProcessor<C>());
-		
+		colGroupCol.insert(&CollidableGroup<C>::Instance());
 	}
 
 	
@@ -49,8 +62,10 @@ private:
 
 	
 	typedef  std::list<CollisionProcessorBase*> CollisionProcessorCollection;
+	typedef  std::set<CollidableGroupBase*> ColGroupCollection;
 
 	CollisionManager(){
+		colGroupCol = set<CollidableGroupBase*>();
 		colProcessorCol = std::list<CollisionProcessorBase*>();
 	} //dissallow User to create CollisionManagers
 
@@ -73,8 +88,18 @@ private:
 			it2 = colProcessorCol.erase(it2);
 		}
 
+		colGroupCol.clear();
+
 	}
 
+	void UpdateGroupAABS(){
+		std::set< CollidableGroupBase*>::iterator it2 = colGroupCol.begin();
+		while(it2!=colGroupCol.end()){
+			(*it2)->UpdateGroupAABB();
+			++it2;
+		}
+
+	}
 
 	/**
 	\brief This method is called by a Scene at every frame to check for collisions.
@@ -84,6 +109,8 @@ private:
 
 	*/
 	void ProcessCollisions(){
+		UpdateGroupAABS();
+
 		std::list< CollisionProcessorBase*>::iterator it2 = colProcessorCol.begin();
 		while(it2!=colProcessorCol.end()){
 			(*it2)->CollisionTest();
@@ -96,5 +123,9 @@ private:
 	\brief This is the list of pairs and self collisions considered for collisions.
 	*/
 	CollisionProcessorCollection colProcessorCol;
+
+	//set of all of the collision groups
+	ColGroupCollection colGroupCol;
+	
 };
 #endif

@@ -1,0 +1,6 @@
+<map id="Sound3D" name="Sound3D">
+<area shape="rect" id="node2" href="$class_sound.html" title="{Sound\n|# mySoundSource\l# isLooped\l# volume\l|+ Sound()\l+ ~Sound()\l+ Play()\l+ Stop()\l+ Play()\l+ SetLooped()\l+ Release()\l+ Pause()\l+ Stop()\l+ SetVolume()\l+ IsPlaying()\l# Sound()\l# Sound()\l# Sound()\l# operator=()\l# ~Sound()\l# ResetToDefaultState()\l}" alt="" coords="86,345,246,687"/>
+<area shape="rect" id="node3" title="STL class. " alt="" coords="29,176,109,253"/>
+<area shape="rect" id="node4" title="STL class. " alt="" coords="5,5,132,97"/>
+<area shape="rect" id="node5" href="$class_play_mode_base.html" title="{PlayModeBase\n||# PlayModeBase()\l# ~PlayModeBase()\l# Play()\l# Play()\l# Play()\l}" alt="" coords="133,147,271,283"/>
+</map>

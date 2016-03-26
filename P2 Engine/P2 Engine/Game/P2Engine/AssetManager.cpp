@@ -2,7 +2,9 @@
 #include <iostream>
 #include <string>
 #include <assert.h>
-
+#include "SoundManager.h"
+#include "irrKlang.h"
+#include "TerrainAssetManager.h"
 
 AssetManager * AssetManager::instance =NULL;
 
@@ -69,6 +71,19 @@ void AssetManager::LoadTexture(const char* const fileName,const char* const asse
 	//vague message in console.
 }
 
+
+
+void AssetManager::LoadAzulModel(const char* const fileName, const char* const assetName){
+
+	if( Instance()->mDataBase.find(assetName)!= Instance()->mDataBase.end()){//already has a terrain then overwrite it (delete it)
+		delete Instance()->mDataBase[assetName];
+	}
+
+	Instance()->mDataBase[assetName] = GpuModel::Create(fileName);
+
+}
+
+
 Texture * const AssetManager::GetTexture(const char* const assetName){
 	Texture* tempTex = Instance()->tDataBase[assetName];
 	
@@ -95,13 +110,53 @@ void AssetManager::UnloadAssets(){
 
 }
 
+void AssetManager::LoadTerrain(const char* const fileName, const char* const assetName, const char* const TextureKey, float Sidelength = 1, float maxheight=1, float zeroHeight=0, int RepeatU =1, int RepeatV =1){
+
+	Instance()->terrainAssetManager->LoadTerrain(fileName,assetName,TextureKey,Sidelength, maxheight,zeroHeight,RepeatU,RepeatV);
+}
+
+Terrain* AssetManager::GetTerrain(const char* const assetName){
+
+	return Instance()->terrainAssetManager->GetTerrain(assetName);
+}
+
+void AssetManager::LoadSound(const char* const fileName, const char* const assetName){
+	
+	Instance()->soundManager->LoadSound(fileName,assetName);
+
+}
+
+Sound2D* AssetManager::GetSound2DInstance(const char* const assetName){
+	return Instance()->soundManager->Create2DSound(assetName);
+}
+
+Sound3D* AssetManager::GetSound3DInstance(const char* const assetName){
+	return Instance()->soundManager->Create3DSound(assetName);
+}
+
 void AssetManager::DeleteMe(){
 	Instance()->UnloadAssets();
 	delete instance;
 }
 
 AssetManager::~AssetManager(){
-	
+	delete terrainAssetManager;
+	delete soundManager;
 	instance =NULL;
 
+}
+
+AssetManager::AssetManager(){
+	terrainAssetManager = new TerrainAssetManager();
+	soundManager = new SoundManager();
+
+}
+
+ISoundSource* AssetManager::GetSoundSource(const char* const assetName){
+	return Instance()->soundManager->GetSoundSource(assetName);
+}
+
+
+SoundManager* AssetManager::GetSoundManager(){
+	return Instance()->soundManager;
 }

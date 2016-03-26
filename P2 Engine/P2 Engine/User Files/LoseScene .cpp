@@ -4,6 +4,7 @@
 
 void LoseScene::SetUp(){
 
-	new Floor();
-	new LoseText();
+	//new Floor();
+	//new LoseText();
+	SceneManager::SetCurrentTerrain("TerTestTerrain2");
 }

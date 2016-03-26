@@ -15,6 +15,7 @@ class Alarmable;
 #include "CollisionManager.h"
 #include "TerminableManager.h"
 #include "TerminationDumpster.h"
+#include "TerrainManager.h"
 
 class Scene{
 
@@ -69,6 +70,8 @@ protected:
 	*/
 	TerminationDumpster terminationDumpster;
 
+	TerrainManager terrainManager;
+
 	/**
 	\brief Method which calls the DrawableManager's DrawAll() method.
 	*/
@@ -91,6 +94,8 @@ protected:
 	\brief Returns the scene's instance of an UpdatableManager.
 	*/
 	UpdatableManager& GetUpdatableManager();
+
+	TerrainManager& GetTerrainManager();
 
 	/**
 	\brief Returns the scene's instance of a DrawableManager.
@@ -121,6 +126,13 @@ protected:
 	\brief Returns the scene's instance of a CollisionManager.
 	*/
 	CollisionManager& GetCollisionManager();
+
+	////new stufffff//////
+
+
+	void SetCurrentTerrain(const char* const assetName);
+
+	/////
 
 	/**\brief Sets the collision pairs for a scene.
 	\ingroup SCENEFUNCTIONS
@@ -172,6 +184,14 @@ protected:
 	void SetCollisionSelf(){
 		collisionManager.SetCollisionSelf<C>();
 	}
+
+
+
+	template <class C>
+	void SetCollisionWithTerrain(){
+		collisionManager.SetCollisionWithTerrain<C>();
+	}
+
 
 	/**\brief Function used to initialize a scene.
 	\ingroup SCENEFUNCTIONS

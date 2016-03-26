@@ -117,7 +117,9 @@ public:
 
 protected:
 
-	Updatable(){}
+	Updatable(){
+		RegisterForUpdate();
+	}
 	Updatable( const Updatable & rhs){ rhs;}
 	Updatable& operator = (const Updatable& rhs){ rhs;}
 	virtual ~Updatable(){}

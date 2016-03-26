@@ -3,6 +3,7 @@
 
 #include "Azul.h"
 #include "P2Engine\P2Engine.h"
+#include "DebugVisualizer.h"
 
 class Game : public Engine
 {

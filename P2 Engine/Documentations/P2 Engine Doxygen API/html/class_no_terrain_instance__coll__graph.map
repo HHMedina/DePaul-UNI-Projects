@@ -1,0 +1,4 @@
+<map id="NoTerrainInstance" name="NoTerrainInstance">
+<area shape="rect" id="node2" href="$class_terrain.html" title="{Terrain\n|# imgWidth\l# imgHeigth\l# numVerts\l# numTris\l# numCells\l# numVertsPerSide\l# numCellsPerSide\l# cellDimension\l# sideLength\l# vertsArray\l# terrainGrphObject\l|+ Terrain()\l+ Terrain()\l+ GetCellIndexFromWorldPosition()\l# Terrain()\l# operator=()\l# ~Terrain()\l# Draw()\l# CreateTerrainModel()\l# SaveTerrainModel()\l# GetLikelyCandidates()\l# IsWithinTerrain()\l}" alt="" coords="5,373,232,744"/>
+<area shape="rect" id="node3" href="$struct_terrain_1_1_max_and_min_points.html" title="{Terrain::MaxAndMinPoints\n|+ MaxPoint\l+ MinPoint\l|+ MaxAndMinPoints()\l+ MaxAndMinPoints()\l+ operator=()\l+ MaxAndMinPoints()\l+ ~MaxAndMinPoints()\l}" alt="" coords="66,5,241,156"/>
+</map>

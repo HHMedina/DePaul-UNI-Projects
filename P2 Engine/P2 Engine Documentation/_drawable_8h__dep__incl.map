@@ -1,7 +1,0 @@
-<map id="Drawable.h" name="Drawable.h">
-<area shape="rect" id="node2" href="$_drawable_8cpp.html" title="Drawable.cpp" alt="" coords="5,80,105,107"/>
-<area shape="rect" id="node3" href="$_drawable_manager_8cpp.html" title="DrawableManager.cpp" alt="" coords="129,80,280,107"/>
-<area shape="rect" id="node4" href="$_game_object_8h.html" title="GameObject.h" alt="" coords="305,80,411,107"/>
-<area shape="rect" id="node5" href="$_p2_engine_8h.html" title="P2Engine.h" alt="" coords="359,155,448,181"/>
-<area shape="rect" id="node6" href="$_scene_manager_8cpp.html" title="SceneManager.cpp" alt="" coords="487,80,621,107"/>
-</map>

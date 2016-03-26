@@ -9,6 +9,7 @@ class Updatable;
 class Drawable;
 class Inputable;
 class Terminable;
+class Terrain;
 enum AlarmID;
 enum AZUL_KEY;
 enum KeyEvent;
@@ -75,6 +76,21 @@ public:
 	*/
 	static void ChangeScene(Scene* nScene);
 
+
+	////////////////////////new stufff//////////////
+
+
+	static void SetCurrentTerrain(const char* const);
+
+
+	template<class C1>
+	static void SetCollisionWithTerrain(){
+		Instance().currentScene->GetCollisionManager().SetCollisionWithTerrain<C1>();
+	}
+
+	static Terrain* GetCurrentTerrain();
+
+	////////////////////////////////////
 
 	/**
 	\brief Method used to register an Updatable in the current scene
@@ -156,7 +172,7 @@ public:
 	\param key key is the key to register for the Inputable.
 	\param keyEvent keyEvent is the KeyEvent to register for.
 	*/
-	static void RegisterForInput(Inputable * in, AZUL_KEY key, KeyEvent keyEvent );
+	static void RegisterForInput(Inputable * in, AZUL_KEY key, KeyEvent keyEvent  );
 
 	/**
 	\brief Method used deregister an Inputable in the current scene.
@@ -169,6 +185,8 @@ public:
 	\param keyEvent keyEvent is the KeyEvent to deregister for.
 	*/
 	static void DeregisterForInput(Inputable * in, AZUL_KEY key , KeyEvent keyEvent );
+
+	static void DeregisterAllInputKeys(Inputable * in);
 
 	/**
 	\brief Method used register a Terminable in the current scene.

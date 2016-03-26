@@ -7,7 +7,11 @@ void Alarmable::SetAlarm(AlarmID id,float time){
 	//SceneManager::DeregisterForAlarm(this,id);//remove previous non activated alarm (if any) for this with alarmID id
 	SceneManager::RegisterForAlarm(this,id,time);//Register new alarm marker
 }
+/*
+void Alarmable::PauseAlarm(){
 
+}
+*/
 float Alarmable::GetTimeRemainingOfAlarm(AlarmID id){
 	if(timeTrigger[id] == -1){
 		return -1; // inactive

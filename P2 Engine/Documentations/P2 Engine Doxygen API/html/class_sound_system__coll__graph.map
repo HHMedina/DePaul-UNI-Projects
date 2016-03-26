@@ -1,0 +1,10 @@
+<map id="SoundSystem" name="SoundSystem">
+<area shape="rect" id="node9" href="$class_burst_sound_user_ended_receiver.html" title="{BurstSoundUserEndedReceiver\n||# BurstSoundUserEndedReceiver()\l# OnSoundStopped()\l}" alt="" coords="350,1411,573,1503"/>
+<area shape="rect" id="node11" href="$class_burst_sound_end_receiver.html" title="{BurstSoundEndReceiver\n||# BurstSoundEndReceiver()\l# OnSoundStopped()\l}" alt="" coords="44,1411,225,1503"/>
+<area shape="rect" id="node2" href="$class_sound_conscious.html" title="{SoundConscious\n|# sndConPos\l# sndConDirection\l|+ GetSoundConsciousPosition()\l+ GetSoundConsciousDirection()\l+ SetAsListener()\l# SoundConscious()\l# SoundConscious()\l# operator=()\l# ~SoundConscious()\l# SetSndConciousPos()\l# SetToNotListening()\l# SetToListening()\l# SetSndConciousDir()\l# UpdatePosAndDir()\l}" alt="" coords="42,749,254,1003"/>
+<area shape="rect" id="node3" href="$class_sound_conscious_listening_state.html" title="{SoundConsciousListeningState\n||# SoundConsciousListeningState()\l# SoundConsciousListeningState()\l# operator=()\l# ~SoundConsciousListening\lState()\l# Update()\l}" alt="" coords="37,441,259,591"/>
+<area shape="rect" id="node5" href="$class_sound.html" title="{Sound\n|# mySoundSource\l# isLooped\l# volume\l|+ Sound()\l+ ~Sound()\l+ Play()\l+ Stop()\l+ Play()\l+ SetLooped()\l+ Release()\l+ Pause()\l+ Stop()\l+ SetVolume()\l+ IsPlaying()\l# Sound()\l# Sound()\l# Sound()\l# operator=()\l# ~Sound()\l# ResetToDefaultState()\l}" alt="" coords="353,345,513,687"/>
+<area shape="rect" id="node6" title="STL class. " alt="" coords="311,176,391,253"/>
+<area shape="rect" id="node7" title="STL class. " alt="" coords="287,5,414,97"/>
+<area shape="rect" id="node8" href="$class_play_mode_base.html" title="{PlayModeBase\n||# PlayModeBase()\l# ~PlayModeBase()\l# Play()\l# Play()\l# Play()\l}" alt="" coords="415,147,553,283"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="UsingSounds" name="UsingSounds">
+<area shape="rect" id="node1" href="$group___s_o_u_n_d3_d_e_x.html" title="The following shows how to use Sound3D&#39;s. " alt="" coords="259,5,385,32"/>
+<area shape="rect" id="node2" href="$group___s_o_u_n_d2_d_e_x.html" title="The following shows how to use Sound2D&#39;s. " alt="" coords="259,56,385,83"/>
+<area shape="rect" id="node3" href="$group___s_o_u_n_d.html" title="This module teaches the user how to use sound in the P2 Engine. " alt="" coords="5,107,64,133"/>
+<area shape="rect" id="node4" href="$group___b_o_t_h_s_o_u_n_d_s.html" title="These are the relevant features for both SoundTypes. " alt="" coords="261,107,383,133"/>
+<area shape="rect" id="node5" href="$group___s_o_u_n_d3_d.html" title="Sound3Ds are used for sounds played in 3D space. " alt="" coords="285,157,359,184"/>
+<area shape="rect" id="node6" href="$group___s_o_u_n_d2_d.html" title="Sound2Ds are used for sounds played in 2D space. " alt="" coords="285,208,359,235"/>
+</map>

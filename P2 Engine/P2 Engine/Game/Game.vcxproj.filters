@@ -4,9 +4,6 @@
     <ClCompile Include="Game.cpp">
       <Filter>P2Engine</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>P2Engine</Filter>
-    </ClCompile>
     <ClCompile Include="P2Engine\Alarmable.cpp">
       <Filter>P2Engine\Source\AlarmSystem</Filter>
     </ClCompile>
@@ -112,8 +109,119 @@
     <ClCompile Include="P2Engine\GraphicsObjectMaker.cpp">
       <Filter>P2Engine\Source\GraphicsObjectMaker</Filter>
     </ClCompile>
+    <ClCompile Include="P2Engine\BoundingSphereVolume.cpp">
+      <Filter>P2Engine\Source\CollisionSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\DesertFloor.cpp">
+      <Filter>User Files\GameObjects\TankGameDemoGameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\TankShell.cpp">
+      <Filter>User Files\GameObjects\TankGameDemoGameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\DeathMatchLevel.cpp">
+      <Filter>User Files\Levels\TankGameLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\TankBottom.cpp">
+      <Filter>User Files\GameObjects\TankGameDemoGameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\TankTop.cpp">
+      <Filter>User Files\GameObjects\TankGameDemoGameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\Tank.cpp">
+      <Filter>User Files\GameObjects\TankGameDemoGameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\SoundManager.cpp">
+      <Filter>P2Engine\Headers\SoundSystem</Filter>
+    </ClCompile>
     <ClCompile Include="P2Engine\AlarmMarker.cpp">
-      <Filter>P2Engine\Source\AssetManager</Filter>
+      <Filter>P2Engine\Source\AlarmSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\AABBBoundingBox.cpp">
+      <Filter>P2Engine\Source\CollisionSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\OOBB.cpp">
+      <Filter>P2Engine\Source\CollisionSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\DebugVisualizer.cpp">
+      <Filter>P2Engine\Source\Tools\DebugVisualizer</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\P2Math.cpp">
+      <Filter>P2Engine\Source\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\AlarmTestLevel.cpp">
+      <Filter>User Files\Levels\AlarmTestLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\AlarmExampleGameObject.cpp">
+      <Filter>User Files\GameObjects\AlarmTest</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\TerrainModel.cpp">
+      <Filter>P2Engine\Source\TerrainSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\Terrain.cpp">
+      <Filter>P2Engine\Source\TerrainSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\TerrainAssetManager.cpp">
+      <Filter>P2Engine\Source\TerrainSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainManager.cpp">
+      <Filter>P2Engine\Source\TerrainSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\SoundTestLevel.cpp">
+      <Filter>User Files\Levels\SoundTestLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\BurstSoundEndReceiver.cpp">
+      <Filter>P2Engine\Headers\SoundSystem\SoundEndRecievers</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\BurstSoundUserEndedReceiver.cpp">
+      <Filter>P2Engine\Headers\SoundSystem\SoundEndRecievers</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\SoundSystem.cpp">
+      <Filter>P2Engine\Headers\SoundSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\Burst3DPlayMode.cpp">
+      <Filter>P2Engine\Headers\SoundSystem\PlayModes\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\Sound.cpp">
+      <Filter>P2Engine\Headers\SoundSystem\SoundTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\Sound2D.cpp">
+      <Filter>P2Engine\Headers\SoundSystem\SoundTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\Burst2DPlayMode.cpp">
+      <Filter>P2Engine\Headers\SoundSystem\PlayModes\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\Looped2DPlayMode.cpp">
+      <Filter>P2Engine\Headers\SoundSystem\PlayModes\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\Looped3DPlayMode.cpp">
+      <Filter>P2Engine\Headers\SoundSystem\PlayModes\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Audible.cpp">
+      <Filter>P2Engine\Headers\SoundSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\ListeningState.cpp">
+      <Filter>P2Engine\Headers\SoundSystem\SoundConsciousListeningStates</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\NotListeningState.cpp">
+      <Filter>P2Engine\Headers\SoundSystem\SoundConsciousListeningStates</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\Sound3D.cpp">
+      <Filter>P2Engine\Headers\SoundSystem\SoundTypes\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\No3DSound.cpp">
+      <Filter>P2Engine\Headers\SoundSystem\SoundTypes\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>User Files</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\DefaultSoundConscious.cpp">
+      <Filter>P2Engine\Headers\SoundSystem\SoundConscious</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\CollisionTester.cpp">
+      <Filter>User Files\Levels\TankGameLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\CollisionTesterMovable.cpp">
+      <Filter>User Files\Levels\TankGameLevel</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -237,6 +345,78 @@
     <Filter Include="P2Engine\Headers\GraphicsObjectMaker">
       <UniqueIdentifier>{0e5008b9-dae2-4df8-ae2e-0e6527bcafdb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="P2Engine\Headers\SoundSystem">
+      <UniqueIdentifier>{48150c65-9ef2-48a2-8dcf-d0dbaab0d3ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Source\SoundSystem">
+      <UniqueIdentifier>{781e61eb-0eb4-4ed9-8268-11e9e530228b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User Files\Levels\TankGameLevel">
+      <UniqueIdentifier>{9c4bf8d0-d287-4ff7-affa-318f575f8766}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User Files\GameObjects\TankGameDemoGameObjects">
+      <UniqueIdentifier>{442457d8-ff71-4ad1-8f2a-c24b03599fe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\Tools">
+      <UniqueIdentifier>{4f36e7dd-9d20-4b8c-ac1e-2f7976828d2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Source\Tools">
+      <UniqueIdentifier>{1cbde7d3-456b-4f53-a8d5-adf7c7b9fec4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\Tools\DebugVisualizer">
+      <UniqueIdentifier>{a511b8f9-2176-462e-a197-e8ac586b670f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Source\Tools\DebugVisualizer">
+      <UniqueIdentifier>{ccde6f2a-9854-4bec-9fed-a1b4f31d5d1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User Files\GameObjects\AlarmTest">
+      <UniqueIdentifier>{64e966d1-9d08-4cd3-a33b-8c0b065025c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User Files\Levels\AlarmTestLevel">
+      <UniqueIdentifier>{27af4d37-1c4a-4908-ae40-4228087d60ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User Files\GameObjects\SoundTestObjects">
+      <UniqueIdentifier>{9d0e71f2-a956-42a8-9603-a0e9fc22c80d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\TerrainSystem">
+      <UniqueIdentifier>{9db5fb98-b8c6-4010-9a17-7fef7a367fdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Source\TerrainSystem">
+      <UniqueIdentifier>{a195e952-5f22-4044-bf68-3ff025e0d6b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\CollisionSystem\CollisionVolumes">
+      <UniqueIdentifier>{499fef9e-7ce3-4605-87bc-b62f0c31ac57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\CollisionSystem\CollisionPairTypes">
+      <UniqueIdentifier>{c53d9a9a-f96f-4a07-b237-e3f808c0a27b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User Files\Levels\SoundTestLevel">
+      <UniqueIdentifier>{cca535bc-1d3c-4d83-b6ca-38f79943776d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\SoundSystem\PlayModes">
+      <UniqueIdentifier>{7f165cc5-4cfb-40dd-8ea8-ce034318d084}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\SoundSystem\SoundEndRecievers">
+      <UniqueIdentifier>{b0362a4a-dfba-4f7b-adfe-d63e89ecacfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\SoundSystem\PlayModes\2D">
+      <UniqueIdentifier>{7308aa68-b661-48e5-8b8f-7116005d8db9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\SoundSystem\PlayModes\3D">
+      <UniqueIdentifier>{54439d0b-4915-4446-8166-f339d2c9a524}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\SoundSystem\SoundTypes">
+      <UniqueIdentifier>{cf9ec0eb-a7ce-449d-a5fb-902f60333db1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\SoundSystem\SoundConsciousListeningStates">
+      <UniqueIdentifier>{f718ec3b-250f-42ca-baee-3468c09a281a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\SoundSystem\SoundTypes\3D">
+      <UniqueIdentifier>{63f2bc9b-9d50-4118-9d66-be70cbce5cae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\SoundSystem\SoundConscious">
+      <UniqueIdentifier>{7e4de9e2-60a0-47bd-8627-935e7c36ef30}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Time\include\Time.h">
@@ -260,9 +440,6 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="P2Engine\P2Engine.h">
       <Filter>P2Engine\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>P2Engine</Filter>
     </ClInclude>
     <ClInclude Include="P2Engine\Alarmable.h">
       <Filter>P2Engine\Headers\AlarmSystem</Filter>
@@ -366,15 +543,6 @@
     <ClInclude Include="P2Engine\CollisionManager.h">
       <Filter>P2Engine\Headers\CollisionSystem</Filter>
     </ClInclude>
-    <ClInclude Include="P2Engine\CollisionPairProcessor.h">
-      <Filter>P2Engine\Headers\CollisionSystem</Filter>
-    </ClInclude>
-    <ClInclude Include="P2Engine\CollisionProcessorBase.h">
-      <Filter>P2Engine\Headers\CollisionSystem</Filter>
-    </ClInclude>
-    <ClInclude Include="P2Engine\CollisionSingleProcessor.h">
-      <Filter>P2Engine\Headers\CollisionSystem</Filter>
-    </ClInclude>
     <ClInclude Include="P2Engine\GraphicsObjectMaker.h">
       <Filter>P2Engine\Headers\GraphicsObjectMaker</Filter>
     </ClInclude>
@@ -392,6 +560,162 @@
     </ClInclude>
     <ClInclude Include="..\User Files\WeirdShape.h">
       <Filter>User Files\GameObjects\DebuggingGameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\SoundSystem.h">
+      <Filter>P2Engine\Headers\SoundSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\DeathMatchLevel.h">
+      <Filter>User Files\Levels\TankGameLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\DesertFloor.h">
+      <Filter>User Files\GameObjects\TankGameDemoGameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\TankShell.h">
+      <Filter>User Files\GameObjects\TankGameDemoGameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\TankBottom.h">
+      <Filter>User Files\GameObjects\TankGameDemoGameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\TankTop.h">
+      <Filter>User Files\GameObjects\TankGameDemoGameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\Tank.h">
+      <Filter>User Files\GameObjects\TankGameDemoGameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\SoundManager.h">
+      <Filter>P2Engine\Headers\SoundSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\P2Math.h">
+      <Filter>P2Engine\Headers\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\BGM.h">
+      <Filter>User Files\GameObjects\TankGameDemoGameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\DebugVisualizer.h">
+      <Filter>P2Engine\Headers\Tools\DebugVisualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\AlarmTestLevel.h">
+      <Filter>User Files\Levels\AlarmTestLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\AlarmExampleGameObject.h">
+      <Filter>User Files\GameObjects\AlarmTest</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\SoundTest1.h">
+      <Filter>User Files\GameObjects\SoundTestObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\TerrainModel.h">
+      <Filter>P2Engine\Headers\TerrainSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\Terrain.h">
+      <Filter>P2Engine\Headers\TerrainSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\TerrainAssetManager.h">
+      <Filter>P2Engine\Headers\TerrainSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\TerrainManager.h">
+      <Filter>P2Engine\Headers\TerrainSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\NoTerrainInstance.h">
+      <Filter>P2Engine\Headers\TerrainSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\CollisionVolume.h">
+      <Filter>P2Engine\Headers\CollisionSystem\CollisionVolumes</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\BoundingSphereVolume.h">
+      <Filter>P2Engine\Headers\CollisionSystem\CollisionVolumes</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\AABBBoundingBox.h">
+      <Filter>P2Engine\Headers\CollisionSystem\CollisionVolumes</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\OOBB.h">
+      <Filter>P2Engine\Headers\CollisionSystem\CollisionVolumes</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\CollisionSingleProcessor.h">
+      <Filter>P2Engine\Headers\CollisionSystem\CollisionPairTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\CollisionProcessorBase.h">
+      <Filter>P2Engine\Headers\CollisionSystem\CollisionPairTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\CollisionPairProcessor.h">
+      <Filter>P2Engine\Headers\CollisionSystem\CollisionPairTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\CollisionTerrainProcessor.h">
+      <Filter>P2Engine\Headers\CollisionSystem\CollisionPairTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\SoundTestLevel.h">
+      <Filter>User Files\Levels\SoundTestLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\SoundTester.h">
+      <Filter>User Files\GameObjects\SoundTestObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\PlayModeBase.h">
+      <Filter>P2Engine\Headers\SoundSystem\PlayModes</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\BurstSoundUserEndedReceiver.h">
+      <Filter>P2Engine\Headers\SoundSystem\SoundEndRecievers</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\BurstSoundEndReceiver.h">
+      <Filter>P2Engine\Headers\SoundSystem\SoundEndRecievers</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\Sound.h">
+      <Filter>P2Engine\Headers\SoundSystem\SoundTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\Sound2D.h">
+      <Filter>P2Engine\Headers\SoundSystem\SoundTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\Burst2DPlayMode.h">
+      <Filter>P2Engine\Headers\SoundSystem\PlayModes\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\Looped2DPlayMode.h">
+      <Filter>P2Engine\Headers\SoundSystem\PlayModes\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\Burst3DPlayMode.h">
+      <Filter>P2Engine\Headers\SoundSystem\PlayModes\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\Looped3DPlayMode.h">
+      <Filter>P2Engine\Headers\SoundSystem\PlayModes\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\Audible.h">
+      <Filter>P2Engine\Headers\SoundSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\SoundConsciousListeningState.h">
+      <Filter>P2Engine\Headers\SoundSystem\SoundConsciousListeningStates</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\ListeningState.h">
+      <Filter>P2Engine\Headers\SoundSystem\SoundConsciousListeningStates</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\NotListeningState.h">
+      <Filter>P2Engine\Headers\SoundSystem\SoundConsciousListeningStates</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\SoundListenerTest.h">
+      <Filter>User Files\GameObjects\SoundTestObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\Sound3D.h">
+      <Filter>P2Engine\Headers\SoundSystem\SoundTypes\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\No3DSound.h">
+      <Filter>P2Engine\Headers\SoundSystem\SoundTypes\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\ObjectSound3DTest.h">
+      <Filter>User Files\GameObjects\SoundTestObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>User Files</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\SoundConscious.h">
+      <Filter>P2Engine\Headers\SoundSystem\SoundConscious</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\DefaultSoundConscious.h">
+      <Filter>P2Engine\Headers\SoundSystem\SoundConscious</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\CollisionTester.h">
+      <Filter>User Files\Levels\TankGameLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\CameraObjectFollow.h">
+      <Filter>User Files\Levels\TankGameLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\CollisionTesterMovable.h">
+      <Filter>User Files\Levels\TankGameLevel</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

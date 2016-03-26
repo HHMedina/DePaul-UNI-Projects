@@ -1,0 +1,5 @@
+<map id="Sound" name="Sound">
+<area shape="rect" id="node2" href="$class_sound2_d.html" title="{Sound2D\n||+ Play()\l+ SetLooped()\l+ Release()\l# ResetToDefaultState()\l# Sound2D()\l# Sound2D()\l# Sound2D()\l# operator=()\l# ~Sound2D()\l}" alt="" coords="5,483,165,677"/>
+<area shape="rect" id="node3" href="$class_sound3_d.html" title="{Sound3D\n|# audiblePos\l# maxSoundDist\l# minSoundDist\l|+ Play()\l+ SetLooped()\l+ SetSoundPosition()\l+ GetSoundPosition()\l+ SetMinSoundDistance()\l+ Release()\l+ Stop()\l+ Pause()\l+ IsPlaying()\l# Sound3D()\l# Sound3D()\l# Sound3D()\l# operator=()\l# ~Sound3D()\l# ResetToDefaultState()\l}" alt="" coords="189,424,360,736"/>
+<area shape="rect" id="node4" href="$class_no3_d_sound.html" title="{No3DSound\n|&#45; zeroVect\l&#45; instance\l|+ Play()\l+ SetLooped()\l+ GetSoundPosition()\l+ Release()\l+ SetMinSoundDistance()\l+ Stop()\l+ Pause()\l+ IsPlaying()\l&#45; No3DSound()\l&#45; No3DSound()\l&#45; operator=()\l&#45; ~No3DSound()\l&#45; SetSoundPosition()\l&#45; GetInstance()\l&#45; DeleteMe()\l}" alt="" coords="189,784,360,1081"/>
+</map>

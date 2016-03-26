@@ -6,7 +6,7 @@ REM  mm mm
 
 REM cleanup root director
 
-    rmdir /S /Q Debug
+REM rmdir /S /Q Debug
     rmdir /S /Q Release
     rmdir /S /Q ipch
     del /F /S /A:H *.suo
@@ -16,7 +16,7 @@ REM walk through subdirectories delete Release & Debug subs
 
 for /d %%D in (*) do (
 	echo %%~fD
-	rmdir /S /Q %%~D\Debug
+    rmdir /S /Q %%~D\Debug
 	rmdir /S /Q %%~D\Release
 	rmdir /S /Q %%~D\lib
 )

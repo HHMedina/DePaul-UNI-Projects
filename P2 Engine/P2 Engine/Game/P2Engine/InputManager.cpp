@@ -36,25 +36,48 @@ void InputManager::RegisterInput(Inputable * in, AZUL_KEY key, KeyEvent keyEvent
 		registeredKeyStates[key] = new KeyState(key);
 	}
 	
-	//attempt to register
-	registeredKeyStates[key]->Register(in,keyEvent);
-		
+	if(keyEvent == KeyUpAndDown){//if keyevent is both then register for both
+		//attempt to register
+		registeredKeyStates[key]->Register(in,KeyDown);
+		registeredKeyStates[key]->Register(in,KeyUp);
+
+		//adjust Inputable's Registered Keys list (Already checks for doubles)
+		in->AddRegisteredKeyPair(Inputable::KeyPair(key,KeyDown));
+		in->AddRegisteredKeyPair(Inputable::KeyPair(key,KeyUp));
+
+	}else{//else do other they specified 
+		registeredKeyStates[key]->Register(in,keyEvent);
+		in->AddRegisteredKeyPair(Inputable::KeyPair(key,keyEvent));
+	}
 	
 }
 
 void InputManager::DeregisterInput(Inputable * target, AZUL_KEY key, KeyEvent keyEvent){
 	iterate = registeredKeyStates.find(key);
 	if(iterate!=registeredKeyStates.end()){
-		//check Keystate to see if gameobject is not there. If so register it
-		if(!registeredKeyStates[key]->Deregister(target,keyEvent)){//not found
-			//cout<<"InputManager: GameObject " <<target<<" not Found in Register with \""<<char(key)<<" and KeyEvent \""<<KeyState::GetCStringOfEnum(keyEvent)<<"\"."<<endl;
-		}else{//is found and check if no Inputables are Registered to key and remove key
-			if(registeredKeyStates[key]->IsKeyStateEmpty()){//check if empty
-				delete iterate->second;
-				registeredKeyStates.erase(iterate);
-			
-			}
+		
+		//attempt deregister
+		if(keyEvent==KeyUpAndDown){
+			//check Keystate to see if gameobject is not there. If so register it
+			registeredKeyStates[key]->Deregister(target,KeyDown);
+			registeredKeyStates[key]->Deregister(target,KeyUp);
+
+			//adjust Inputable's Registered Keys list (Already checks for doubles)
+			target->RemoveRegisteredKeyPair(Inputable::KeyPair(key,KeyDown));
+			target->RemoveRegisteredKeyPair(Inputable::KeyPair(key,KeyUp));
+
+		}else{
+			registeredKeyStates[key]->Deregister(target,keyEvent);
+			target->RemoveRegisteredKeyPair(Inputable::KeyPair(key,keyEvent));
 		}
+
+		//check if keystate is empty
+		if(registeredKeyStates[key]->IsKeyStateEmpty()){//check if empty
+			delete iterate->second;
+			registeredKeyStates.erase(iterate);
+			
+		}
+		
 	}else{
 		//cout<<"InputManager: GameObject " <<target<<" not Found in Register with \""<<char(key)<<" and KeyEvent \""<<KeyState::GetCStringOfEnum(keyEvent)<<"\"."<<endl;
 	}
@@ -62,3 +85,14 @@ void InputManager::DeregisterInput(Inputable * target, AZUL_KEY key, KeyEvent ke
 
 }
 
+void InputManager::DeregisterAllInputKeys(Inputable * in){
+
+	while(!in->myRegisteredKeys.empty()){
+		DeregisterInput(in,in->myRegisteredKeys.front().myKey,in->myRegisteredKeys.front().myKeyEvent);
+		//in->myRegisteredKeys.pop_front();//deregister also removes from list
+	}
+}
+
+bool Inputable::KeyPair::operator ==(const KeyPair& rhs)const{
+	return myKey==rhs.myKey&&myKeyEvent==rhs.myKeyEvent;
+}

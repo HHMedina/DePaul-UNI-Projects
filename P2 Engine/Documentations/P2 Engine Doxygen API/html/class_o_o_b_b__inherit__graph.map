@@ -1,0 +1,3 @@
+<map id="OOBB" name="OOBB">
+<area shape="rect" id="node2" href="$class_collision_volume.html" title="{CollisionVolume\n|# myOwner\l# scaleM\l# rotationM\l# translationM\l# cheapCenter\l# cheapSphereRadius\l# cheapMinAABBPoint\l# cheapMaxAABBPoint\l|+ CollisionVolume()\l+ GetScaleMatrix()\l+ GetRotationMatrix()\l+ GetTranslationMatrix()\l+ GetRenderMatrix()\l+ GetCheapMaxAABBPoint()\l+ GetCheapMinAABBPoint()\l+ GetCheapSphereRadius()\l+ GetCheapCenter()\l+ DrawColVolume()\l# AcceptCollisionTest()\l# CollisionTest()\l# CollisionTest()\l# CollisionTest()\l# CollisionTest()\l# ~CollisionVolume()\l# UpdateValues()\l}" alt="" coords="9,5,200,420"/>
+</map>

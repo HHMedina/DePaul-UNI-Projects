@@ -11,7 +11,7 @@ Floor::Floor(){
 	floorRot.set( ROT_XYZ, 0, 0, 0);
 	floorPos.set(0,0,0);
 	temp = floorScale * floorRot * Matrix( TRANS, floorPos );
-	SetGameObjectWorld(temp);
+	//SetGameObjectWorld(temp);
 
 }
 Floor::~Floor(){

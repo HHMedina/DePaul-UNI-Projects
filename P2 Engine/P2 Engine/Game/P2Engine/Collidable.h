@@ -4,6 +4,8 @@
 #include "Azul.h"
 #include "CollidableGroup.h"
 #include <assert.h>
+#include "CollisionVolume.h"
+
 class Collidable{
 	
 public:
@@ -12,8 +14,17 @@ public:
 	friend class CollidableGroup;
 	template<class T>
 	friend class CollisionSingleProcessor;
+	template<class T>
+	friend class CollisionTerrainProcessor;
 	template<class T,class T2>
 	friend class CollisionPairProcessor;
+
+
+	friend class CollisionVolume;
+	friend class BoundingSphereVolume;
+	friend class AABBBoundingBox;
+	friend class OOBB;
+	friend class P2Math;
 
 	/**
 	\ingroup COLLISION
@@ -69,9 +80,7 @@ public:
 	\endcode
 
 	*/
-	void SetCollider(Model * collider){
-		collisionModel = collider;
-	}
+	void SetCollider(Model * collider,CollisionVolumeType type = CollisionVolumeType::SphereVolume);
 
 
 	
@@ -144,20 +153,30 @@ public:
 		CollidableGroup<C>::Instance().Deregister(cPtr);
 	}
 
+	/**
+	\ingroup COLLISION
+	\brief This method sets the transform of the CollisionModel
+	
+	\param world world is the matrix that the collidable's collision model will be set to.
+		
+	*/
+
+	CollisionVolume& GetCollisionVolume();
+
+	Vect& GetCheapSphereCenter();
+
+	float GetCheapSphereRadius();
+
 protected:
 
-	//used for collision manager
-	static bool TestCollisionPair(Collidable* a , Collidable* b );
+	
+	void SetColWorld(Matrix& world);
 
-	Collidable(){ collisionModel =NULL;colWorld.set(IDENTITY);}
+	Collidable();
 	Collidable( const Collidable & rhs){ rhs;}
 	Collidable& operator = (const Collidable& rhs){ rhs;}
 	
-	virtual ~Collidable(){
-		//Does not free up collisionModel because collidable does not own the object
-		// it points to.
-		
-	}
+	virtual ~Collidable();
 
 	/**
 	\ingroup COLLISION
@@ -239,9 +258,11 @@ protected:
 
 	\endcode
 	*/
-	virtual void Collision(Collidable*){printf("COLLIDABLE WITH COLLIDABLE");}
+	virtual void Collision(Collidable*){}
+	
+	virtual void TerrainCollision(){}
 
-		
+	static bool TestCollisionPair(CollisionVolume*,CollisionVolume*);
 	/**
 	\ingroup IMPORTANTCOLLISIONMEMBERS
 	\brief This is the Model which is the representation of the collision mesh.
@@ -250,6 +271,8 @@ protected:
 	*/
 	Model* collisionModel;
 
+	CollisionVolume* colVolume;
+
 	/**
 	\ingroup IMPORTANTCOLLISIONMEMBERS
 	\brief This is the world Matrix of the collisonModel which holds its position, scale, and rotation.
@@ -257,5 +280,9 @@ protected:
 	This Matrix will be used to set the rotation,location, and scale of the Collision Model.
 	*/
 	Matrix colWorld;
+
+	
+	BoundingSphereVolume* cheapSphere;
+	AABBBoundingBox* cheapAABB;
 };
 #endif COLLIDABLE_H

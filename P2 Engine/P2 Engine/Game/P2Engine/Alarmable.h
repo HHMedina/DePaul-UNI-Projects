@@ -230,13 +230,21 @@ public:
 	*/
 	void CancelAlarm(AlarmID id);
 
+	void PauseAlarm(AlarmID id);
+
 protected:
 
 	Alarmable(){
-	
+		
 		for(int i =0;i< MAX_ALARM_EVENTS ;++i){ 
 			timeTrigger[i] =-1;//start all alarms as inactive
 		}
+		/*
+		//start as not paused
+		for(int i =0;i< MAX_ALARM_EVENTS ;++i){ 
+			IsPaused[i] =false;//start all alarms as not paused
+		}
+		*/
 	}
 	Alarmable( const Alarmable & rhs){ rhs;}
 	Alarmable& operator = (const Alarmable& rhs){ rhs;}
@@ -320,5 +328,8 @@ protected:
 	*/
 	virtual void Alarm2(){}
 
+	/*
+	bool IsPaused[MAX_ALARM_EVENTS];
+	*/
 };
 #endif

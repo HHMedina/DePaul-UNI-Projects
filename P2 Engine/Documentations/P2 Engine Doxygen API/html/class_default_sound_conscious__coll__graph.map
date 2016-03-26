@@ -1,0 +1,4 @@
+<map id="DefaultSoundConscious" name="DefaultSoundConscious">
+<area shape="rect" id="node2" href="$class_sound_conscious.html" title="{SoundConscious\n|# sndConPos\l# sndConDirection\l|+ GetSoundConsciousPosition()\l+ GetSoundConsciousDirection()\l+ SetAsListener()\l# SoundConscious()\l# SoundConscious()\l# operator=()\l# ~SoundConscious()\l# SetSndConciousPos()\l# SetToNotListening()\l# SetToListening()\l# SetSndConciousDir()\l# UpdatePosAndDir()\l}" alt="" coords="11,219,223,472"/>
+<area shape="rect" id="node3" href="$class_sound_conscious_listening_state.html" title="{SoundConsciousListeningState\n||# SoundConsciousListeningState()\l# SoundConsciousListeningState()\l# operator=()\l# ~SoundConsciousListening\lState()\l# Update()\l}" alt="" coords="5,5,228,156"/>
+</map>

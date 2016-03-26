@@ -6,13 +6,14 @@ Bomb::Bomb(float xPos , float yPos, float zPos){
 	//graphicsObject = GraphicsObjectHandler::CreateGraphicalObject(AssetManager::GetModel("Cottage"));
 	SetGraphicAndCollisionModel(GraphicsObjectMaker::CreateGraphicsObjectFlatTexture(AssetManager::GetModel("BombModel"),AssetManager::GetTexture("BombTexture")) );
 	SetAlarm(AlarmID_0,10);
+	colVolume = new BoundingSphereVolume(this);
 
 	Matrix temp = Matrix();
-	bombScale.set( SCALE, 1.0f, 1.0f, 1.0f);
+	bombScale.set( SCALE, 10.0f, 10.0f, 10.0f);
 	bombRot.set( ROT_XYZ, 0, 0, 0);
 	bombPos = Vect(xPos,yPos,zPos);
 	temp = bombScale * bombRot * Matrix( TRANS, bombPos );
-	SetGameObjectWorld(temp);
+//	SetGameObjectWorld(temp);
 	RegisterCollision(this);
 }
 
@@ -29,11 +30,11 @@ void Bomb::Initialize(float x, float y, float z){
 	SetAlarm(AlarmID_0,10);
 
 	Matrix temp = Matrix();
-	bombScale.set( SCALE, 1.0f, 1.0f, 1.0f);
+	bombScale.set( SCALE, 10.0f, 10.0f, 10.0f);
 	bombRot.set( ROT_XYZ, 0, 0, 0);
 	bombPos = Vect(x,y,z);
 	temp = bombScale * bombRot * Matrix( TRANS, bombPos );
-	SetGameObjectWorld(temp);
+//	SetGameObjectWorld(temp);
 	RegisterCollision(this);
 }
 

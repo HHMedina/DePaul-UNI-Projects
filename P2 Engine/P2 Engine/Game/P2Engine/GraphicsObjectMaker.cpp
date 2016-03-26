@@ -77,7 +77,16 @@ GraphicsObjectColorNoTexture* GraphicsObjectMaker::privCreateGraphicsObjectColor
 }
 
 void GraphicsObjectMaker::privRemoveGraphicsObject(GraphicsObject* grphObj){
-	allGraphicsObjects.remove(grphObj);
+	
+	list<GraphicsObject*>::iterator it =allGraphicsObjects.begin();
+	while(it!=allGraphicsObjects.end()){
+		if(*it == grphObj){
+			delete (*it);
+			allGraphicsObjects.remove(grphObj);
+			return;
+		}
+		++it;
+	}
 }
 
 //=====================
@@ -101,7 +110,7 @@ GraphicsObjectWireFrame* GraphicsObjectMaker::CreateGraphicsObjectWireFrame(Mode
 }
 
 GraphicsObjectColorNoTexture* GraphicsObjectMaker::CreateGraphicsObjectColorNoTexture(Model* model){
-	return Instance()->CreateGraphicsObjectColorNoTexture(model);
+	return Instance()->privCreateGraphicsObjectColorNoTexture(model);
 }
 
 void GraphicsObjectMaker::RemoveGraphicsObject(GraphicsObject* grphObj){
