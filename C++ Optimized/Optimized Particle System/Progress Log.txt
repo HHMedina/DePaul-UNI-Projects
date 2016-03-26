@@ -1,0 +1,330 @@
+Start:
+	Running times without any changes ( 10k particles )
+
+	Debug:
+	 update:1262.053223 ms  draw:655.474365 ms  tot:1917.527710
+	Release:
+	 update:484.214264 ms  draw:501.172974 ms  tot:985.387207
+	Ctrl+f5 Release: 
+	 update:4.560562 ms  draw:6.215325 ms  tot:10.775887
+
+Change 1(Changelist: 172261):
+
+	Matrix.h and Matrix.cpp:
+
+		Changed Matrix class to be const correct. Also changed them so that the initialization
+		list is used instead of assignments in the constructor and copy constructor. Also added
+		the assignment operator (mising big four).
+
+	Vect4D.h and vect4D.cpp:
+
+		Changed Vector class to be const correct. Also changed it so that the initialization list
+		is used instead of 	assignments in the constructor and copy constructor. Also added the 
+		assignment operator (missing big four). Changed	operator + and operator - to take vector 
+		reference as parameter.
+
+	Running times After change 1 ( 10k particles )
+
+	Debug:
+	 update:1209.290405 ms  draw:597.301636 ms  tot:1806.592041
+	Release:
+	 update:409.663635 ms  draw:531.795410 ms  tot:941.459045
+	Ctrl+f5 Release: 
+	 update:4.741215 ms  draw:6.177293 ms  tot:10.918509
+
+Change 2(Changelist: 172325):
+
+	Overall Change: Switch from a double based system to a float based math system.
+
+	Matrix.h and Matrix.cpp:
+
+		Changed Matrix class to use floats instead of using doubles from m0 to m15. All functions 
+		have been changed 	so that they use float temporaries instead of doubles. Changed implicit 
+		doubles to explicit floats for constant numbers.
+
+	Vect4D.h and Vect4D.cpp:
+
+		Changed Vect4D class to use floats instead of using doubles, for x,y,z,w. All functions have 
+		been changed so that they use float temporaries instead of doubles. Changed implicit doubles
+		to explicit floats for constant numbers.
+
+	Particle.h and Particle.cpp:
+
+		Changed Particle class to use floats instead of using doubles.All functions have been changed 
+		so that they use float temporaries instead of doubles. Changed implicit doubles to explicit 
+		floats for constant numbers.
+
+	ParticleEmitter.h and ParticleEmitter.cpp:
+
+		Changed the class members and temporary members in functions so that they now use floats instead 
+		of doubles 	where needed. All class doubles were changed to floats. The SquareVertices struct 
+		was changed to use floats instead of doubles. This means that All openGL functions that worked
+		with doubles were changed to their float counter parts. This included getting the matrix view 
+		as a matrix of floats instead of doubles. This also included inserting the squareOffsets as 
+		floats instead of GL_DOUBLEs. glLoadMatrixd	was changed to glLoadMatrixf. In 
+		ParticleEmitter::Execute(),	the casts to doubles were changed to floats and the sign was changed
+		to an int, as a double was unnecessary. I also changed implicit doubles to explicit floats for 
+		constant numbers. The only temp I did not change was the temps in particleEmitter.cpp that had to 
+		deal with the spawning frequency because float was not precise enough and would negate the effect
+		of addition and subtraction. Instead, I kept the double for precision.
+
+	Main.cpp:
+
+		Since I changed the system to floats, I had load into the inverse cameraMatrix as a float matrix
+		and no longer a double Matrix.
+
+	Running times After change 2 ( 10k particles )
+
+	Debug:
+	 update:1225.743652 ms  draw:605.637695 ms  tot:1831.381348
+	Release:
+	 update:552.981079 ms  draw:506.933685 ms  tot:1059.914795
+	Ctrl+f5 Release: 
+	 update:2.799383 ms  draw:5.132142 ms  tot:7.931525
+	 
+Change 3(Changelist: 172564):
+
+	Overall Change: Added big four to missing classes, data member rearrangement for optimal layout. 
+	Changed	Draw buffer list to take pointers instead of particles.
+
+	ParticleEmitter.h and ParticleEmitter.cpp:
+
+		Added the missing big four: copy constructor, assignment operator. I also changed the draw list 
+	so that	it takes pointers to particles, however I think I can just make it walk the list via the head,
+	instead	of having to recopy all of those pointers...need to investigate this. I also made this class 
+	const correct as well as rearranging the data so that it is optimally packed. 
+	
+	Particle.h and Particle.cpp:
+		
+		I added the missing big four: copy constructor, and assignment operator. I also made the class more 
+	const correct as well as rearranging the data members so that it is optimally packed.
+
+	Running times After change 3 ( 10k particles )
+
+	Debug:
+	 update:950.057190 ms  draw:530.089783 ms  tot:1480.146973
+	Release:
+	 update:449.407928 ms  draw:419.259064 ms  tot:868.666992
+	Ctrl+f5 Release: 
+	 update:2.180630 ms  draw:5.087161 ms  tot:7.267791
+	 
+Change 4(Changelist: 172580):
+
+	Overall Change: Added big four to missing classes, data member rearrangement for optimal layout. 
+	Changed	Draw buffer list to take pointers instead of particles.
+
+	ParticleEmitter.h and ParticleEmitter.cpp:
+
+		I noticed that the previous coder copied the particles to draw into a separate list, but nothing
+	was done to the previous particles so it did not make sense to copy it to a separate list. In addition
+	to this, the previous coder changed the diff_row's in each particle but once it goes out of scope of
+	the draw function, the change is gone too, since it did not alter the original particle (particles passed
+	in to the list was copied and not by reference). Therefore, I removed the draw list in order to avoid 
+	having to copy the list and does the behaviour the coder intended to do. I also removed the particle 
+	list member because it was never being used. HUGE CHANGE IN PERFORMANCE! (the stl calls to debugging 
+	functions are gone) The previous function was Theta(2n), where the new function is Theta(n), since the 
+	list only needs to be traversed once.
+	
+
+	Running times After change 4 ( 10k particles )
+
+	Debug:
+	 update:53.560188 ms  draw:37.014023 ms  tot:90.574211
+	Release:
+	 update:1.572482 ms  draw:6.981087 ms  tot:8.553569
+	Ctrl+f5 Release: 
+	 update:1.568459 ms  draw:4.683070 ms  tot:6.251529
+
+Change 5(Changelist: 173411):
+
+	Overall Change: Added the custom memory system and added a particle factory.
+
+	ParticleEmitter.h and ParticleEmitter.cpp:
+
+		I changed the line that gets a new particle via new particle() and instead recieves a pointer
+	from a factory that has preinstantiated 30k particles via new (with new custom memory) so that it will
+	recycle particles instead of calling new and delete constantly.
+
+	ParticleFactory.H and ParticleFactory.cpp (new files!)
+
+		Added to manage the particles in the world that has a memory pool of all of the particles needed
+	for the particle system. In this case, it manages 30k particles. When one particle is deleted it is moved
+	into a stack (recycling stack) and then popped out when needed.
+	
+	Compiler Settings:
+	
+		I also added a new compiler settings, which uses fast floats as its precision model. I also did
+	a few other tweaks such as omitting frame pointers and getting rid of uneccessary runtime checks.
+
+	Running times After change 5 ( 10k particles )
+
+	Debug:
+	 update:53.876877 ms  draw:53.245323 ms  tot:107.122200
+	Release:
+	 update:0.770882 ms  draw:3.351946 ms  tot:4.122828
+	Ctrl+f5 Release: 
+	 update:0.863402 ms  draw:3.275882 ms  tot:4.139284
+	Fast (new compiler setting): 
+	 update:0.784778 ms  draw:4.226685 ms  tot:5.011463
+	cntrl+f5 Fast (new compiler setting): 
+	 update:0.811839 ms  draw:2.788412 ms  tot:3.600251
+
+
+Change 6(Changelist: 173416):
+
+	Overall Change: Added hotcold Structure and changed a few things here and there (particle and particle emitter classes)
+	to adjust for it.
+
+	HotParticle.h, HotParticle.cpp, ColdParticleSide.h ,ColdParticleSide.cpp
+
+	Added the hot and cold system and utilized it in the particle factory.... However there is not much of a change.
+	I will have to investigate different data setups to gain more of a speed boost.' 
+
+	Running times After change 6 ( 10k particles )
+
+	Debug:
+	 update:53.531666 ms  draw:53.565308 ms  tot:107.096970
+	Release:
+	 update:0.843289 ms  draw:3.271493 ms  tot:4.114782
+	Ctrl+f5 Release: 
+	 update:0.847312 ms  draw:3.266739 ms  tot:4.114051
+	Fast (new compiler setting): 
+	 update:0.802331 ms  draw:4.247529 ms  tot:5.049860
+	cntrl+f5 Fast (new compiler setting): 
+	 update:0.771247 ms  draw:2.759157 ms  tot:3.530404
+	 
+Change 7(Changelist: 173990):
+
+	Overall Change: minor RVO changes in all code (that is modifiable). Removed all instances of Curr_row, 
+	diff_row, prev_row. Original behaviour was diff_row always as 0... therefore it did nothing. Therefore I could 
+	remove all of them. I Also fixed An error in mixing the memory systems.
+
+	HotParticle.h, HotParticle.cpp, ColdParticleSide.h ,ColdParticleSide.cpp
+
+		I removed all instances of curr_row0 - curr_row3, diff_row0 - diff_row3, prev_row0 - prev_row3, since
+	they ended up doing virtually nothing in the program except waste computational time. I also changed any lines
+	that perform multiple mathematical computations and changed them so that they do a uniary computation at each step
+	to remove the temporaries that were created in-between the steps (RVO). I also changed all of the new and delete
+	operators so that they would not be mixed. In HotParticle::Update(), there was a local float called scale which
+	got the determinant of the diff_row's, which was always 0 so it would always be 0. Therefore, this could be removed
+	completely.
+	
+	ParticleEmitter.h && ParticleEmitter.cpp
+	
+		I removed all instances of curr_row0 - curr_row3, diff_row0 - diff_row3, prev_row0 - prev_row3, since
+	they ended up doing virtually nothing in the program except waste computational time. The particle emitter was constantly
+	creating temporaries on the stack, so I moved them to being class members in order to prevent continual unneeded creation.
+	
+		I did this to the following variables in particleEmitter::Draw():
+			cameraMatrix
+			transCamera
+			transParticle
+			rotParticle
+			scaleMatrix
+	
+	In addition to this, I also moved the gl calls that set the options for what is being draw outside of the while loop in
+	Draw(), because there is no need to specify for each triangle, the properties of the particle (they are the same).
+	
+		This was moved...
+		
+		// OpenGL goo... don't worrry about this
+		glVertexPointer(3, GL_FLOAT, 0, squareVertices);
+		glEnableClientState(GL_VERTEX_ARRAY);
+		glColorPointer(4, GL_UNSIGNED_BYTE, 0, squareColors);
+		glEnableClientState(GL_COLOR_ARRAY);
+		
+	In draw(), the Matrix pivotParticle and Pivot Vect, was never used, so I removed them completely. All it was doing was
+	Wasting computation time. In addition to this, I changed code so that it is better with RVO.
+	
+		tmp = scaleMatrix * transCamera * transParticle * rotParticle * scaleMatrix; 
+		
+		became...
+		
+		tmp = scaleMatrix;
+		tmp	*= transCamera;
+		tmp	*= transParticle;
+		tmp	*= rotParticle;
+		tmp	*= scaleMatrix;
+		
+	Matrix.h && Matrix.cpp
+	
+		I added the void operator-=(const Matrix &t) functions in a previous trial, but I ended up not needing it. 
+	I kept it in case of possible future usage.
+	
+	Running times After change 7 ( 10k particles )
+
+	Debug:
+	 update:14.699724 ms  draw:11.808928 ms  tot:26.508652
+	Release:
+	 update:0.579622 ms  draw:3.289400 ms  tot:3.869022
+	Ctrl+f5 Release: 
+	 update:0.648738 ms  draw:2.237304 ms  tot:2.886042
+	Fast (new compiler setting): 
+	 update:0.593518 ms  draw:3.084978 ms  tot:3.678496
+	cntrl+f5 Fast (new compiler setting): 
+	 update:0.605220 ms  draw:1.988268 ms  tot:2.593488
+
+Change 8(Changelist:174629):
+
+	Overall Change: Changed some code to be outside of the draw loop because it was unncessessary for it to be called
+	every time a prticle was being drawn. I also forgot to initialize scale when a new particle is spawned so i fixed
+	it (would have probably been disqualification so Id rather take less speed then that.) I also rearranged my hot cold
+	structure so that scale,position,life and velocity are in the hot side and rotation and rotation velocity are in the 
+	cold side.
+
+	ParticleEmitter.cpp
+
+		I changed getting the position from within the while loop to outside of the while loop. The camera position
+	does not change while drawing the particles, so you only need to get the camera position once. Therefore, I moved it
+	outside of the loop.
+
+	HotParticle.h && HotParticle.cpp && ColdParticleSide.h && ColdParticleSide.cpp
+
+		I moved the members: scale, position, velocity, and life from coldParticle to the hot particle since they are
+	being used the most. this included changing the members in each initialization list for the copy constructor and other
+	related funcitions. I also added missing big four in both classes. In addition to this, I added a function call initialize
+	that takes parameters to set the scale,position, etc... 		
+
+	Running times After change 8 ( 10k particles )
+
+	Debug:
+	 update:14.559663 ms  draw:11.070054 ms  tot:25.629719
+	Release:
+	 update:0.624268 ms  draw:3.257017 ms  tot:3.881284
+	Ctrl+f5 Release: 
+	 update:0.627925 ms  draw:2.225713 ms  tot:2.853638
+	Contest_Setting(new compiler setting): 
+	 update:0.613296 ms  draw:3.031739 ms  tot:3.645036
+	cntrl+f5 Contest_Setting(new compiler setting): 
+	 update:0.622805 ms  draw:1.911203 ms  tot:2.534007
+
+Change 9(Changelist: 174807):
+
+	Overall Change: Changed the multiplications of the matrices and instead concatenated the matrices and multiplying
+	only the elements of the matrices that get affected. A lot of them were zeros so the multiplications would have
+	wasted computation time just multiplying zeros. 
+	
+	ParticleEmitter.cpp
+
+	Changed:
+		partTmp = scaleMatrix;
+		partTmp *= transCamera;
+		partTmp *= transParticle;
+		partTmp *= rotParticle;
+		partTmp *= scaleMatrix;
+
+	to be replaced by a function ConcatMatricesForDraw(), which creates a matrix that matches the result of all of the
+	multiplications. This avoid multiplying when it is not neccessary. (not implemented in SIMD, but a lot faster.)
+
+	Running times After change 9 ( 10k particles )
+
+	Debug:
+	 update:9.594413 ms  draw:4.984633 ms  tot:14.579045
+	Release:
+	 update:1.009726 ms  draw:1.692873 ms  tot:2.702600
+	Ctrl+f5 Release: 
+	 update:0.648738 ms  draw:2.237304 ms  tot:2.886042
+	Contest_Setting(new compiler setting): 
+	 update:0.980835 ms  draw:1.559389 ms  tot:2.540225
+	cntrl+f5 Contest_Setting(new compiler setting): 
+	 update:0.933293 ms  draw:1.489173 ms  tot:2.422466
