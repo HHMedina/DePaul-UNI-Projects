@@ -1,0 +1,74 @@
+Program Assignment: 3 
+Name: Student Values
+------------Memory System------------
+
+Test15: 
+
+     memSystem mem;                     
+     mem.InitializeSystem();            
+     void *a = mem.Malloc( 0x100 );     
+     void *b = mem.Malloc( 0x200 );     
+     void *c = mem.Malloc( 0x10 );     
+     void *d = mem.Malloc( 0x200 );     
+     mem.dump();                        
+     mem.Free( d );                     
+     mem.Free( b );                     
+     mem.dump();                        
+     void *r = mem.Malloc( 0x200 );     
+     mem.dump();                        
+
+------- DUMP -------------
+
+heapStart: 0x007A98D0     
+heapEnd:   0x007B60D0 
+
+usedHead:  0x007A9C50     
+freeHead:  0x007A9E60 
+
+Heap Hdr   s: 007A98D0  e: 007A9910                            size: 0x40 
+USED HDR   s: 007A9910  e: 007A9920  p: 007A9A20  n: 00000000  size: 0x10    AF: 0 
+USED       s: 007A9920  e: 007A9A20                            size: 0x100 
+USED HDR   s: 007A9A20  e: 007A9A30  p: 007A9C30  n: 007A9910  size: 0x10    AF: 0 
+USED       s: 007A9A30  e: 007A9C30                            size: 0x200 
+USED HDR   s: 007A9C30  e: 007A9C40  p: 007A9C50  n: 007A9A20  size: 0x10    AF: 0 
+USED       s: 007A9C40  e: 007A9C50                            size: 0x10 
+USED HDR   s: 007A9C50  e: 007A9C60  p: 00000000  n: 007A9C30  size: 0x10    AF: 0 
+USED       s: 007A9C60  e: 007A9E60                            size: 0x200 
+FREE HDR   s: 007A9E60  e: 007A9E70  p: 00000000  n: 00000000  size: 0x10    AF: 0 
+FREE       s: 007A9E70  e: 007B60D0                            size: 0xc260 
+
+------- DUMP -------------
+
+heapStart: 0x007A98D0     
+heapEnd:   0x007B60D0 
+
+usedHead:  0x007A9C30     
+freeHead:  0x007A9A20 
+
+Heap Hdr   s: 007A98D0  e: 007A9910                            size: 0x40 
+USED HDR   s: 007A9910  e: 007A9920  p: 007A9C30  n: 00000000  size: 0x10    AF: 0 
+USED       s: 007A9920  e: 007A9A20                            size: 0x100 
+FREE HDR   s: 007A9A20  e: 007A9A30  p: 00000000  n: 007A9C50  size: 0x10    AF: 0 
+FREE       s: 007A9A30  e: 007A9C30                            size: 0x200 
+USED HDR   s: 007A9C30  e: 007A9C40  p: 00000000  n: 007A9910  size: 0x10    AF: 1 
+USED       s: 007A9C40  e: 007A9C50                            size: 0x10 
+FREE HDR   s: 007A9C50  e: 007A9C60  p: 007A9A20  n: 00000000  size: 0x10    AF: 0 
+FREE       s: 007A9C60  e: 007B60D0                            size: 0xc470 
+
+------- DUMP -------------
+
+heapStart: 0x007A98D0     
+heapEnd:   0x007B60D0 
+
+usedHead:  0x007A9A20     
+freeHead:  0x007A9C50 
+
+Heap Hdr   s: 007A98D0  e: 007A9910                            size: 0x40 
+USED HDR   s: 007A9910  e: 007A9920  p: 007A9C30  n: 00000000  size: 0x10    AF: 0 
+USED       s: 007A9920  e: 007A9A20                            size: 0x100 
+USED HDR   s: 007A9A20  e: 007A9A30  p: 00000000  n: 007A9C30  size: 0x10    AF: 0 
+USED       s: 007A9A30  e: 007A9C30                            size: 0x200 
+USED HDR   s: 007A9C30  e: 007A9C40  p: 007A9A20  n: 007A9910  size: 0x10    AF: 0 
+USED       s: 007A9C40  e: 007A9C50                            size: 0x10 
+FREE HDR   s: 007A9C50  e: 007A9C60  p: 00000000  n: 00000000  size: 0x10    AF: 0 
+FREE       s: 007A9C60  e: 007B60D0                            size: 0xc470 

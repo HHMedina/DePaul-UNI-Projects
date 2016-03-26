@@ -1,0 +1,9 @@
+Program Assignment: 4 
+Name: Hector Medina
+
+Compiler Settings
+  - List any changes to the compiler settings here
+
+Favor Size Or Speed: orig: neither   now:  Favor fast code (/Ot)
+Omit Frame Pointers: orig: No (/Oy-) now:  Yes(/Oy)
+Enable Enhanced Instruction Set: orig: Unset now: SSE (/arch:SSE)

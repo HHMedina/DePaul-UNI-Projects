@@ -1,0 +1,25 @@
+Program Assignment: 3 
+Name: Student Values
+------------Memory System------------
+
+Test4: 
+
+ 1) allocate regular size block              
+     memSystem mem;                          
+     mem.InitializeSystem();                 
+     void *p = mem.Malloc( 200 );            
+     mem.dump();                             
+
+------- DUMP -------------
+
+heapStart: 0x007A98D0     
+heapEnd:   0x007B60D0 
+
+usedHead:  0x007A9910     
+freeHead:  0x007A9B20 
+
+Heap Hdr   s: 007A98D0  e: 007A9910                            size: 0x40 
+USED HDR   s: 007A9910  e: 007A9920  p: 00000000  n: 00000000  size: 0x10    AF: 0 
+USED       s: 007A9920  e: 007A9B20                            size: 0x200 
+FREE HDR   s: 007A9B20  e: 007A9B30  p: 00000000  n: 00000000  size: 0x10    AF: 0 
+FREE       s: 007A9B30  e: 007B60D0                            size: 0xc5a0 

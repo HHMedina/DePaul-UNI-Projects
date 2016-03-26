@@ -1,0 +1,59 @@
+Program Assignment: 5 
+Name: Hector Medina
+PA5 - Intrinsics & SIMD
+
+
+-- DEBUG -------------------------------------
+
+
+---------- Vect4D ----------------
+  Vect4D Orig: 1.783423  
+  Vect4D_SIMD: 1.684109
+       Faster: 1.058971
+
+
+---------- Matrix ----------------
+  Matrix Orig: 1.862620
+  Matrix SIMD: 1.210213
+       Faster: 1.539084
+
+
+---------- Vect * Matrix ----------------
+  Vect*Matrix Orig: 1.102370
+  Vect*Matrix_SIMD: 1.343571
+            Faster: 0.820478
+
+
+---------- LERP ----------------
+  LERP Orig: 2.721060
+  LERP SIMD: 0.960551
+     Faster: 2.832812
+
+
+
+
+-- RELEASE------------------------------------
+
+---------- Vect4D ----------------
+  Vect4D Orig: 1.176132  
+  Vect4D_SIMD: 1.070324
+       Faster: 1.098856
+
+
+---------- Matrix ----------------
+  Matrix Orig: 2.498639
+  Matrix SIMD: 0.854897
+       Faster: 2.922737
+
+
+---------- Vect * Matrix ----------------
+  Vect*Matrix Orig: 2.852116
+  Vect*Matrix_SIMD: 1.053088
+            Faster: 2.708336
+
+
+---------- LERP ----------------
+  LERP Orig: 6.112000
+  LERP SIMD: 1.013557
+     Faster: 6.030249
+

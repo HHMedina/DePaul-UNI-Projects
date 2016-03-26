@@ -1,0 +1,16 @@
+Program Assignment: 5 
+Name: <your name>
+
+ -----------Memory System------------
+
+Memory Time: 2973.287821 ms
+
+
+ --------- Bloated Nodes ---------------
+
+Creation of List: 7.216900 s
+        Find Key: 38.943917 ms
+
+ -----------Math Test------------
+
+Math test: 35.575751 ms

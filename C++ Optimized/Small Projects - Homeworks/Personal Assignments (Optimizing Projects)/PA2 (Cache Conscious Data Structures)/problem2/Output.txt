@@ -1,0 +1,174 @@
+Information for (Reworked Test_A)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x11a48f0: 00 00 00 
+
+	(Reworked Test_A): Size: 3 bytes.	Number of Padding: 0
+	(Test_A): Size: 3 bytes.
+
+Information for (Reworked Test_B)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x11a48f0: 00 00 00 00 
+	0x11a48f4: 00 00 00 00 
+
+	(Reworked Test_B): Size: 8 bytes.	Number of Padding: 0
+	(Test_B): Size: 8 bytes.
+
+Information for (Reworked Test_C)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x11a48f0: 00 00 00 00 
+	0x11a48f4: 00 aa aa aa 
+
+	(Reworked Test_C): Size: 8 bytes.	Number of Padding: 3
+	(Test_C): Size: 8 bytes.
+
+Information for (Reworked Test_D)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x11a48f0: 00 00 00 00 
+	0x11a48f4: 00 00 aa aa 
+
+	(Reworked Test_D): Size: 8 bytes.	Number of Padding: 2
+	(Test_D): Size: 12 bytes.
+
+Information for (Reworked Test_E)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x11a48f0: 00 00 00 00 
+	0x11a48f4: 00 00 00 00 
+	0x11a48f8: 00 00 00 00 
+	0x11a48fc: 00 00 00 aa 
+
+	(Reworked Test_E): Size: 16 bytes.	Number of Padding: 1
+	(Test_E): Size: 16 bytes.
+
+Information for (Reworked Test_F)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x11a48f0: 00 00 00 00 
+	0x11a48f4: 00 00 00 00 
+	0x11a48f8: 00 00 00 00 
+	0x11a48fc: 00 aa aa aa 
+
+	(Reworked Test_F): Size: 16 bytes.	Number of Padding: 3
+	(Test_F): Size: 24 bytes.
+
+Information for (Reworked Test_G)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x11a48f0: 00 00 00 00 
+	0x11a48f4: 00 00 00 00 
+	0x11a48f8: 00 00 00 00 
+	0x11a48fc: 00 aa aa aa 
+
+	(Reworked Test_G): Size: 16 bytes.	Number of Padding: 3
+	(Test_G): Size: 16 bytes.
+
+Information for (Reworked vect)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x11a48f0: 00 00 00 00 
+	0x11a48f4: 00 00 00 00 
+	0x11a48f8: 00 00 00 00 
+	0x11a48fc: 00 00 00 00 
+	0x11a4900: 00 aa aa aa 
+
+	(Reworked vect): Size: 20 bytes.	Number of Padding: 3
+	(vect): Size: 20 bytes.
+
+Information for (Reworked Test_H)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x11a48f0: 00 00 00 00 
+	0x11a48f4: 00 00 00 00 
+	0x11a48f8: 00 00 00 00 
+	0x11a48fc: 00 00 00 00 
+	0x11a4900: 00 aa aa aa 
+	0x11a4904: 00 00 00 00 
+	0x11a4908: 00 00 00 00 
+	0x11a490c: 00 aa aa aa 
+
+	(Reworked Test_H): Size: 32 bytes.	Number of Padding: 6
+	(Test_H): Size: 32 bytes.
+
+Information for (Reworked Test_I)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x11a48f0: 00 00 00 00 
+	0x11a48f4: 00 00 00 00 
+	0x11a48f8: 00 00 00 00 
+	0x11a48fc: 00 00 00 00 
+	0x11a4900: 00 00 00 00 
+	0x11a4904: 00 00 00 00 
+	0x11a4908: 00 00 00 00 
+	0x11a490c: 00 00 00 00 
+	0x11a4910: 00 00 00 00 
+	0x11a4914: 00 00 00 00 
+	0x11a4918: 00 00 00 00 
+	0x11a491c: 00 00 00 00 
+	0x11a4920: 00 00 00 00 
+	0x11a4924: 00 00 00 00 
+	0x11a4928: 00 00 00 00 
+	0x11a492c: 00 00 00 00 
+	0x11a4930: 00 00 00 00 
+	0x11a4934: 00 00 00 00 
+
+	(Reworked Test_I): Size: 72 bytes.	Number of Padding: 0
+	(Test_I): Size: 76 bytes.
+
+Information for (Reworked Test_J)...
+
+	Memory Layout (where 0xaa is padding):
+
+	0x11ad1a0: 00 00 00 00 
+	0x11ad1a4: 00 00 00 00 
+	0x11ad1a8: 00 00 00 00 
+	0x11ad1ac: 00 00 00 00 
+	0x11ad1b0: 00 00 00 00 
+	0x11ad1b4: 00 00 00 00 
+	0x11ad1b8: 00 00 00 00 
+	0x11ad1bc: 00 00 00 00 
+	0x11ad1c0: 00 00 00 00 
+	0x11ad1c4: 00 00 00 00 
+	0x11ad1c8: 00 00 00 00 
+	0x11ad1cc: 00 00 00 00 
+	0x11ad1d0: 00 00 00 00 
+	0x11ad1d4: 00 00 00 00 
+	0x11ad1d8: 00 00 00 00 
+	0x11ad1dc: 00 00 00 00 
+	0x11ad1e0: 00 00 00 00 
+	0x11ad1e4: 00 00 00 00 
+	0x11ad1e8: 00 00 00 00 
+	0x11ad1ec: 00 00 00 00 
+	0x11ad1f0: 00 00 00 00 
+	0x11ad1f4: 00 00 00 00 
+	0x11ad1f8: 00 00 00 00 
+	0x11ad1fc: 00 00 00 00 
+	0x11ad200: 00 00 00 00 
+	0x11ad204: 00 00 00 00 
+	0x11ad208: 00 00 00 00 
+	0x11ad20c: 00 00 00 00 
+	0x11ad210: 00 00 00 00 
+	0x11ad214: 00 00 00 00 
+	0x11ad218: 00 00 00 00 
+	0x11ad21c: 00 00 00 00 
+	0x11ad220: 00 00 00 00 
+	0x11ad224: 00 00 00 00 
+	0x11ad228: 00 00 00 00 
+	0x11ad22c: 00 00 00 00 
+
+	(Reworked Test_J): Size: 144 bytes.	Number of Padding: 0
+	(Test_J): Size: 160 bytes.
+
