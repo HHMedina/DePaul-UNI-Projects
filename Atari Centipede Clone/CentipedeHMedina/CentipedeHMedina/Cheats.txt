@@ -1,0 +1,1 @@
+Pressing 0 turns off the blaster's collision at any point in the game (invincibility) NOTE: Will cause blaster to stop colliding with mushrooms as well. 

@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{428EA161-7108-48E2-9AC7-505A62F31BD5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>InstallTest2</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\..\..\..\reference\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>Sync</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)\..\..\..\..\reference\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SFML-graphics-d.lib;SFML-system-d.lib;SFML-window-d.lib;SFML-network-d.lib;SFML-audio-d.lib;SFML-main-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>Sync</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\..\..\reference\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SFML-graphics.lib;SFML-system.lib;SFML-window.lib;SFML-network.lib;SFML-audio.lib;SFML-main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Game Components\AttracterMode.cpp" />
+    <ClCompile Include="Game Components\AttractionMode.cpp" />
+    <ClCompile Include="Game Components\AudibleSoundSystem.cpp" />
+    <ClCompile Include="Game Components\AwesomeFont.cpp" />
+    <ClCompile Include="Game Components\Blaster.cpp" />
+    <ClCompile Include="Game Components\BlasterBullet.cpp" />
+    <ClCompile Include="Game Components\BlasterFactory.cpp" />
+    <ClCompile Include="Game Components\CentipedeFactory.cpp" />
+    <ClCompile Include="Game Components\EnemyExplosion.cpp" />
+    <ClCompile Include="Game Components\Flea.cpp" />
+    <ClCompile Include="Game Components\Glyph.cpp" />
+    <ClCompile Include="Game Components\HighScoreInput.cpp" />
+    <ClCompile Include="Game Components\HUD.cpp" />
+    <ClCompile Include="Game Components\Mode.cpp" />
+    <ClCompile Include="Game Components\ModeManager.cpp" />
+    <ClCompile Include="Game Components\Player.cpp" />
+    <ClCompile Include="Game Components\Player0.cpp" />
+    <ClCompile Include="Game Components\Player1.cpp" />
+    <ClCompile Include="Game Components\Player2.cpp" />
+    <ClCompile Include="Game Components\PlayerManager.cpp" />
+    <ClCompile Include="Game Components\PlayerOneMode.cpp" />
+    <ClCompile Include="Game Components\PlayerTwoMode.cpp" />
+    <ClCompile Include="Game Components\PositionAndRotationOffset .cpp" />
+    <ClCompile Include="Game Components\RecyclingCBodySegmentFactory.cpp" />
+    <ClCompile Include="Game Components\CentipedeBodySegment.cpp" />
+    <ClCompile Include="Game Components\CentipedeHeadSegment.cpp" />
+    <ClCompile Include="Game Components\controller.cpp" />
+    <ClCompile Include="Game Components\Mushroom.cpp" />
+    <ClCompile Include="Game Components\MushroomField.cpp" />
+    <ClCompile Include="Game Components\Level1.cpp" />
+    <ClCompile Include="Game Components\PlayerController.cpp" />
+    <ClCompile Include="Game Components\PlayerExplosion.cpp" />
+    <ClCompile Include="Game Components\RecyclingBulletFactory.cpp" />
+    <ClCompile Include="Game Components\RecyclingCHeadSegmentFactory.cpp" />
+    <ClCompile Include="Game Components\RecyclingEnemyExplosionFactory.cpp" />
+    <ClCompile Include="Game Components\RecyclingFleaFactory.cpp" />
+    <ClCompile Include="Game Components\RecyclingMushroomFactory.cpp" />
+    <ClCompile Include="Game Components\RecyclingPlayerExplosion.cpp" />
+    <ClCompile Include="Game Components\RecyclingScoreExplosionFactory.cpp" />
+    <ClCompile Include="Game Components\RecyclingScorpionFactory.cpp" />
+    <ClCompile Include="Game Components\RecyclingSpiderFactory.cpp" />
+    <ClCompile Include="Game Components\ScoreExplosion.cpp" />
+    <ClCompile Include="Game Components\Scorpion.cpp" />
+    <ClCompile Include="Game Components\SoundManager.cpp" />
+    <ClCompile Include="Game Components\Spider.cpp" />
+    <ClCompile Include="Game Components\SpriteSheet.cpp" />
+    <ClCompile Include="Game Components\TEAL\AlarmEventTimeline.cpp" />
+    <ClCompile Include="Game Components\TEAL\AlarmManager.cpp" />
+    <ClCompile Include="Game Components\TEAL\AnimatedSprite.cpp" />
+    <ClCompile Include="Game Components\TEAL\CollisionInfoAABB.cpp" />
+    <ClCompile Include="Game Components\TEAL\CollisionInfoAABBfromShape.cpp" />
+    <ClCompile Include="Game Components\TEAL\CollisionInfoAABBfromSprite.cpp" />
+    <ClCompile Include="Game Components\TEAL\CollisionInfoShape.cpp" />
+    <ClCompile Include="Game Components\TEAL\CollisionInfoSprite.cpp" />
+    <ClCompile Include="Game Components\TEAL\CollisionManager.cpp" />
+    <ClCompile Include="Game Components\TEAL\CollisionTools.cpp" />
+    <ClCompile Include="Game Components\TEAL\ConsoleMsg.cpp" />
+    <ClCompile Include="Game Components\TEAL\Game.cpp" />
+    <ClCompile Include="Game Components\TEAL\GameClock.cpp" />
+    <ClCompile Include="Game Components\TEAL\GameObject.cpp" />
+    <ClCompile Include="Game Components\TEAL\InputEventManager.cpp" />
+    <ClCompile Include="Game Components\TEAL\LoadAllResources.cpp" />
+    <ClCompile Include="Game Components\TEAL\ResourceManager.cpp" />
+    <ClCompile Include="Game Components\TEAL\Scene.cpp" />
+    <ClCompile Include="Game Components\TEAL\SceneManager.cpp" />
+    <ClCompile Include="Game Components\TEAL\TEALShow.cpp" />
+    <ClCompile Include="Game Components\TEAL\Tools.cpp" />
+    <ClCompile Include="Game Components\TEAL\WindowManager.cpp" />
+    <ClCompile Include="Game Components\WaveDefintion.cpp" />
+    <ClCompile Include="Game Components\WaveManager.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game Components\AttracterMode.h" />
+    <ClInclude Include="Game Components\AttractionMode.h" />
+    <ClInclude Include="Game Components\AudibleSoundSystem.h" />
+    <ClInclude Include="Game Components\AwesomeFont.h" />
+    <ClInclude Include="Game Components\Blaster.h" />
+    <ClInclude Include="Game Components\BlasterBullet.h" />
+    <ClInclude Include="Game Components\BlasterFactory.h" />
+    <ClInclude Include="Game Components\CentipedeFactory.h" />
+    <ClInclude Include="Game Components\EnemyExplosion.h" />
+    <ClInclude Include="Game Components\Flea.h" />
+    <ClInclude Include="Game Components\Glyph.h" />
+    <ClInclude Include="Game Components\HighScoreInput.h" />
+    <ClInclude Include="Game Components\HUD.h" />
+    <ClInclude Include="Game Components\Mode.h" />
+    <ClInclude Include="Game Components\ModeManager.h" />
+    <ClInclude Include="Game Components\NoSoundSystem.h" />
+    <ClInclude Include="Game Components\Player.h" />
+    <ClInclude Include="Game Components\Player0.h" />
+    <ClInclude Include="Game Components\Player1.h" />
+    <ClInclude Include="Game Components\Player2.h" />
+    <ClInclude Include="Game Components\PlayerManager.h" />
+    <ClInclude Include="Game Components\PlayerOneMode.h" />
+    <ClInclude Include="Game Components\PlayerTwoMode.h" />
+    <ClInclude Include="Game Components\PositionAndRotationOffset.h" />
+    <ClInclude Include="Game Components\RecyclingCBodySegmentFactory.h" />
+    <ClInclude Include="Game Components\CentipedeBodySegment.h" />
+    <ClInclude Include="Game Components\CentipedeHeadSegment.h" />
+    <ClInclude Include="Game Components\CentipedeSegment.h" />
+    <ClInclude Include="Game Components\controller.h" />
+    <ClInclude Include="Game Components\Mushroom.h" />
+    <ClInclude Include="Game Components\MushroomField.h" />
+    <ClInclude Include="Game Components\Level1.h" />
+    <ClInclude Include="Game Components\PlayerController.h" />
+    <ClInclude Include="Game Components\PlayerExplosion.h" />
+    <ClInclude Include="Game Components\RecyclingBulletFactory.h" />
+    <ClInclude Include="Game Components\RecyclingCHeadSegmentFactory.h" />
+    <ClInclude Include="Game Components\RecyclingEnemyExplosionFactory.h" />
+    <ClInclude Include="Game Components\RecyclingFleaFactory.h" />
+    <ClInclude Include="Game Components\RecyclingMushroomFactory.h" />
+    <ClInclude Include="Game Components\RecyclingPlayerExplosion.h" />
+    <ClInclude Include="Game Components\RecyclingScoreExplosionFactory.h" />
+    <ClInclude Include="Game Components\RecyclingScorpionFactory.h" />
+    <ClInclude Include="Game Components\RecyclingSpiderFactory.h" />
+    <ClInclude Include="Game Components\ScoreExplosion.h" />
+    <ClInclude Include="Game Components\Scorpion.h" />
+    <ClInclude Include="Game Components\SoundManager.h" />
+    <ClInclude Include="Game Components\SoundSystem.h" />
+    <ClInclude Include="Game Components\Spider.h" />
+    <ClInclude Include="Game Components\SpriteSheet.h" />
+    <ClInclude Include="Game Components\TEAL\AlarmEventTimeline.h" />
+    <ClInclude Include="Game Components\TEAL\AlarmManager.h" />
+    <ClInclude Include="Game Components\TEAL\AnimatedSprite.h" />
+    <ClInclude Include="Game Components\TEAL\CollisionGrid.h" />
+    <ClInclude Include="Game Components\TEAL\CollisionGridBase.h" />
+    <ClInclude Include="Game Components\TEAL\CollisionInfo.h" />
+    <ClInclude Include="Game Components\TEAL\CollisionInfoAABB.h" />
+    <ClInclude Include="Game Components\TEAL\CollisionInfoAABBfromShape.h" />
+    <ClInclude Include="Game Components\TEAL\CollisionInfoAABBfromSprite.h" />
+    <ClInclude Include="Game Components\TEAL\CollisionInfoShape.h" />
+    <ClInclude Include="Game Components\TEAL\CollisionInfoSprite.h" />
+    <ClInclude Include="Game Components\TEAL\CollisionManager.h" />
+    <ClInclude Include="Game Components\TEAL\CollisionTools.h" />
+    <ClInclude Include="Game Components\TEAL\CommonElements.h" />
+    <ClInclude Include="Game Components\TEAL\ConsoleMsg.h" />
+    <ClInclude Include="Game Components\TEAL\doxygendata.h" />
+    <ClInclude Include="Game Components\TEAL\Game.h" />
+    <ClInclude Include="Game Components\TEAL\GameClock.h" />
+    <ClInclude Include="Game Components\TEAL\GameObject.h" />
+    <ClInclude Include="Game Components\TEAL\GlobalDefinitions.h" />
+    <ClInclude Include="Game Components\TEAL\InputEventManager.h" />
+    <ClInclude Include="Game Components\TEAL\ResourceManager.h" />
+    <ClInclude Include="Game Components\TEAL\Scene.h" />
+    <ClInclude Include="Game Components\TEAL\SceneManager.h" />
+    <ClInclude Include="Game Components\TEAL\TEALShow.h" />
+    <ClInclude Include="Game Components\TEAL\Tools.h" />
+    <ClInclude Include="Game Components\TEAL\WindowManager.h" />
+    <ClInclude Include="Game Components\WaveDefintion.h" />
+    <ClInclude Include="Game Components\WaveManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cheats.txt" />
+    <None Include="Game Components\TEAL\_Version Information.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
