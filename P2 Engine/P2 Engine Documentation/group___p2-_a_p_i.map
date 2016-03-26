@@ -1,7 +1,0 @@
-<map id="P2 API" name="P2 API">
-<area shape="rect" id="node1" href="$group___t_i_m_e_m_a_n_a_g_e_r.html" title="The TimeManager is used to allow the player to get the frame time and to get the time since the start..." alt="" coords="140,5,240,32"/>
-<area shape="rect" id="node2" href="$group___g_a_m_e_o_b_j_e_c_t.html" title="All game entities will be derived from the GameObject class. " alt="" coords="143,56,237,83"/>
-<area shape="rect" id="node3" href="$group___a_s_s_e_t_m_a_n_a_g_e_r.html" title="The AssetManager is used to allow the player to load models and texture into the game, while also allowing them to get a reference to that loaded resource. " alt="" coords="137,107,243,133"/>
-<area shape="rect" id="node4" href="$group___s_c_e_n_e.html" title="A scene is a base class from which all scenes should derive from. " alt="" coords="157,157,223,184"/>
-<area shape="rect" id="node6" href="$group___g_r_a_p_h_i_c_s_o_b_j_e_c_t_m_a_k_e_r.html" title="The GraphicsObjectMaker is pretty much a factory that will create and return different types of Graph..." alt="" coords="116,208,264,235"/>
-</map>

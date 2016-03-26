@@ -1,0 +1,6 @@
+<map id="PlayModeBase" name="PlayModeBase">
+<area shape="rect" id="node2" href="$class_burst2_d_play_mode.html" title="{Burst2DPlayMode\n|&#45; instance\l|&#45; Burst2DPlayMode()\l&#45; ~Burst2DPlayMode()\l&#45; Play()\l&#45; GetInstance()\l&#45; DeleteMe()\l}" alt="" coords="5,189,156,325"/>
+<area shape="rect" id="node3" href="$class_burst3_d_play_mode.html" title="{Burst3DPlayMode\n|&#45; instance\l|&#45; Burst3DPlayMode()\l&#45; ~Burst3DPlayMode()\l&#45; Play()\l&#45; GetInstance()\l&#45; DeleteMe()\l}" alt="" coords="180,189,331,325"/>
+<area shape="rect" id="node4" href="$class_looped2_d_play_mode.html" title="{Looped2DPlayMode\n|&#45; instance\l|&#45; Looped2DPlayMode()\l&#45; ~Looped2DPlayMode()\l&#45; Play()\l&#45; GetInstance()\l&#45; DeleteMe()\l}" alt="" coords="355,189,518,325"/>
+<area shape="rect" id="node5" href="$class_looped3_d_play_mode.html" title="{Looped3DPlayMode\n|&#45; instance\l|&#45; Looped3DPlayMode()\l&#45; ~Looped3DPlayMode()\l&#45; Play()\l&#45; GetInstance()\l&#45; DeleteMe()\l}" alt="" coords="542,189,705,325"/>
+</map>

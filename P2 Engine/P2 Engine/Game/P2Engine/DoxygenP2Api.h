@@ -8,7 +8,162 @@
 \note A GameObject is Derived from Terminable, Collidable, Updatable, Inputable, Drawable, and Alarmable, and will therefore absorb all of its methods.
 */
 
+/** \defgroup AUDIBLE AudibleFunctions
+\ingroup GAMEOBJECT
+\brief These functions are relevant to anything that derived from the audible class
+\note GameObjects are derived from Audible. Also, Audible sound's position is automated.
 
+The following is an example of a missle that makes a whirling sound in the air.
+
+\code
+class Missle:public GameObject{
+public:
+	Missle(){
+		SetAudibleSound("WhirlSound");
+		SetAudibleLooped(true);//looping whirl
+		PlayAudibleSound();//play upon creation
+				
+		//irrelevant functions omitted...
+	}
+	
+	void Update(){
+		misslePos += Vect(0,2,0); //missle moving up
+
+		//since this sound is done via Audible Sound...position is automated!
+		//whirlSound->SetSoundPosition(misslePos);//not needed!
+
+		SetGameObjectWorld(misslePos,Vect(1.0f,1.0f,1.0f),Vect(0,0,0)); //sound set via this function!
+	}
+
+	void OnTerminate(){
+		//whirlSound->Release(); Audible takes care of releasing its own sound! Not Needed!
+	}
+
+	Sound3D* whirlSound;
+
+	Vect misslePos;
+};
+
+\endcode
+
+*/
+
+/** \defgroup SNDCON SoundConscious
+\ingroup GAMEOBJECT
+\brief These functions are relevant to anything that is is consicous to sound. (derived from SoundConscious)
+*/
+
+
+
+/** \defgroup SOUND Sound
+\ingroup P2-API
+\brief This module teaches the user how to use sound in the P2 Engine.
+*/
+
+/** \defgroup SOUNDSYS SoundSystemFunctions
+\ingroup SOUND
+\brief This module shows the global SoundSystem Functions.
+*/
+
+
+/** \defgroup USINGSOUNDS UsingSounds
+\ingroup SOUND
+\brief This module teaches the user how to use Sounds in the P2 Engine.
+*/
+
+/** \defgroup BOTHSOUNDS BothSoundTypes
+\ingroup USINGSOUNDS
+\brief These are the relevant features for both SoundTypes.
+*/
+
+/** \defgroup SOUND2D Sound2D
+\ingroup USINGSOUNDS
+\brief Sound2Ds are used for sounds played in 2D space.
+*/
+
+/** \defgroup SOUND3D Sound3D
+\ingroup USINGSOUNDS
+\brief Sound3Ds are used for sounds played in 3D space.
+*/
+
+/** \defgroup SOUND2DEX Sound2DExample
+\ingroup USINGSOUNDS
+\brief The following shows how to use Sound2D's.
+
+The following shows an example of a robot making a 2D beep sound when the user presses they key 'P'.
+
+\code
+
+class Robot:public GameObject{
+public:
+	Robot(){
+	
+		beepSound = AssetManager::GetSound2DInstance("BeepSound");
+		
+		RegisterForInput(AZUL_KEY::KEY_P);
+		
+		//irrelevant functions omitted...
+	}
+
+
+	void KeyDown(AZUL_KEY key){
+			
+		if(key == AZUL_KEY::KEY_P){
+			beepSound->Play();
+		}
+	}
+
+	void OnTerminate(){
+		beepSound->Release(); //dont forget to release the sound upon death
+	}
+
+	Sound2D* beepSound;
+};
+
+\endcode
+
+*/
+
+/** \defgroup SOUND3DEX Sound3DExample
+\ingroup USINGSOUNDS
+\brief The following shows how to use Sound3D's.
+
+The following shows an example of a missle making a sound as it travels through the air.
+
+\code
+
+class Missle:public GameObject{
+public:
+	Missle(){
+	
+		whirlSound = AssetManager::GetSound2DInstance("WhirlSound");
+		whirlSound->SetLooped(true); //whirling always while in the air
+		whirlSound->Play();//play on creation/ launch of missle
+				
+		//irrelevant functions omitted...
+	}
+	
+	void Update(){
+		misslePos += Vect(0,2,0); //missle moving up
+
+		//since this sound is not done via Audible Sound... the user is responsible for updating its position.
+		whirlSound->SetSoundPosition(misslePos);
+
+		SetGameObjectWorld(misslePos,Vect(1.0f,1.0f,1.0f),Vect(0,0,0));
+	}
+
+	void OnTerminate(){
+		whirlSound->Release(); //dont forget to release the sound upon death!
+	}
+
+	Sound3D* whirlSound;
+
+	Vect misslePos;
+};
+
+\endcode
+
+*/
 
 /**
 \defgroup ASSETMANAGER AssetManager
@@ -16,6 +171,7 @@
 \brief The AssetManager is used to allow the player to load models and texture into the game, while also allowing them to get a reference to that loaded resource.
 
 */
+
 
 /**
 \defgroup GRAPHICSOBJECTMAKER GraphicsObjectMaker

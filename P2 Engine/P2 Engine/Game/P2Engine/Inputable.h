@@ -4,6 +4,7 @@
 #include <Azul.h>
 #include <map>
 #include <set>
+#include <list>
 #include "KeyEventEnum.h"
 using namespace std;
 
@@ -11,6 +12,7 @@ class SceneManager;
 class Inputable{
 
 	friend class KeyState;
+	friend class InputManager;
 public:
 
 	virtual ~Inputable(){}
@@ -64,7 +66,7 @@ public:
 		\endcode
 
 	*/
-	void RegisterForInput(AZUL_KEY key, KeyEvent kEventType);
+	void RegisterForInput(AZUL_KEY key, KeyEvent kEventType = KeyEvent::KeyUpAndDown);
 
 	/**\ingroup INPUT
 		\brief Method used to deregister a no longer wanted registered Input.
@@ -106,8 +108,9 @@ public:
 		\endcode
 
 	*/
-	void DeregisterForInput(AZUL_KEY key, KeyEvent kEventType);
+	void DeregisterForInput(AZUL_KEY key, KeyEvent kEventType = KeyEvent::KeyUpAndDown);
 	
+	void DeregisterAllInputKeys();
 
 protected:
 	
@@ -189,7 +192,24 @@ protected:
 	*/
 	virtual void KeyUp(AZUL_KEY key){key;/*left empty in case of no event in inputable*/}
 
+	struct KeyPair
+	{
+		KeyPair(AZUL_KEY key, KeyEvent kEvent){
+			myKey = key;
+			myKeyEvent = kEvent;
+		}
+		AZUL_KEY myKey;
+		KeyEvent myKeyEvent;
+
+		bool operator ==(const KeyPair& rhs)const;
+
+	};
 	
-	
+		
+	list<KeyPair> myRegisteredKeys;
+
+	void AddRegisteredKeyPair(Inputable::KeyPair pair);
+
+	void RemoveRegisteredKeyPair(Inputable::KeyPair pair);
 };
 #endif

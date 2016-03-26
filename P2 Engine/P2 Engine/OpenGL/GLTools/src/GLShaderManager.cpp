@@ -189,7 +189,7 @@ static const char *szTextureReplaceFP =
 										"uniform sampler2D textures[4];"
 										"void main(void) " 
 										"{" 
-										"	   gl_FragColor = texture2D(textures[ int(vTex.z) ], vTex.xy); "
+										"	   gl_FragColor = texture2D(textures[ int(vTex.z) ], fract(vTex.xy)); "
 										"}";
 
 // GLT_SHADER_COLOR_NO_TEXTURE

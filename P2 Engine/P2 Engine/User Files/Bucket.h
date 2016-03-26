@@ -19,6 +19,7 @@ public:
 	virtual void KeyDown(AZUL_KEY);
 
 	virtual void Collision(Collidable*){}
+	virtual void TerrainCollision();
 	virtual void Collision(Bomb*);
 	virtual void OnTerminate();
 	

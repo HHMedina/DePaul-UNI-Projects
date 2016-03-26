@@ -1,0 +1,4 @@
+<map id="AlarmManager" name="AlarmManager">
+<area shape="rect" id="node3" href="$class_alarm_marker.html" title="{AlarmMarker\n|&#45; alarmID\l|&#45; AlarmMarker()\l&#45; AlarmMarker()\l&#45; operator=()\l&#45; ~AlarmMarker()\l&#45; GetAlarmable()\l&#45; GetAlarmID()\l&#45; ExecuteAlarm()\l}" alt="" coords="45,351,165,516"/>
+<area shape="rect" id="node4" href="$class_alarmable.html" title="{Alarmable\n|# timeTrigger\l# MAX_ALARM_EVENTS\l|+ ~Alarmable()\l+ SetAlarm()\l+ GetTimeRemainingOfAlarm()\l+ AddTimeToAlarm()\l+ SubtractTimeFromAlarm()\l+ CancelAlarm()\l+ PauseAlarm()\l# Alarmable()\l# Alarmable()\l# operator=()\l# Dispatch()\l# Alarm0()\l# Alarm1()\l# Alarm2()\l}" alt="" coords="5,5,204,288"/>
+</map>

@@ -11,7 +11,7 @@ LoseText::LoseText(){
 	winRot.set( ROT_XYZ, 0, 0, 0);
 	winPos.set(0,0,0);
 	temp = winScale * winRot * Matrix( TRANS, winPos );
-	SetGameObjectWorld(temp);
+//	SetGameObjectWorld(temp);
 
 }
 

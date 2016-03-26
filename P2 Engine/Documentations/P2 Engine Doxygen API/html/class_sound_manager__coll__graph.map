@@ -1,0 +1,8 @@
+<map id="SoundManager" name="SoundManager">
+<area shape="rect" id="node3" href="$class_sound3_d.html" title="{Sound3D\n|# audiblePos\l# maxSoundDist\l# minSoundDist\l|+ Play()\l+ SetLooped()\l+ SetSoundPosition()\l+ GetSoundPosition()\l+ SetMinSoundDistance()\l+ Release()\l+ Stop()\l+ Pause()\l+ IsPlaying()\l# Sound3D()\l# Sound3D()\l# Sound3D()\l# operator=()\l# ~Sound3D()\l# ResetToDefaultState()\l}" alt="" coords="401,841,571,1153"/>
+<area shape="rect" id="node4" href="$class_sound.html" title="{Sound\n|# mySoundSource\l# isLooped\l# volume\l|+ Sound()\l+ ~Sound()\l+ Play()\l+ Stop()\l+ Play()\l+ SetLooped()\l+ Release()\l+ Pause()\l+ Stop()\l+ SetVolume()\l+ IsPlaying()\l# Sound()\l# Sound()\l# Sound()\l# operator=()\l# ~Sound()\l# ResetToDefaultState()\l}" alt="" coords="406,345,566,687"/>
+<area shape="rect" id="node9" href="$class_sound2_d.html" title="{Sound2D\n||+ Play()\l+ SetLooped()\l+ Release()\l# ResetToDefaultState()\l# Sound2D()\l# Sound2D()\l# Sound2D()\l# operator=()\l# ~Sound2D()\l}" alt="" coords="183,900,343,1095"/>
+<area shape="rect" id="node5" title="STL class. " alt="" coords="710,176,790,253"/>
+<area shape="rect" id="node6" title="STL class. " alt="" coords="687,5,813,97"/>
+<area shape="rect" id="node7" href="$class_play_mode_base.html" title="{PlayModeBase\n||# PlayModeBase()\l# ~PlayModeBase()\l# Play()\l# Play()\l# Play()\l}" alt="" coords="417,147,555,283"/>
+</map>

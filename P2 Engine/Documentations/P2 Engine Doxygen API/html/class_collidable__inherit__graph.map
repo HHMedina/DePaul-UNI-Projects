@@ -1,0 +1,4 @@
+<map id="Collidable" name="Collidable">
+<area shape="rect" id="node2" href="$class_game_object.html" title="{GameObject\n||+ SetGameObjectWorld()\l+ SetGraphicAndCollisionModel()\l# GameObject()\l# GameObject()\l# operator=()\l# ~GameObject()\l# DeregisterFromAutomated()\l# RegisterForAutomated()\l}" alt="" coords="5,380,220,560"/>
+<area shape="rect" id="node3" href="$class_terrain_model.html" title="{TerrainModel\n|&#45; highLightPos\l&#45; imgWidth\l&#45; imgHeigth\l&#45; numVerts\l&#45; numTris\l&#45; numCells\l&#45; numVertsPerSide\l&#45; numCellsPerSide\l&#45; cellDimension\l&#45; sideLength\land 6 more...\l|+ HighLightCellOnGrid()\l+ HighLightCellsUnderNeath\lSphere()\l+ HighlightCellOnTerrainFrom\lWorld()\l+ GetIndexFromWorldPosition()\l+ TerrainModel()\l+ ~TerrainModel()\l+ Draw()\l&#45; CreateTerrainModel()\l&#45; SaveTerrainModel()\l&#45; Update()\l}" alt="" coords="10,608,215,993"/>
+</map>

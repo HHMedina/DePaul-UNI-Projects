@@ -17,6 +17,7 @@ Scene::~Scene(){
 }
 
 void Scene::DrawScene(){
+	terrainManager.DrawCurrentTerrain();
 	drawableManager.DrawAll();
 }
 
@@ -28,6 +29,14 @@ void Scene::UpdateScene(){
 	updatableManager.UpdateAll();
 	collisionManager.ProcessCollisions();
 	terminableManager.processTerminations();
+}
+
+void Scene::SetCurrentTerrain(const char* const assetName){
+	terrainManager.SetCurrentTerrain(assetName);
+}
+
+TerrainManager& Scene::GetTerrainManager(){
+	return terrainManager;
 }
 
 TerminableManager& Scene::GetTerminableManager(){
@@ -59,3 +68,9 @@ UpdatableManager& Scene::GetUpdatableManager(){
 CollisionManager& Scene::GetCollisionManager(){
 	return collisionManager;
 }
+
+/*
+TerrainManager& Scene::GetTerrainManager(){
+	return terrainManager;
+}
+*/

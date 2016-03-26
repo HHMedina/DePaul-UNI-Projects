@@ -15,7 +15,7 @@ void GameController::DeleteMe(){
 void GameController::SpawnRandomBomb(){
 	
 	if(!Instance()->playerWonAlready){//dont spawn another bomb if the player won already.
-		RecyclingBombFactory::CreateBomb(rand()%randomBoxLength,0,rand()%randomBoxLength);
+		RecyclingBombFactory::CreateBomb((float)(rand()%randomBoxLength),0.0f,(float)(rand()%randomBoxLength));
 	}
 }
 

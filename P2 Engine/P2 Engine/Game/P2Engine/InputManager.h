@@ -131,7 +131,7 @@ public:
 	\param keyEvent keyEvent is the KeyEvent to be registered for.
 
 	*/
-	void RegisterInput(Inputable* in,AZUL_KEY key,KeyEvent keyEvent);
+	void RegisterInput(Inputable* in,AZUL_KEY key,KeyEvent keyEvent = KeyUpAndDown);
 
 	
 	/**
@@ -149,6 +149,7 @@ public:
 	*/
 	void DeregisterInput(Inputable* target, AZUL_KEY key, KeyEvent keyEvent);
 
+	void DeregisterAllInputKeys(Inputable * in);
 
 };
 

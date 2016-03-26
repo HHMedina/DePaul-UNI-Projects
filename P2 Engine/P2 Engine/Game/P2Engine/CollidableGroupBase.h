@@ -9,8 +9,10 @@ class CollidableGroupBase{
 
 	template<class C1>
 	friend class CollisionSingleProcessor;
+	template <class T>
+	friend class CollisionTerrainProcessor;
 
-
+	virtual int GetGroupSize()=0;
 
 protected:
 
@@ -18,6 +20,11 @@ protected:
 	CollidableGroupBase(){}
 	CollidableGroupBase( const CollidableGroupBase & ){}
 	CollidableGroupBase& operator = (const CollidableGroupBase& ){ }
+	
+	
+	virtual void UpdateGroupAABB() = 0;
+	Vect groupAABBMin;
+	Vect groupAABBMax;
 	
 };
 #endif

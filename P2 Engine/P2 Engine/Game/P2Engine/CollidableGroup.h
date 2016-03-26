@@ -4,6 +4,10 @@
 #include <set>
 #include "CollidableGroupBase.h"
 #include <iostream>
+#include <P2Math.h>
+#include <DebugVisualizer.h>
+#include "AABBBoundingBox.h"
+#include "BoundingSphereVolume.h"
 
 template<typename C>
 class CollidableGroup: public CollidableGroupBase {
@@ -13,6 +17,8 @@ class CollidableGroup: public CollidableGroupBase {
 	
 	template <class T>
 	friend class CollisionSingleProcessor;
+	template <class T>
+	friend class CollisionTerrainProcessor;
 	template <class T, class T2>
 	friend class CollisionPairProcessor;
 
@@ -43,7 +49,6 @@ public:
 		return *instance;
 	}
 
-	
 		
 
 private:
@@ -64,7 +69,28 @@ private:
 		instance = NULL;
 	}
 
+	virtual int GetGroupSize(){
+		return collideCol.size();
+	}
+	
+	virtual void UpdateGroupAABB(){
+		CollidableCollection::iterator it = Instance().collideCol.begin();
+		if(it !=Instance().collideCol.end()){ //if there is data in collidecol
+			
+			
+			groupAABBMin = (*it)->cheapAABB->GetMinAABBPoint();
+			groupAABBMax = (*it)->cheapAABB->GetMaxAABBPoint();
+			++it;
+		}
+		//search for minnest min and maximum max
+		for(it;it != Instance().collideCol.end();++it){
+		
+			groupAABBMin = P2Math::MinVect(groupAABBMin,(*it)->cheapAABB->GetMinAABBPoint());
+			groupAABBMax = P2Math::MaxVect(groupAABBMax,(*it)->cheapAABB->GetMaxAABBPoint());
 
+		}
+		
+	}
 
 };
 

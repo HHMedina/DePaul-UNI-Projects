@@ -69,9 +69,11 @@ void AlarmManager::AddTimeToAlarm(Alarmable* ptr,AlarmID id,float timeToAdd){
 	float timeUntilAlarm =0;
 	if(ptr->timeTrigger[id]!=-1){//if the alarm is active
 		timeUntilAlarm = ptr->timeTrigger[id]-TimeManager::GetTotalGameTime();//returns time until alarm goes off
+		//timeUntilAlarm+timeToAdd because register is registering from current time.
 		Deregister(ptr,id);
-		Register(ptr,id,timeUntilAlarm+timeToAdd);//timeUntilAlarm+timeToAdd because register is registering from current time.
+		Register(ptr,id,timeUntilAlarm+timeToAdd);
 	}
+	
 }
 
 void AlarmManager::SubtractTimeFromAlarm(Alarmable* ptr,AlarmID id,float timeToSubtract){

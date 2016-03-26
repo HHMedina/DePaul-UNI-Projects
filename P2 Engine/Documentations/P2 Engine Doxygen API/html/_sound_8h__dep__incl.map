@@ -1,0 +1,20 @@
+<map id="Sound.h" name="Sound.h">
+<area shape="rect" id="node2" href="$_sound3_d_8h.html" title="Sound3D.h" alt="" coords="315,80,401,107"/>
+<area shape="rect" id="node5" href="$_p2_engine_8h.html" title="P2Engine.h" alt="" coords="21,304,111,331"/>
+<area shape="rect" id="node10" href="$_sound_system_8cpp.html" title="SoundSystem.cpp" alt="" coords="377,229,507,256"/>
+<area shape="rect" id="node12" href="$_sound_manager_8cpp.html" title="SoundManager.cpp" alt="" coords="528,155,663,181"/>
+<area shape="rect" id="node13" href="$_burst2_d_play_mode_8cpp.html" title="Burst2DPlayMode.cpp" alt="" coords="690,80,842,107"/>
+<area shape="rect" id="node14" href="$_burst3_d_play_mode_8cpp.html" title="Burst3DPlayMode.cpp" alt="" coords="866,80,1018,107"/>
+<area shape="rect" id="node15" href="$_looped2_d_play_mode_8cpp.html" title="Looped2DPlayMode.cpp" alt="" coords="1042,80,1205,107"/>
+<area shape="rect" id="node16" href="$_looped3_d_play_mode_8cpp.html" title="Looped3DPlayMode.cpp" alt="" coords="1229,80,1391,107"/>
+<area shape="rect" id="node17" href="$_sound_8cpp.html" title="Sound.cpp" alt="" coords="1416,80,1500,107"/>
+<area shape="rect" id="node18" href="$_sound2_d_8h.html" title="Sound2D.h" alt="" coords="579,80,665,107"/>
+<area shape="rect" id="node3" href="$_audible_8h.html" title="Audible.h" alt="" coords="73,155,149,181"/>
+<area shape="rect" id="node8" href="$_no3_d_sound_8h.html" title="No3DSound.h" alt="" coords="173,155,276,181"/>
+<area shape="rect" id="node11" href="$_sound3_d_8cpp.html" title="Sound3D.cpp" alt="" coords="352,155,452,181"/>
+<area shape="rect" id="node4" href="$_game_object_8h.html" title="GameObject.h" alt="" coords="58,229,165,256"/>
+<area shape="rect" id="node6" href="$_terrain_model_8h.html" title="TerrainModel.h" alt="" coords="58,379,165,405"/>
+<area shape="rect" id="node7" href="$_terrain_model_8cpp.html" title="TerrainModel.cpp" alt="" coords="5,453,127,480"/>
+<area shape="rect" id="node9" href="$_no3_d_sound_8cpp.html" title="No3DSound.cpp" alt="" coords="189,229,305,256"/>
+<area shape="rect" id="node19" href="$_sound2_d_8cpp.html" title="Sound2D.cpp" alt="" coords="739,155,839,181"/>
+</map>

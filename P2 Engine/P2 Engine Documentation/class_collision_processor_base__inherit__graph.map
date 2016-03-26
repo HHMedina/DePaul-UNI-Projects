@@ -1,4 +1,0 @@
-<map id="CollisionProcessorBase" name="CollisionProcessorBase">
-<area shape="rect" id="node2" href="$class_collision_pair_processor.html" title="{CollisionPairProcessor\l\&lt; C1, C2 \&gt;\n|# CollisionGroup1\l# CollisionGroup2\l|# CollisionPairProcessor()\l# CollisionPairProcessor()\l# operator=()\l# ~CollisionPairProcessor()\l# CollisionTest()\l}" alt="" coords="5,160,185,325"/>
-<area shape="rect" id="node3" href="$class_collision_single_processor.html" title="{CollisionSingleProcessor\&lt; C \&gt;\n|# CollisionGroup\l|# CollisionSingleProcessor()\l# CollisionSingleProcessor()\l# operator=()\l# ~CollisionSingleProcessor()\l# CollisionTest()\l}" alt="" coords="209,175,408,311"/>
-</map>

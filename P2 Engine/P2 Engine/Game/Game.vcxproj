@@ -61,7 +61,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>$(SolutionDir)Azul\include;$(SolutionDir)Math\include;$(SolutionDir)File\include;$(SolutionDir)Time\include;$(SolutionDir)OpenGL\GLTools\include;$(SolutionDir)OpenGL\GLFW;$(SolutionDir)OpenGL\GLFW\include;$(SolutionDir)Game\P2Engine;$(SolutionDir)User Files;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Azul\include;$(SolutionDir)Math\include;$(SolutionDir)File\include;$(SolutionDir)Time\include;$(SolutionDir)OpenGL\GLTools\include;$(SolutionDir)OpenGL\GLFW;$(SolutionDir)OpenGL\GLFW\include;$(SolutionDir)Game\P2Engine;$(SolutionDir)IrrKlang\include;$(SolutionDir)User Files;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
       <StringPooling>false</StringPooling>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -77,8 +77,9 @@
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
-      <AdditionalDependencies>OpenGL32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OpenGL32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>%libcmt.lib;msvcrt.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>$(SolutionDir)IrrKlang\irrKlangLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -112,9 +113,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\User Files\AlarmExampleGameObject.cpp" />
+    <ClCompile Include="..\User Files\AlarmTestLevel.cpp" />
     <ClCompile Include="..\User Files\BattleShip.cpp" />
     <ClCompile Include="..\User Files\Bomb.cpp" />
     <ClCompile Include="..\User Files\Bucket.cpp" />
+    <ClCompile Include="..\User Files\CollisionTester.cpp" />
+    <ClCompile Include="..\User Files\CollisionTesterMovable.cpp" />
+    <ClCompile Include="..\User Files\DeathMatchLevel.cpp" />
+    <ClCompile Include="..\User Files\DesertFloor.cpp" />
     <ClCompile Include="..\User Files\Floor.cpp" />
     <ClCompile Include="..\User Files\GameController.cpp" />
     <ClCompile Include="..\User Files\Level1.cpp" />
@@ -124,32 +131,62 @@
     <ClCompile Include="..\User Files\P2EngineContent.cpp" />
     <ClCompile Include="..\User Files\RecyclingBombFactory.cpp" />
     <ClCompile Include="..\User Files\Ship.cpp" />
+    <ClCompile Include="..\User Files\SoundTestLevel.cpp" />
+    <ClCompile Include="..\User Files\Tank.cpp" />
+    <ClCompile Include="..\User Files\TankBottom.cpp" />
+    <ClCompile Include="..\User Files\TankShell.cpp" />
+    <ClCompile Include="..\User Files\TankTop.cpp" />
     <ClCompile Include="..\User Files\TutorialLevel1.cpp" />
     <ClCompile Include="..\User Files\WeirdShape.cpp" />
     <ClCompile Include="..\User Files\WinScene.cpp" />
     <ClCompile Include="..\User Files\WinText.cpp" />
+    <ClCompile Include="Audible.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="P2Engine\AABBBoundingBox.cpp" />
     <ClCompile Include="P2Engine\Alarmable.cpp" />
     <ClCompile Include="P2Engine\AlarmManager.cpp" />
     <ClCompile Include="P2Engine\AlarmMarker.cpp" />
     <ClCompile Include="P2Engine\AssetManager.cpp" />
+    <ClCompile Include="P2Engine\BoundingSphereVolume.cpp" />
+    <ClCompile Include="P2Engine\Burst3DPlayMode.cpp" />
+    <ClCompile Include="P2Engine\Burst2DPlayMode.cpp" />
+    <ClCompile Include="P2Engine\BurstSoundEndReceiver.cpp" />
+    <ClCompile Include="P2Engine\BurstSoundUserEndedReceiver.cpp" />
     <ClCompile Include="P2Engine\Collidable.cpp" />
     <ClCompile Include="P2Engine\CollisionManager.cpp" />
+    <ClCompile Include="P2Engine\DebugVisualizer.cpp" />
+    <ClCompile Include="P2Engine\DefaultSoundConscious.cpp" />
     <ClCompile Include="P2Engine\Drawable.cpp" />
     <ClCompile Include="P2Engine\DrawableManager.cpp" />
     <ClCompile Include="P2Engine\GraphicsObjectMaker.cpp" />
     <ClCompile Include="P2Engine\Inputable.cpp" />
     <ClCompile Include="P2Engine\InputManager.cpp" />
     <ClCompile Include="P2Engine\KeyState.cpp" />
+    <ClCompile Include="P2Engine\ListeningState.cpp" />
+    <ClCompile Include="P2Engine\Looped2DPlayMode.cpp" />
+    <ClCompile Include="P2Engine\Looped3DPlayMode.cpp" />
+    <ClCompile Include="P2Engine\No3DSound.cpp" />
+    <ClCompile Include="P2Engine\NotListeningState.cpp" />
+    <ClCompile Include="P2Engine\OOBB.cpp" />
+    <ClCompile Include="P2Engine\P2Math.cpp" />
     <ClCompile Include="P2Engine\Scene.cpp" />
     <ClCompile Include="P2Engine\SceneManager.cpp" />
+    <ClCompile Include="P2Engine\Sound.cpp" />
+    <ClCompile Include="P2Engine\Sound2D.cpp" />
+    <ClCompile Include="P2Engine\Sound3D.cpp" />
+    <ClCompile Include="P2Engine\SoundManager.cpp" />
+    <ClCompile Include="P2Engine\SoundSystem.cpp" />
     <ClCompile Include="P2Engine\Terminable.cpp" />
     <ClCompile Include="P2Engine\TerminableManager.cpp" />
     <ClCompile Include="P2Engine\TerminationDumpster.cpp" />
+    <ClCompile Include="P2Engine\Terrain.cpp" />
+    <ClCompile Include="P2Engine\TerrainAssetManager.cpp" />
+    <ClCompile Include="P2Engine\TerrainModel.cpp" />
     <ClCompile Include="P2Engine\TimeManager.cpp" />
     <ClCompile Include="P2Engine\Updatable.cpp" />
     <ClCompile Include="P2Engine\UpdatableManager.cpp" />
+    <ClCompile Include="TerrainManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Azul\include\Azul.h" />
@@ -158,26 +195,49 @@
     <ClInclude Include="..\Math\include\MathEngine.h" />
     <ClInclude Include="..\Time\include\Time.h" />
     <ClInclude Include="..\Time\include\Timer.h" />
+    <ClInclude Include="..\User Files\AlarmExampleGameObject.h" />
+    <ClInclude Include="..\User Files\AlarmTestLevel.h" />
+    <ClInclude Include="..\User Files\BGM.h" />
     <ClInclude Include="..\User Files\Bomb.h" />
     <ClInclude Include="..\User Files\Bucket.h" />
+    <ClInclude Include="..\User Files\CameraObjectFollow.h" />
+    <ClInclude Include="..\User Files\CollisionTester.h" />
+    <ClInclude Include="..\User Files\CollisionTesterMovable.h" />
+    <ClInclude Include="..\User Files\DesertFloor.h" />
     <ClInclude Include="..\User Files\Floor.h" />
     <ClInclude Include="..\User Files\GameController.h" />
     <ClInclude Include="..\User Files\Level1.h" />
     <ClInclude Include="..\User Files\Level2.h" />
     <ClInclude Include="..\User Files\LoseScene .h" />
     <ClInclude Include="..\User Files\LoseText.h" />
+    <ClInclude Include="..\User Files\ObjectSound3DTest.h" />
     <ClInclude Include="..\User Files\RecyclingBombFactory.h" />
     <ClInclude Include="..\User Files\Ship.h" />
     <ClInclude Include="..\User Files\BattleShip.h" />
+    <ClInclude Include="..\User Files\DeathMatchLevel.h" />
+    <ClInclude Include="..\User Files\SoundListenerTest.h" />
+    <ClInclude Include="..\User Files\SoundTester.h" />
+    <ClInclude Include="..\User Files\SoundTestLevel.h" />
+    <ClInclude Include="..\User Files\Tank.h" />
+    <ClInclude Include="..\User Files\TankBottom.h" />
+    <ClInclude Include="..\User Files\TankShell.h" />
+    <ClInclude Include="..\User Files\TankTop.h" />
     <ClInclude Include="..\User Files\TutorialLevel1.h" />
     <ClInclude Include="..\User Files\WeirdShape.h" />
     <ClInclude Include="..\User Files\WinScene.h" />
     <ClInclude Include="..\User Files\WinText.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="P2Engine\AABBBoundingBox.h" />
     <ClInclude Include="P2Engine\Alarmable.h" />
     <ClInclude Include="P2Engine\AlarmManager.h" />
     <ClInclude Include="P2Engine\AlarmMarker.h" />
     <ClInclude Include="P2Engine\AssetManager.h" />
+    <ClInclude Include="P2Engine\Audible.h" />
+    <ClInclude Include="P2Engine\BoundingSphereVolume.h" />
+    <ClInclude Include="P2Engine\Burst3DPlayMode.h" />
+    <ClInclude Include="P2Engine\Burst2DPlayMode.h" />
+    <ClInclude Include="P2Engine\BurstSoundEndReceiver.h" />
+    <ClInclude Include="P2Engine\BurstSoundUserEndedReceiver.h" />
     <ClInclude Include="P2Engine\Collidable.h" />
     <ClInclude Include="P2Engine\CollidableGroup.h" />
     <ClInclude Include="P2Engine\CollidableGroupBase.h" />
@@ -185,21 +245,46 @@
     <ClInclude Include="P2Engine\CollisionPairProcessor.h" />
     <ClInclude Include="P2Engine\CollisionProcessorBase.h" />
     <ClInclude Include="P2Engine\CollisionSingleProcessor.h" />
+    <ClInclude Include="P2Engine\CollisionTerrainProcessor.h" />
+    <ClInclude Include="P2Engine\CollisionVolume.h" />
+    <ClInclude Include="P2Engine\DebugVisualizer.h" />
+    <ClInclude Include="P2Engine\DefaultSoundConscious.h" />
     <ClInclude Include="P2Engine\DoxygenP2Api.h" />
     <ClInclude Include="P2Engine\Drawable.h" />
     <ClInclude Include="P2Engine\DrawableManager.h" />
     <ClInclude Include="P2Engine\GameObject.h" />
     <ClInclude Include="P2Engine\GraphicsObjectMaker.h" />
+    <ClInclude Include="P2Engine\ListeningState.h" />
+    <ClInclude Include="P2Engine\No3DSound.h" />
+    <ClInclude Include="P2Engine\NotListeningState.h" />
+    <ClInclude Include="P2Engine\SoundConsciousListeningState.h" />
     <ClInclude Include="P2Engine\Inputable.h" />
     <ClInclude Include="P2Engine\InputManager.h" />
     <ClInclude Include="P2Engine\KeyEventEnum.h" />
     <ClInclude Include="P2Engine\KeyState.h" />
+    <ClInclude Include="P2Engine\Looped2DPlayMode.h" />
+    <ClInclude Include="P2Engine\Looped3DPlayMode.h" />
+    <ClInclude Include="P2Engine\NoTerrainInstance.h" />
+    <ClInclude Include="P2Engine\OOBB.h" />
     <ClInclude Include="P2Engine\P2Engine.h" />
+    <ClInclude Include="P2Engine\P2Math.h" />
+    <ClInclude Include="P2Engine\PlayModeBase.h" />
     <ClInclude Include="P2Engine\Scene.h" />
     <ClInclude Include="P2Engine\SceneManager.h" />
+    <ClInclude Include="P2Engine\Sound.h" />
+    <ClInclude Include="P2Engine\Sound2D.h" />
+    <ClInclude Include="P2Engine\Sound3D.h" />
+    <ClInclude Include="P2Engine\SoundConscious.h" />
+    <ClInclude Include="P2Engine\SoundManager.h" />
+    <ClInclude Include="P2Engine\SoundSystem.h" />
+    <ClInclude Include="P2Engine\SoundTest1.h" />
     <ClInclude Include="P2Engine\Terminable.h" />
     <ClInclude Include="P2Engine\TerminableManager.h" />
     <ClInclude Include="P2Engine\TerminationDumpster.h" />
+    <ClInclude Include="P2Engine\Terrain.h" />
+    <ClInclude Include="P2Engine\TerrainAssetManager.h" />
+    <ClInclude Include="P2Engine\TerrainManager.h" />
+    <ClInclude Include="P2Engine\TerrainModel.h" />
     <ClInclude Include="P2Engine\TimeManager.h" />
     <ClInclude Include="P2Engine\Updatable.h" />
     <ClInclude Include="P2Engine\UpdatableManager.h" />

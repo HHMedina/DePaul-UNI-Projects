@@ -32,7 +32,8 @@ Game::Game( const char * const windowName, int widthScreen, int heightScreen )
 //-----------------------------------------------------------------------------
 void Game::Initialize()
 {
-	
+	SoundSystem::StartSoundEngine();
+	GraphicsObjectMaker::Initialize();
 	InitializeContext();
 }
 
@@ -43,25 +44,15 @@ void Game::Initialize()
 //-----------------------------------------------------------------------------
 void Game::LoadContent()
 {
-	LoadGameContent();
 	
+	DebugVisualizer::Initialize();
+	LoadGameContent();
 
 	// Camera Setup ---------------------------------------
 
 		// Initially setup the camera
 		CameraMan::GetCurrent()->setViewport( 0, 0, this->screenWidth, this->screenHeight);
 		CameraMan::GetCurrent()->setPerspective( 45, float(this->screenWidth)/float(this->screenHeight), 1, 5000);
-
-		// Position and Orient Camera
-		//      First: we create a rotation matrix pointing (Z) towards the target
-		Vect Target(0,0,0);
-		CamRot = Matrix( Quat( ROT_ORIENT, Target - CamPos, CamUp));
-
-		//		Second: we set the camera to its position and pointing toward the target
-		CameraMan::GetCurrent()->setOrientAndPosition( CamUp * CamRot, CamPos + CamDir * CamRot, CamPos);
-
-		// Computes all the internal parameters for the camera
-		CameraMan::GetCurrent()->updateCamera();
 				
 	//changed initial stop watch to here because loading can take a while
 	//and time to start as soon as the game does.
@@ -76,9 +67,10 @@ void Game::LoadContent()
 //-----------------------------------------------------------------------------
 void Game::Update()
 {
+	SoundSystem::ProcessSoundDrops();
 	TimeManager::Update();
 	SceneManager::UpdateCurrentScene();
-		
+	/*
 	// Camera translation movement (not using time-based values for simplicity)
 	if ( InputMan::GetKeyboard()->GetKeyState(AZUL_KEY::KEY_1 ) )
 	{
@@ -119,6 +111,7 @@ void Game::Update()
 	// Update the camera settings
 	CameraMan::GetCurrent()->setOrientAndPosition( CamUp * CamRot, CamPos + CamDir * CamRot, CamPos);
 	CameraMan::GetCurrent()->updateCamera();
+	*/
 }
 
 //-----------------------------------------------------------------------------
@@ -129,7 +122,9 @@ void Game::Update()
 //-----------------------------------------------------------------------------
 void Game::Draw()
 { 
+	
 	SceneManager::DrawCurrentScene();
+	DebugVisualizer::RenderVisuals();
 }
 
 //-----------------------------------------------------------------------------
@@ -140,11 +135,13 @@ void Game::Draw()
 //-----------------------------------------------------------------------------
 void Game::UnLoadContent()
 {
+	
 	UnloadGameContent();
-	AssetManager::DeleteMe();
 	SceneManager::DeleteMe();
 	TimeManager::DeleteMe();
 	GraphicsObjectMaker::DeleteMe();
+	SoundSystem::DeleteMe();//must go before assetmanager since it has to clean up assets in the assetmanager
+	AssetManager::DeleteMe();
 	TerminateContext();
 }
 

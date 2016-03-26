@@ -1,0 +1,5 @@
+<map id="InputManager" name="InputManager">
+<area shape="rect" id="node3" href="$class_key_state.html" title="{KeyState\n|&#45; myKey\l&#45; previousState\l|&#45; KeyState()\l&#45; KeyState()\l&#45; operator=()\l&#45; ~KeyState()\l&#45; Register()\l&#45; Deregister()\l&#45; Update()\l&#45; IsKeyStateEmpty()\l&#45; CheckKeyUp()\l&#45; CheckKeyDown()\l&#45; GetCStringOfEnum()\l}" alt="" coords="28,785,177,1024"/>
+<area shape="rect" id="node5" href="$class_inputable.html" title="{Inputable\n||+ ~Inputable()\l+ RegisterForInput()\l+ DeregisterForInput()\l+ DeregisterAllInputKeys()\l# Inputable()\l# Inputable()\l# operator=()\l# KeyDown()\l# KeyUp()\l# AddRegisteredKeyPair()\l# RemoveRegisteredKeyPair()\l}" alt="" coords="5,329,200,553"/>
+<area shape="rect" id="node7" href="$struct_inputable_1_1_key_pair.html" title="{Inputable::KeyPair\n|+ myKey\l+ myKeyEvent\l|+ KeyPair()\l+ operator==()\l}" alt="" coords="39,5,167,112"/>
+</map>

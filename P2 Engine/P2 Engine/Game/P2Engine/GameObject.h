@@ -7,19 +7,25 @@
 #include <Drawable.h>
 #include <Terminable.h>
 #include <Alarmable.h>
+#include "SoundConscious.h"
 #include "SceneManager.h"
 #include "GraphicsObjectMaker.h"
+#include "Audible.h"
 
 class GameObject:public Collidable, 
 				public Inputable,
 				public Updatable,//
 				public Drawable,//
 				public Alarmable,
-				public Terminable{//
+				public Terminable,
+				public SoundConscious,
+				public Audible
+{//
 
 
 public:
-
+	
+	//Vect position;
 	
 	/**
 	\ingroup METHODS
@@ -30,14 +36,25 @@ public:
 
 	\param newWorld is the new world matrix for the collision model and graphics object to be set to.
 	*/
-	void SetGameObjectWorld(Matrix& newWorld ){
-		if(graphicsObject!=NULL){
-			graphicsObject->setWorld(newWorld);
-		}
-		if(this->collisionModel!=NULL){
-			colWorld = newWorld;
-		}
+	void SetGameObjectWorld(Vect& newPos,Vect& scale, Vect& rot  ){
+		Matrix newWorld = Matrix(SCALE, scale[x],scale[y],scale[z]) * Matrix(ROT_XYZ,rot[x],rot[y],rot[z]) * Matrix(TRANS,newPos[x],newPos[y],newPos[z]);
+	
+		SetAudiblePosition(newPos);
+		SetGraphicsWorld(newWorld);
+		SetColWorld(newWorld);
+		SetSndConciousPos(newPos);
+		SetSndConciousDir(rot);
+		UpdatePosAndDir();
 	}
+
+
+
+	///For Testing Purposes
+	//void SetGameObjectPosition(const Vect& pos){
+	//	position = pos;
+
+	//}
+
 
 	/**
 	\ingroup METHODS
@@ -49,12 +66,10 @@ public:
 
 	\param gObj gObj is the graphicsObject to set the graphicsObject of the GameObject to. This also passes in the model for the collision mesh.
 	*/
-	void SetGraphicAndCollisionModel(GraphicsObject* gObj){
-		if(graphicsObject!=NULL){
-			GraphicsObjectMaker::RemoveGraphicsObject(graphicsObject);
-		}//frees up previous space
-		graphicsObject = gObj;
-		collisionModel = gObj->getModel();
+	void SetGraphicAndCollisionModel(GraphicsObject* gObj, CollisionVolumeType type = CollisionVolumeType::SphereVolume){
+	
+		SetGraphicsObject(gObj);
+		SetCollider(gObj->getModel(),type);
 	}
 
 protected:
@@ -83,8 +98,8 @@ protected:
 		CancelAlarm(AlarmID_0);
 		CancelAlarm(AlarmID_1);
 		CancelAlarm(AlarmID_2);
-		SceneManager::DeregisterForUpdating(this);
-		SceneManager::DeregisterForDrawing(this);
+		DeregisterForUpdate();
+		DeregisterToDraw();
 	}
 
 	/**
@@ -93,11 +108,8 @@ protected:
 
 	*/
 	void RegisterForAutomated(){
-		SceneManager::RegisterForUpdating(this);
-		SceneManager::RegisterForDrawing(this);
 	}
 
-	
 
 };
 

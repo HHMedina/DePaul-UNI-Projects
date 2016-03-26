@@ -1,0 +1,22 @@
+<map id="SoundSystem.h" name="SoundSystem.h">
+<area shape="rect" id="node2" href="$_burst2_d_play_mode_8cpp.html" title="Burst2DPlayMode.cpp" alt="" coords="5,80,157,107"/>
+<area shape="rect" id="node3" href="$_burst3_d_play_mode_8cpp.html" title="Burst3DPlayMode.cpp" alt="" coords="181,80,333,107"/>
+<area shape="rect" id="node4" href="$_burst_sound_end_receiver_8cpp.html" title="BurstSoundEndReceiver.cpp" alt="" coords="357,80,544,107"/>
+<area shape="rect" id="node5" href="$_burst_sound_user_ended_receiver_8cpp.html" title="BurstSoundUserEndedReceiver.cpp" alt="" coords="569,80,797,107"/>
+<area shape="rect" id="node6" href="$_listening_state_8h.html" title="ListeningState.h" alt="" coords="873,80,989,107"/>
+<area shape="rect" id="node10" href="$_sound_system_8cpp.html" title="SoundSystem.cpp" alt="" coords="1087,304,1217,331"/>
+<area shape="rect" id="node12" href="$_p2_engine_8h.html" title="P2Engine.h" alt="" coords="749,304,838,331"/>
+<area shape="rect" id="node16" href="$_looped2_d_play_mode_8cpp.html" title="Looped2DPlayMode.cpp" alt="" coords="1064,80,1227,107"/>
+<area shape="rect" id="node17" href="$_looped3_d_play_mode_8cpp.html" title="Looped3DPlayMode.cpp" alt="" coords="1251,80,1413,107"/>
+<area shape="rect" id="node18" href="$_sound_8cpp.html" title="Sound.cpp" alt="" coords="1438,80,1522,107"/>
+<area shape="rect" id="node19" href="$_sound2_d_8cpp.html" title="Sound2D.cpp" alt="" coords="1546,80,1646,107"/>
+<area shape="rect" id="node20" href="$_sound3_d_8cpp.html" title="Sound3D.cpp" alt="" coords="1670,80,1770,107"/>
+<area shape="rect" id="node21" href="$_sound_manager_8cpp.html" title="SoundManager.cpp" alt="" coords="1794,80,1929,107"/>
+<area shape="rect" id="node7" href="$_sound_conscious_8h.html" title="SoundConscious.h" alt="" coords="943,155,1073,181"/>
+<area shape="rect" id="node15" href="$_listening_state_8cpp.html" title="ListeningState.cpp" alt="" coords="788,155,919,181"/>
+<area shape="rect" id="node8" href="$_default_sound_conscious_8h.html" title="DefaultSoundConscious.h" alt="" coords="919,229,1089,256"/>
+<area shape="rect" id="node11" href="$_game_object_8h.html" title="GameObject.h" alt="" coords="788,229,895,256"/>
+<area shape="rect" id="node9" href="$_default_sound_conscious_8cpp.html" title="DefaultSoundConscious.cpp" alt="" coords="878,304,1063,331"/>
+<area shape="rect" id="node13" href="$_terrain_model_8h.html" title="TerrainModel.h" alt="" coords="785,379,892,405"/>
+<area shape="rect" id="node14" href="$_terrain_model_8cpp.html" title="TerrainModel.cpp" alt="" coords="733,453,854,480"/>
+</map>

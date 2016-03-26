@@ -6,6 +6,7 @@
 #include "Alarmable.h"
 #include "Azul.h"
 #include "Terminable.h"
+#include "Terrain.h"
 
 SceneManager* SceneManager::instance=NULL;
 
@@ -30,6 +31,15 @@ void SceneManager::UpdateCurrentScene(){
 
 
 	Instance().currentScene->UpdateScene();
+}
+
+void SceneManager::SetCurrentTerrain(const char* const assetName){
+	Instance().currentScene->SetCurrentTerrain(assetName);
+}
+
+Terrain* SceneManager::GetCurrentTerrain() {
+
+	return Instance().currentScene->GetTerrainManager().GetCurrentTerrain();
 }
 
 void SceneManager::SetStartScene(Scene* targetScene){
@@ -63,12 +73,16 @@ void SceneManager::DeregisterForDrawing(Drawable* d){
 	Instance().currentScene->GetDrawableManager().Deregister(d);
 }
 
-void SceneManager::RegisterForInput(Inputable * in, AZUL_KEY key, KeyEvent keyEvent){
+void SceneManager::RegisterForInput(Inputable * in, AZUL_KEY key, KeyEvent keyEvent = KeyEvent::KeyUpAndDown ){
 	Instance().currentScene->GetInputManager().RegisterInput( in, key, keyEvent );
 }
 
 void SceneManager::DeregisterForInput(Inputable * in, AZUL_KEY key, KeyEvent keyEvent){
 	Instance().currentScene->GetInputManager().DeregisterInput( in, key, keyEvent );
+}
+
+void SceneManager::DeregisterAllInputKeys(Inputable * in){
+	Instance().currentScene->GetInputManager().DeregisterAllInputKeys(in);
 }
 
 void SceneManager::RegisterForAlarm(Alarmable* ptr,AlarmID id,float s){

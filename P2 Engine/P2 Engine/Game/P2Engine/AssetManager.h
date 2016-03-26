@@ -3,9 +3,16 @@
 
 #include <Azul.h>
 #include <map>
+#include "irrKlang.h"
 
+using namespace irrklang;
 using namespace std;
-
+class SoundManager;
+class TerrainAssetManager;
+class Terrain;
+class Sound;
+class Sound2D;
+class Sound3D;
 class AssetManager{
 
 	static struct comparer
@@ -18,10 +25,20 @@ class AssetManager{
 	};
 
 	friend class Game;
+	friend class Sound;
 
 private:
 
-	
+
+	/**
+	Asset Manager contains a SoundManager;
+	*/
+	SoundManager* soundManager;
+
+	/**AssetManager contains a terrainManager
+	*/
+	TerrainAssetManager* terrainAssetManager;
+
 	/**
 	\brief Static pointer to singleton
 	*/
@@ -45,7 +62,7 @@ private:
 
 	}
 
-	AssetManager(){}
+	AssetManager();
 	AssetManager( const AssetManager & rhs){ rhs;}
 	AssetManager& operator = (const AssetManager& rhs){ rhs;}
 	~AssetManager();
@@ -63,7 +80,23 @@ private:
 	static void DeleteMe();
 
 public:
+
+	static void LoadTerrain(const char* const, const char* const , const char* const , float , float , float , int , int);
+
+	static Terrain* GetTerrain(const char* const);
+
+	/*
+
+	*/
+	static void LoadSound(const char* const fileName, const char* const assetName);
+
+	static Sound2D* GetSound2DInstance(const char* const assetName);
+
+	static Sound3D* GetSound3DInstance(const char* const assetName);
+
+	static ISoundSource* GetSoundSource(const char* const assetName);
 	
+	static SoundManager* GetSoundManager();
 	/**
 	\ingroup ASSETMANAGER
 
@@ -102,6 +135,8 @@ public:
 	*/
 	static void LoadModel(const char* const fileName,const char* const  assetName);
 	
+	static void LoadAzulModel(const char* const fileName,const char* const assetName);
+
 	/**
 	\ingroup ASSETMANAGER
 

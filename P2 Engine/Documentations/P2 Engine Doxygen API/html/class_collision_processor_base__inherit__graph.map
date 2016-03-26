@@ -1,0 +1,5 @@
+<map id="CollisionProcessorBase" name="CollisionProcessorBase">
+<area shape="rect" id="node2" href="$class_collision_pair_processor.html" title="{CollisionPairProcessor\l\&lt; C1, C2 \&gt;\n|# CollisionGroup1\l# CollisionGroup2\l|# CollisionPairProcessor()\l# CollisionPairProcessor()\l# operator=()\l# ~CollisionPairProcessor()\l# CollisionTest()\l}" alt="" coords="5,167,185,333"/>
+<area shape="rect" id="node3" href="$class_collision_single_processor.html" title="{CollisionSingleProcessor\&lt; C \&gt;\n|# CollisionGroup\l|# CollisionSingleProcessor()\l# CollisionSingleProcessor()\l# operator=()\l# ~CollisionSingleProcessor()\l# CollisionTest()\l}" alt="" coords="209,182,408,318"/>
+<area shape="rect" id="node4" href="$class_collision_terrain_processor.html" title="{CollisionTerrainProcessor\l\&lt; C1 \&gt;\n|# CollisionGroup1\l# currentTerrain\l# fakeAABB\l|# CollisionTerrainProcessor()\l# CollisionTerrainProcessor()\l# operator=()\l# ~CollisionTerrainProcessor()\l# CollisionTest()\l}" alt="" coords="432,160,628,340"/>
+</map>

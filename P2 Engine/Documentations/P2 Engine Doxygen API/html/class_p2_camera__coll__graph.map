@@ -1,0 +1,4 @@
+<map id="P2Camera" name="P2Camera">
+<area shape="rect" id="node3" href="$class_sound_conscious.html" title="{SoundConscious\n|# sndConPos\l# sndConDirection\l|+ GetSoundConsciousPosition()\l+ GetSoundConsciousDirection()\l# SoundConscious()\l# SoundConscious()\l# operator=()\l# ~SoundConscious()\l# SetSndConciousPos()\l# SetToNotListening()\l# SetToListening()\l# SetSndConciousDir()\l# UpdatePosAndDir()\l}" alt="" coords="97,219,309,457"/>
+<area shape="rect" id="node4" href="$class_sound_conscious_listening_state.html" title="{SoundConsciousListeningState\n||# SoundConsciousListeningState()\l# SoundConsciousListeningState()\l# operator=()\l# ~SoundConsciousListening\lState()\l# Update()\l}" alt="" coords="91,5,314,156"/>
+</map>

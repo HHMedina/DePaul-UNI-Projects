@@ -109,19 +109,24 @@ public:
 		}//frees up previous space
 		graphicsObject = newGObj;
 	}
-
 	
 protected:
+
+	
+
+	void SetGraphicsWorld(Matrix& newWorld){
+		graphicsWorld = newWorld;
+	}
 
 	Drawable(){
 		//Set graphicsObject to Null
 		graphicsObject =NULL;
+		RegisterToDraw();
 	}
 	Drawable( const Drawable & rhs){ rhs;}
 	Drawable& operator = (const Drawable& rhs){ rhs;}
 	virtual ~Drawable(){
-		//does not delete graphicsObject because it's dereference is not owned by
-		//the Drawable. It is owned by whoever sets it.
+		GraphicsObjectMaker::RemoveGraphicsObject(graphicsObject);
 	}
 
 	
@@ -179,6 +184,7 @@ protected:
 	
 	*/
 	void RenderGraphics(){
+		graphicsObject->setWorld(graphicsWorld);
 		graphicsObject->Render();
 	}
 
@@ -187,6 +193,7 @@ protected:
 	*/
 	GraphicsObject* graphicsObject;
 
+	Matrix graphicsWorld;
 
 };
 #endif

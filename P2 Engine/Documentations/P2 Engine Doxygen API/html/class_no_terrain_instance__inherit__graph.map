@@ -1,0 +1,3 @@
+<map id="NoTerrainInstance" name="NoTerrainInstance">
+<area shape="rect" id="node2" href="$class_terrain.html" title="{Terrain\n|# imgWidth\l# imgHeigth\l# numVerts\l# numTris\l# numCells\l# numVertsPerSide\l# numCellsPerSide\l# cellDimension\l# sideLength\l# vertsArray\l# minMaxData\l# terrainGrphObject\l# likeyCandidates\l|+ Terrain()\l+ Terrain()\l+ GetCellIndexFromWorldPosition()\l# Terrain()\l# operator=()\l# ~Terrain()\l# Draw()\l# CreateTerrainModel()\l# SaveTerrainModel()\l# GetLikelyCandidates()\l# IsWithinTerrain()\l}" alt="" coords="5,5,232,405"/>
+</map>
