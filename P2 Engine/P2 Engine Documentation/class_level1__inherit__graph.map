@@ -1,0 +1,3 @@
+<map id="Level1" name="Level1">
+<area shape="rect" id="node2" href="$class_scene.html" title="{Scene\n|# updatableManager\l# drawableManager\l# inputManager\l# alarmManager\l# collisionManager\l# terminableManager\l# terminationDumpster\l|+ ~Scene()\l# Scene()\l# Scene()\l# operator=()\l# DrawScene()\l# UpdateScene()\l# GetUpdatableManager()\l# GetDrawableManager()\l# GetInputManager()\l# GetAlarmManager()\l# GetTerminableManager()\land 6 more...\l}" alt="" coords="5,5,180,332"/>
+</map>

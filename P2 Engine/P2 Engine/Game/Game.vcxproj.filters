@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Game.cpp">
+      <Filter>P2Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>P2Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\Alarmable.cpp">
+      <Filter>P2Engine\Source\AlarmSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\AlarmManager.cpp">
+      <Filter>P2Engine\Source\AlarmSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\AssetManager.cpp">
+      <Filter>P2Engine\Source\AssetManager</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\InputManager.cpp">
+      <Filter>P2Engine\Source\InputSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\KeyState.cpp">
+      <Filter>P2Engine\Source\InputSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\TimeManager.cpp">
+      <Filter>P2Engine\Source\TimeSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\Scene.cpp">
+      <Filter>P2Engine\Source\Scene System</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\SceneManager.cpp">
+      <Filter>P2Engine\Source\Scene System</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\DrawableManager.cpp">
+      <Filter>P2Engine\Source\DrawingSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\UpdatableManager.cpp">
+      <Filter>P2Engine\Source\Update System</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\TerminableManager.cpp">
+      <Filter>P2Engine\Source\TerminableSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\TerminationDumpster.cpp">
+      <Filter>P2Engine\Source\TerminableSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\Inputable.cpp">
+      <Filter>P2Engine\Source\InputSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\Terminable.cpp">
+      <Filter>P2Engine\Source\TerminableSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\Updatable.cpp">
+      <Filter>P2Engine\Source\Update System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\P2EngineContent.cpp">
+      <Filter>User Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\Bomb.cpp">
+      <Filter>User Files\GameObjects\Demo GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\Bucket.cpp">
+      <Filter>User Files\GameObjects\Demo GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\Floor.cpp">
+      <Filter>User Files\GameObjects\Demo GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\WinText.cpp">
+      <Filter>User Files\GameObjects\Demo GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\WinScene.cpp">
+      <Filter>User Files\Levels\Demo Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\TutorialLevel1.cpp">
+      <Filter>User Files\Levels\Demo Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\LoseScene .cpp">
+      <Filter>User Files\Levels\Demo Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\LoseText.cpp">
+      <Filter>User Files\GameObjects\Demo GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\GameController.cpp">
+      <Filter>User Files\GameObjects\Demo GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\RecyclingBombFactory.cpp">
+      <Filter>User Files\GameObjects\Demo GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\Drawable.cpp">
+      <Filter>P2Engine\Source\DrawingSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\Collidable.cpp">
+      <Filter>P2Engine\Source\CollisionSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\CollisionManager.cpp">
+      <Filter>P2Engine\Source\CollisionSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\Level1.cpp">
+      <Filter>User Files\Levels\debugging Level for engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\Level2.cpp">
+      <Filter>User Files\Levels\debugging Level for engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\BattleShip.cpp">
+      <Filter>User Files\GameObjects\DebuggingGameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\Ship.cpp">
+      <Filter>User Files\GameObjects\DebuggingGameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\User Files\WeirdShape.cpp">
+      <Filter>User Files\GameObjects\DebuggingGameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\GraphicsObjectMaker.cpp">
+      <Filter>P2Engine\Source\GraphicsObjectMaker</Filter>
+    </ClCompile>
+    <ClCompile Include="P2Engine\AlarmMarker.cpp">
+      <Filter>P2Engine\Source\AssetManager</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="_Libs">
+      <UniqueIdentifier>{654b17f4-5c32-4af8-9c06-44081aee35e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\_Time">
+      <UniqueIdentifier>{00a7d9a7-621b-4cd1-ab70-b15a303a0e69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\_Time\include">
+      <UniqueIdentifier>{22fb9e59-7fdb-44a2-b3f4-aa36c607468e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\_Math">
+      <UniqueIdentifier>{f7cd51a8-6ca7-472f-a6c3-31ce8fde6c0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\_Math\include">
+      <UniqueIdentifier>{20f26c44-6049-453c-9a4b-38e04c3a12c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\_File">
+      <UniqueIdentifier>{e3abff6f-2abf-4ce0-b8ef-784c3ec6379b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\_File\include">
+      <UniqueIdentifier>{9aca96a8-c51f-4709-a910-aa551e8732cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\_Azul">
+      <UniqueIdentifier>{452fe1b8-c527-4569-8967-51e4f2139f06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Libs\_Azul\include">
+      <UniqueIdentifier>{0ad67470-fbca-4090-bba8-5213abfc2846}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine">
+      <UniqueIdentifier>{a62e489a-1d7c-4d43-93c3-343e684c9ece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers">
+      <UniqueIdentifier>{7a460a9e-2837-48e8-9273-0b1427d60239}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Source">
+      <UniqueIdentifier>{3837cf60-94d9-4533-8703-45f46d09831d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User Files">
+      <UniqueIdentifier>{53ce78e6-f690-4cef-b216-4a2ce5c4d8c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User Files\Levels">
+      <UniqueIdentifier>{db7988ba-b3e7-4e26-bbf5-77202d6d9c00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User Files\GameObjects">
+      <UniqueIdentifier>{36f60b81-a52b-4db3-a74f-be7c7eabc84d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Source\AlarmSystem">
+      <UniqueIdentifier>{7c611564-d00a-4708-a8be-088d86c57085}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Source\AssetManager">
+      <UniqueIdentifier>{f2dd6bc6-f6b6-4c1d-9d37-43b7f510e1d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Source\InputSystem">
+      <UniqueIdentifier>{61440274-3e25-45a1-8585-0b2d4d4c6ef0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Source\TimeSystem">
+      <UniqueIdentifier>{a7dbc199-4d20-43a8-baf6-24eb14b30cd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Source\Scene System">
+      <UniqueIdentifier>{19f9b749-b5a5-40d3-8f33-aee3d796ed72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Source\DrawingSystem">
+      <UniqueIdentifier>{f0518455-c6b1-40aa-bd8c-b0c1fe28774f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Source\Update System">
+      <UniqueIdentifier>{6d5b40ac-0059-466c-b043-c1193875b99a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\AlarmSystem">
+      <UniqueIdentifier>{2d414106-1313-41fc-a197-5677ff64252e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\AssetManager">
+      <UniqueIdentifier>{9b05ac08-f95a-45fa-8e7f-1b465e63b5d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\DrawingSystem">
+      <UniqueIdentifier>{6ccb889b-7c9f-4219-961f-1afba8bb6184}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\InputSystem">
+      <UniqueIdentifier>{f3e31747-6a8e-42d8-a389-c4ab6debd4f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\SceneSystem">
+      <UniqueIdentifier>{b4b964c1-1060-41ae-a97e-501de0a9c3e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\UpdateSystem">
+      <UniqueIdentifier>{cc23e602-b6da-4ffd-85c2-249d61d7d997}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\TimeSystem">
+      <UniqueIdentifier>{f1887730-42f9-45f7-8096-4667fb30eef5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\CollisionSystem">
+      <UniqueIdentifier>{8413352f-364d-4f2b-8cae-166dac3e2a50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\TerminableSystem">
+      <UniqueIdentifier>{9e2b010c-2f36-4448-a8e9-dc3489526e8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Source\TerminableSystem">
+      <UniqueIdentifier>{7f59a8b0-1f95-476c-b7ff-63eb5fd42ef2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Source\CollisionSystem">
+      <UniqueIdentifier>{f6fbc184-3033-467b-8346-fdbb39b7847c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User Files\Levels\Demo Levels">
+      <UniqueIdentifier>{8f8be5e3-5407-4e62-b4b5-a47628b2694d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User Files\GameObjects\Demo GameObjects">
+      <UniqueIdentifier>{6c67594a-0e18-469a-911b-5c269cbb537d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\GameObject">
+      <UniqueIdentifier>{6ba0f034-2959-4bfd-a3ef-cb7a9bcf92d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User Files\Levels\debugging Level for engine">
+      <UniqueIdentifier>{cd7c9d8f-e530-4eae-a6da-6f4498f5bcf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User Files\GameObjects\DebuggingGameObjects">
+      <UniqueIdentifier>{0ddd71af-f435-4f8a-b6fd-050e5ea4b575}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Source\GraphicsObjectMaker">
+      <UniqueIdentifier>{8c67994e-76d9-4e0b-9367-7bb5c587119b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P2Engine\Headers\GraphicsObjectMaker">
+      <UniqueIdentifier>{0e5008b9-dae2-4df8-ae2e-0e6527bcafdb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Time\include\Time.h">
+      <Filter>_Libs\_Time\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Time\include\Timer.h">
+      <Filter>_Libs\_Time\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Math\include\MathApp.h">
+      <Filter>_Libs\_Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Math\include\MathEngine.h">
+      <Filter>_Libs\_Math\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\File\include\File.h">
+      <Filter>_Libs\_File\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Azul\include\Azul.h">
+      <Filter>_Libs\_Azul\include</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="P2Engine\P2Engine.h">
+      <Filter>P2Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>P2Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\Alarmable.h">
+      <Filter>P2Engine\Headers\AlarmSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\AlarmManager.h">
+      <Filter>P2Engine\Headers\AlarmSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\AlarmMarker.h">
+      <Filter>P2Engine\Headers\AlarmSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\AssetManager.h">
+      <Filter>P2Engine\Headers\AssetManager</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\Drawable.h">
+      <Filter>P2Engine\Headers\DrawingSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\DrawableManager.h">
+      <Filter>P2Engine\Headers\DrawingSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\GameObject.h">
+      <Filter>P2Engine\Headers\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\Inputable.h">
+      <Filter>P2Engine\Headers\InputSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\InputManager.h">
+      <Filter>P2Engine\Headers\InputSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\Scene.h">
+      <Filter>P2Engine\Headers\SceneSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\KeyState.h">
+      <Filter>P2Engine\Headers\InputSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\SceneManager.h">
+      <Filter>P2Engine\Headers\SceneSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\Updatable.h">
+      <Filter>P2Engine\Headers\UpdateSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\UpdatableManager.h">
+      <Filter>P2Engine\Headers\UpdateSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\TimeManager.h">
+      <Filter>P2Engine\Headers\TimeSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\Terminable.h">
+      <Filter>P2Engine\Headers\TerminableSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\TerminableManager.h">
+      <Filter>P2Engine\Headers\TerminableSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\TerminationDumpster.h">
+      <Filter>P2Engine\Headers\TerminableSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\KeyEventEnum.h">
+      <Filter>P2Engine\Headers\InputSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\DoxygenP2Api.h">
+      <Filter>P2Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\Bomb.h">
+      <Filter>User Files\GameObjects\Demo GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\Bucket.h">
+      <Filter>User Files\GameObjects\Demo GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\Floor.h">
+      <Filter>User Files\GameObjects\Demo GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\GameController.h">
+      <Filter>User Files\GameObjects\Demo GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\WinText.h">
+      <Filter>User Files\GameObjects\Demo GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\WinScene.h">
+      <Filter>User Files\Levels\Demo Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\TutorialLevel1.h">
+      <Filter>User Files\Levels\Demo Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\LoseScene .h">
+      <Filter>User Files\Levels\Demo Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\LoseText.h">
+      <Filter>User Files\GameObjects\Demo GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\RecyclingBombFactory.h">
+      <Filter>User Files\GameObjects\Demo GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\Collidable.h">
+      <Filter>P2Engine\Headers\CollisionSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\CollidableGroup.h">
+      <Filter>P2Engine\Headers\CollisionSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\CollidableGroupBase.h">
+      <Filter>P2Engine\Headers\CollisionSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\CollisionManager.h">
+      <Filter>P2Engine\Headers\CollisionSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\CollisionPairProcessor.h">
+      <Filter>P2Engine\Headers\CollisionSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\CollisionProcessorBase.h">
+      <Filter>P2Engine\Headers\CollisionSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\CollisionSingleProcessor.h">
+      <Filter>P2Engine\Headers\CollisionSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="P2Engine\GraphicsObjectMaker.h">
+      <Filter>P2Engine\Headers\GraphicsObjectMaker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\Level1.h">
+      <Filter>User Files\Levels\debugging Level for engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\Level2.h">
+      <Filter>User Files\Levels\debugging Level for engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\BattleShip.h">
+      <Filter>User Files\GameObjects\DebuggingGameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\Ship.h">
+      <Filter>User Files\GameObjects\DebuggingGameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\User Files\WeirdShape.h">
+      <Filter>User Files\GameObjects\DebuggingGameObjects</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\Azul\lib\AzulDebug.lib">
+      <Filter>_Libs\_Azul</Filter>
+    </Library>
+    <Library Include="..\Time\lib\TimeDebug.lib">
+      <Filter>_Libs\_Time</Filter>
+    </Library>
+    <Library Include="..\Time\lib\TimeRelease.lib">
+      <Filter>_Libs\_Time</Filter>
+    </Library>
+    <Library Include="..\Math\lib\MathDebug.lib">
+      <Filter>_Libs\_Math</Filter>
+    </Library>
+    <Library Include="..\Math\lib\MathRelease.lib">
+      <Filter>_Libs\_Math</Filter>
+    </Library>
+    <Library Include="..\File\lib\FileDebug.lib">
+      <Filter>_Libs\_File</Filter>
+    </Library>
+    <Library Include="..\File\lib\FileRelease.lib">
+      <Filter>_Libs\_File</Filter>
+    </Library>
+    <Library Include="..\Azul\lib\AzulRelease.lib">
+      <Filter>_Libs\_Azul</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Game.rc" />
+  </ItemGroup>
+</Project>

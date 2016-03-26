@@ -1,0 +1,11 @@
+<map id="AlarmManager.h" name="AlarmManager.h">
+<area shape="rect" id="node2" href="$_scene_8h.html" title="Scene.h" alt="" coords="239,80,310,107"/>
+<area shape="rect" id="node5" href="$_alarm_manager_8cpp.html" title="AlarmManager.cpp" alt="" coords="5,229,136,256"/>
+<area shape="rect" id="node7" href="$_p2_engine_8h.html" title="P2Engine.h" alt="" coords="161,229,250,256"/>
+<area shape="rect" id="node9" href="$_scene_8cpp.html" title="Scene.cpp" alt="" coords="453,155,537,181"/>
+<area shape="rect" id="node3" href="$_time_manager_8h.html" title="TimeManager.h" alt="" coords="318,155,429,181"/>
+<area shape="rect" id="node10" href="$_scene_manager_8cpp.html" title="SceneManager.cpp" alt="" coords="159,155,294,181"/>
+<area shape="rect" id="node4" href="$_alarmable_8cpp.html" title="Alarmable.cpp" alt="" coords="274,229,379,256"/>
+<area shape="rect" id="node6" href="$_alarm_marker_8cpp.html" title="AlarmMarker.cpp" alt="" coords="403,229,525,256"/>
+<area shape="rect" id="node8" href="$_time_manager_8cpp.html" title="TimeManager.cpp" alt="" coords="549,229,675,256"/>
+</map>
