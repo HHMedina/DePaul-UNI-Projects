@@ -1,0 +1,579 @@
+ 
+#include <stdlib.h>
+#include <iostream>
+using namespace std;
+
+template <class item>
+LinkedList<item>::LinkedList()
+{
+	head = new Node<item>;
+	tail = new Node<item>;
+
+	head->next = tail;
+	tail->prev = head;
+
+	current = head;
+	bookmark = NULL;
+	curIndex = -1;
+	length = 0;
+}
+ 
+template <class item>
+LinkedList<item>::LinkedList(const LinkedList<item>& list)
+{
+	Node<item> *listCurrent = list.head->next;
+	
+	head = new Node<item>;
+	tail = new Node<item>;
+
+	head->next = tail;
+	tail->prev = head;
+
+	current = head;
+	bookmark = NULL;
+
+	Node<item> *newCurrent;
+	while (listCurrent != list.tail)
+	{
+		InsertTail(listCurrent->contents);
+		if (listCurrent == list.current)
+			newCurrent = current;
+		listCurrent = listCurrent->next;
+	}
+	current = newCurrent;
+	bookmark = NULL;
+	curIndex = list.curIndex;
+	length = list.length;
+}
+
+template <class item>
+LinkedList<item>& LinkedList<item>::operator=(const LinkedList<item>& list)
+{
+	ClearList();
+
+	Node<item> *listCurrent = list.head->next;
+	Node<item> *newCurrent;
+	while (listCurrent != list.tail)
+	{
+		InsertTail(listCurrent->contents);
+		if (listCurrent == list.current)
+			newCurrent = current;
+		listCurrent = listCurrent->next;
+	}
+	current = newCurrent;
+	curIndex = list.curIndex;
+	length = list.length;
+
+	bookmark = NULL;
+	return *this;
+}
+
+template <class item>
+LinkedList<item>::~LinkedList()
+{
+	ClearList();
+	delete head;
+	delete tail;
+}	
+
+template <class item>
+void LinkedList<item>::ClearList(void)
+{
+	while (!IsEmpty())
+		RemoveFirst();
+	curIndex = -1;
+}	
+
+template <class item>
+void LinkedList<item>::MoveToHead(void) const
+{
+	current = head;
+	curIndex = -1;
+}
+
+template <class item>
+void LinkedList<item>::MoveFirst(void) const
+{
+	current = head->next;
+	curIndex = 0;
+}
+
+template <class item>
+void LinkedList<item>::MoveNext(void) const
+{
+	if (!AtEnd())
+	{
+		current = current->next;
+		curIndex++;
+	}
+}
+
+template <class item>
+void LinkedList<item>::MovePrev(void) const
+{
+	if (!AtHead())
+	{
+		current = current->prev;
+		curIndex--;
+	}
+}
+
+template <class item>
+void LinkedList<item>::MoveToTail(void) const
+{
+	current = tail;
+	curIndex = length;
+}
+
+template <class item>
+void LinkedList<item>::MoveLast(void) const
+{
+	current = tail->prev;
+	curIndex = length-1;
+}
+
+template <class item>
+item& LinkedList<item>::GetFirst() const
+{
+	if (!IsEmpty())
+		return head->next->contents;
+	else
+	{
+		complain("Error: Tried to get first item from empty list");
+		exit(1);  // not necessary as complain exits or throws.  But VC++ complains
+				  // Is it possible for a throw to resume back here?
+#if _MSC_VER < 1200
+		// This is not a memory leak as this code never gets executed
+		item *garbage = new item;
+		return *garbage;
+#endif
+	}
+}
+
+template <class item>
+item& LinkedList<item>::GetLast() const
+{
+	if (!IsEmpty())
+		return tail->prev->contents;
+	else
+	{
+		complain("Error: Tried to get last item from empty list");
+		exit(1);  // not necessary as complain exits or throws.  But VC++ complains
+				  // Is it possible for a throw to resume back here?
+#if _MSC_VER < 1200
+		// This is not a memory leak as this code never gets executed
+		item *garbage = new item;
+		return *garbage;
+#endif
+	}
+}
+
+template <class item>
+item& LinkedList<item>::GetCurrent(void) const
+{
+	return current->contents; // Warning!! this will return a "default" item
+							  // if current is off the end of the list.
+}
+
+template <class item>
+void LinkedList<item>::InsertHead(const item &source)
+{
+	Node<item> *newNode = new Node<item>;
+
+	newNode->contents = source;
+	newNode->next = head->next;
+	newNode->prev = head;
+	head->next->prev = newNode;
+	head->next = newNode;
+	current = newNode;
+
+	length++;
+	curIndex = 0;
+}
+
+template <class item>
+void LinkedList<item>::InsertTail(const item &source)
+{
+	Node<item> *newNode = new Node<item>;
+
+	newNode->contents = source;
+	newNode->next = tail;
+    newNode->prev = tail->prev;
+	tail->prev->next = newNode;
+	tail->prev = newNode;
+	current = newNode;
+
+	length++;
+	curIndex = length - 1;
+}
+
+template <class item>
+void LinkedList<item>::InsertBefore(const item &source)
+{
+	if (current == head)
+		current = current->next;
+
+	Node<item> *newNode = new Node<item>;
+	newNode->contents = source;
+
+	newNode->next = current;
+	newNode->prev = current->prev;
+	current->prev->next = newNode;
+	current->prev = newNode;
+	current = newNode;
+	length++;
+	// curIndex does not change!
+}
+
+template <class item>
+void LinkedList<item>::InsertAfter(const item &source) 
+{
+	if (current == tail)
+		current = current->prev;
+
+	Node<item> *newNode = new Node<item>;
+	newNode->contents = source;
+
+	newNode->prev = current;
+	newNode->next = current->next;
+	current->next->prev = newNode;
+	current->next = newNode;
+	current = newNode;
+	length++;
+	curIndex++;
+}
+
+template <class item>
+void LinkedList<item>::InsertSorted(const item& source)
+{
+	if (current == head || current == tail)
+		MoveFirst();
+
+	if (current->contents > source)
+	{
+		for (MoveFirst(); !AtEnd(); MoveNext())
+			if (current->contents > source)
+				break;
+	}
+	else 
+		for (; !AtEnd(); MoveNext())
+			if (current->contents > source)
+				break;
+
+	InsertBefore(source); // Alters length and curIndex!
+}
+
+template <class item>
+void LinkedList<item>::InsertSortedPointer(const item& source)
+{
+	Node<item> *temp = current;
+
+	if (*(current->contents) > *source)
+	{
+		for (MoveFirst(); !AtEnd(); MoveNext())
+			if (*(current->contents) > *source)
+				break;
+	}
+	else 
+		for (; !AtEnd(); MoveNext())
+			if (*(current->contents) > *source)
+				break;
+
+	InsertBefore(source); // Alters length and curIndex
+}
+
+// This just implements a shell sort
+template <class item>
+void LinkedList<item>::Sort(void)
+{
+	Node<item> *old = current;
+
+	int n = Length();
+	if (n < 2) 
+		return;
+
+	Node<item> *first;
+	Node<item> *second;
+	int diff = n;
+	bool swappedAny;
+
+	do
+	{
+		diff = diff / 2;
+		if (diff < 1)
+			diff = 1;
+
+		first = head->next;
+		second = first;
+
+		for (int i = 0; i < diff; i++)
+			second = second->next;
+
+		swappedAny = false;
+		do
+		{
+			if (first->contents > second->contents) // Swap them
+			{
+				Node<item> *tmp;
+
+				first->prev->next = second;
+				second->next->prev = first;
+
+				if (first->next != second)
+				{
+					first->next->prev = second;
+					second->prev->next = first;
+					swap(first->prev, second->prev);
+					swap(first->next, second->next);
+				}
+				else
+				{
+					tmp = first->prev;
+					first->prev = second;
+					first->next = second->next;
+					second->prev = tmp;
+					second->next = first;
+				}
+
+				tmp = first;  // Swap the pointers so that we can still track properly
+				first = second;
+				second = tmp;  // We've flipped them, but we still need to proceed on 
+								 // track to compare others.
+				swappedAny = true;
+			}
+			first = first->next;
+			second = second->next;
+		} while (second != tail);
+	} while ((swappedAny == true) || (diff > 1));
+
+	for (MoveFirst(); current != old; MoveNext());
+}
+
+// This just implements a shell sort with pointers to objects
+template <class item>
+void LinkedList<item>::SortPointer(void)
+{
+	Node<item> *old = current;
+
+	int n = Length();
+	if (n < 2) 
+		return;
+
+	Node<item> *first;
+	Node<item> *second;
+	int diff = n;
+	bool swappedAny;
+
+	do
+	{
+		diff = diff / 2;
+		if (diff < 1)
+			diff = 1;
+
+		first = head->next;
+		second = first;
+
+		for (int i = 0; i < diff; i++)
+			second = second->next;
+
+		swappedAny = false;
+		do
+		{
+			if (*(first->contents) > *(second->contents))
+			{
+				Node<item> *tmp;
+
+				first->prev->next = second;
+				second->next->prev = first;
+
+				if (first->next != second)
+				{
+					first->next->prev = second;
+					second->prev->next = first;
+					swap(first->prev, second->prev);
+					swap(first->next, second->next);
+				}
+				else
+				{
+					tmp = first->prev;
+					first->prev = second;
+					first->next = second->next;
+					second->prev = tmp;
+					second->next = first;
+				}
+
+				tmp = first;  // Swap the pointers so that we can still track properly
+				first = second;
+				second = tmp;  // We've flipped them, but we still need to proceed on 
+								 // track to compare others.
+				swappedAny = true;
+			}
+			first = first->next;
+			second = second->next;
+		} while (second != tail);
+	} while ((swappedAny == true) || (diff > 1));
+
+	for (MoveFirst(); current != old; MoveNext());
+}
+
+template <class item>
+bool LinkedList<item>::Find(const item& source) const
+{
+	Node<item> *tmp = current;
+	int oldIndex = curIndex;
+
+	MoveFirst();
+	while (!AtEnd())
+	{
+		if (current->contents == source)
+			break;
+		MoveNext();
+	}
+
+	if (current != tail) // If we didn't reach the end, we found it
+		return true;
+	else
+	{
+		current = tmp;  // revert to old current;
+		curIndex = oldIndex;
+		return false;
+	}
+}
+
+// Test this!!!!
+template <class item>
+bool LinkedList<item>::MoveTo(int index)
+{
+	if (index < 0)
+		return false;
+	else if (index > length - 1)
+		return false;
+
+	int difference = curIndex - index;
+
+	if (difference > 0)
+	{
+		for (int i = 0; i < difference; i++)
+			MovePrev();
+	}
+	else
+	{
+		for (int i = 0; i < -difference; i++)
+			MoveNext();
+	}
+	return true;
+}
+
+template <class item>
+void LinkedList<item>::RemoveCurrent(void)
+{
+	if ((current == head) || (current == tail))
+		return;
+	else
+	{
+		Node<item> *previous = current->prev;
+        Node<item> *next = current->next;
+
+		previous->next = next; 
+        next->prev = previous; 
+		delete current;
+		length--;
+		current = previous;
+		curIndex--;
+	}
+}
+
+template <class item>
+void LinkedList<item>::RemoveFirst(void)
+{
+	if (IsEmpty())
+		return;
+    else
+    {
+	    Node<item> *next = head->next->next;
+	    delete head->next;
+		next->prev = head;
+	    head->next = next;
+		current = next;
+		length--;
+		curIndex = 0;
+    }
+}
+
+template <class item>
+void LinkedList<item>::RemoveLast(void)
+{
+	if (IsEmpty())
+		return;
+	else
+	{
+		Node<item> *previous = tail->prev->prev;
+		delete tail->prev;
+		tail->prev = previous;
+		previous->next = tail;
+		current = previous;
+		length--;
+		curIndex = length - 1;
+	}
+}
+
+template <class item>
+void LinkedList<item>::Remove(const item &target)
+{
+	Node<item> *tmp = current;
+	int oldIndex = curIndex;
+
+	if (Find(target))
+		RemoveCurrent();
+	else
+	{
+		current = tmp;
+		curIndex = oldIndex;
+	}
+}
+
+template <class item>
+size_t LinkedList<item>::Length(void) const
+{
+	return length;
+}
+
+// Members for the stack class
+
+template <class item>
+Stack<item>::Stack() 
+{ 
+}
+	
+template <class item>
+void Stack<item>::Push(const item &newItem)
+{
+	LinkedList<item>::Append(newItem);
+}
+
+template <class item>
+item Stack<item>::Pop(void)
+{
+	item retVal = LinkedList<item>::GetCurrent();
+	LinkedList<item>::RemoveLast();
+	return retVal;
+}
+
+template <class item>
+item &Stack<item>::Peek(void)
+{
+	return LinkedList<item>::GetCurrent();
+}
+
+template <class item>
+bool Stack<item>::IsEmpty(void)
+{
+	return(LinkedList<item>::IsEmpty());
+}
+
+template <class item>
+void Stack<item>::Clear(void)
+{
+	LinkedList<item>::ClearList();
+}
+
