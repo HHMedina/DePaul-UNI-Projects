@@ -1,0 +1,17 @@
+RenderGL was an assignment in which the class learned about using OpenGL, after having
+been taught vector and matrix arithmetic as well as other graphics related material. We
+learned OpenGL, starting from how to draw simple shapes to the screen all the way up to
+how to store objects in a scene with OOP as well as drawing them in a scene heiarchy.
+For RenderGL, we were tasked with implementing most of the feature within a graphics
+frameworkd provided by Depaul University.
+
+- Scene hierarchy (order of transformations on composed objects)
+- Camera manipulation to view scene.
+- Projection, view, model, matrices implemented and sent to shader
+- Shaders
+	- Phong shading
+	- Striped shading
+	- Multitextured shading
+		- Phong with multiple textures
+		- Alpha transparency
+- Putting data from read files (.rgl) into relevant Mesh Object data
